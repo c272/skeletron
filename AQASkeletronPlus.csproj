@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Company.cs" />
+    <Compile Include="Core\CompanyDefault.cs" />
     <Compile Include="Core\FoodTruck.cs" />
     <Compile Include="Core\Household.cs" />
     <Compile Include="Events\Event.cs" />

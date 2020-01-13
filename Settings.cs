@@ -14,6 +14,37 @@ namespace AQASkeletronPlus
     {
         //Settings.
         public static ISettings Get;
+
+        //AQA provided default companies.
+        internal static List<CompanyDefault> DefaultCompanies = new List<CompanyDefault>()
+        {
+            //AQA Burgers
+            new CompanyDefault()
+            {
+                Name = "AQA Burgers",
+                StartingBalance = 100000,
+                Type = CompanyType.FastFood,
+                StartingOutlets = 6
+            },
+
+            //Ben Thor Cuisine
+            new CompanyDefault()
+            {
+                Name = "Ben Thor Cuisine",
+                StartingBalance = 100400,
+                Type = CompanyType.NamedChef,
+                StartingOutlets = 0
+            },
+
+            //Paltry Poultry
+            new CompanyDefault()
+            {
+                Name = "Paltry Poultry",
+                StartingBalance = 25000,
+                Type = CompanyType.FastFood,
+                StartingOutlets = 3
+            }
+        };
     }
 
     /// <summary>
@@ -38,6 +69,12 @@ namespace AQASkeletronPlus
 
         [Option(DefaultValue = 100)]
         int StartingDailyCost { get; }
+        
+        [Option(DefaultValue = 0.0098)]
+        double FuelCostPerTile { get; }
+
+        [Option(DefaultValue = 100)]
+        double BaseCostForDelivery { get;}
 
 
         //Options for family companies.

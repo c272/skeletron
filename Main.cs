@@ -18,14 +18,14 @@ namespace AQASkeletronPlus
         //Minimum size of the map panel in pixels.
         private int MIN_MAP_X;
         private int MIN_MAP_Y;
-        private int mapX = 1000, mapY = 1000, extraHouses = 300;
+        private int mapX = 1000, mapY = 1000, startingHouses = 700;
 
         public Main()
         {
             InitializeComponent();
 
             //Create the simulation.
-            Simulation = new Simulation(mapX, mapY, extraHouses);
+            Simulation = new Simulation(mapX, mapY, startingHouses);
 
             //Calculate the minimum X and Y based on the simulation setting (at least 2x2 pixels per square).
             MIN_MAP_X = (mapX * 2);

@@ -98,7 +98,7 @@ namespace AQASkeletronPlus
         [Option(DefaultValue = 250)]
         int DefaultSettlementStartingHouses { get; }
         
-        [Option(DefaultValue = 0.02)]
+        [Option(DefaultValue = 0.0005)]
         double ChanceOfHouseholdLeaving { get; }
 
 

@@ -14,8 +14,33 @@ namespace AQASkeletronPlus
     public class MapPanel : PictureBox
     {
         //User set flags.
-        public bool DrawTracers = false;
-        public bool DrawNames = false;
+        private bool iDrawTracers = false, iDrawNames = false;
+        public bool DrawTracers
+        {
+            get
+            {
+                return iDrawTracers;
+            }
+            set
+            {
+                //Refresh the control upon change.
+                iDrawTracers = value;
+                this.Refresh();
+            }
+        }
+        public bool DrawNames
+        {
+            get
+            {
+                return iDrawNames;
+            }
+            set
+            {
+                //Refresh the control upon change.
+                iDrawNames = value;
+                this.Refresh();
+            }
+        }
 
         //Map width and height.
         private int mapWidth = -1;
@@ -55,13 +80,17 @@ namespace AQASkeletronPlus
             base.Width = pixelX;
             base.Height = pixelY;
 
-            //For every ~100 pixels zoomed in both directions, (200 total), increase the font size by 1.
-            int extraPixels = (pixelX - mapWidth) + (pixelY - mapHeight);
-            extraPixels = extraPixels / pixelsTillNameFontIncrease;
-            nameFontSize = NAME_FONT_BASE_SIZE + extraPixels;
-
             //Repaint the map.
             this.Refresh();
+        }
+
+        //Calculates the label font size according to the current width/height of the control.
+        private void CalculateFontSize()
+        {
+            //For every ~100 pixels zoomed in both directions, (200 total), increase the font size by 1.
+            int extraPixels = (base.Width - mapWidth) + (base.Height - mapHeight);
+            extraPixels = extraPixels / pixelsTillNameFontIncrease;
+            nameFontSize = NAME_FONT_BASE_SIZE + extraPixels;
         }
 
         //Paints the map to the image, and scales correctly.
@@ -103,6 +132,9 @@ namespace AQASkeletronPlus
             //Should names be drawn on outlets?
             if (DrawNames)
             {
+                //Recalculate the font size for the map.
+                CalculateFontSize();
+
                 foreach (var outlet in outlets)
                 {
                     //Draw the text in the center of the outlet.
@@ -131,6 +163,9 @@ namespace AQASkeletronPlus
             outlets = new Dictionary<Vector2, string>();
             households = new List<Vector2>();
             tracers = new List<Tuple<Vector2, Vector2>>();
+
+            //Redraw.
+            this.Refresh();
         }
 
         /// <summary>
@@ -185,6 +220,9 @@ namespace AQASkeletronPlus
                     throw new Exception("Unrecognized building type to add to map.");
                 }
             }
+
+            //Redraw, it's a mass addition.
+            this.Refresh();
         }
 
         //Verifies coordinates, and throws an error if failes.

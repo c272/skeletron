@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AQASkeletronPlus.Events;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,11 @@ namespace AQASkeletronPlus
         //Minimum size of the map panel in pixels.
         private int MIN_MAP_X;
         private int MIN_MAP_Y;
-        private int mapX = 1000, mapY = 1000, startingHouses = 700;
+        private int mapX = 300, mapY = 300, startingHouses = 150;
+
+        //Current amount of days ago being viewed on the event viewer.
+        private int currentDaysAgo = 0;
+        private List<IEvent> events = new List<IEvent>();
 
         public Main()
         {
@@ -44,10 +49,15 @@ namespace AQASkeletronPlus
         /// </summary>
         private void advanceDaysBtn_Click(object sender, EventArgs e)
         {
+            //Process the days.
             for (int i=0; i<amtDaysAdvance.Value; i++)
             {
                 Simulation.ProcessDayEnd();
             }
+
+            //Set the event viewer to yesterday, update the viewer.
+            currentDaysAgo += Convert.ToInt32(amtDaysAdvance.Value);
+            UpdateEventList();
         }
 
         /// <summary>
@@ -56,6 +66,69 @@ namespace AQASkeletronPlus
         private void showVisitsChanged(object sender, EventArgs e)
         {
             map.DrawTracers = showVisitsCB.Checked;
+        }
+
+        /// <summary>
+        /// Triggered when the "Advance Days" value box is altered.
+        /// </summary>
+        private void advanceDayAmtValueChanged(object sender, EventArgs e)
+        {
+            advanceDaysBtn.Text = "Advance " + amtDaysAdvance.Value + " days.";
+        }
+
+        /// <summary>
+        /// Scrolls the events viewer back a day.
+        /// </summary>
+        private void scrollEventsBack_Click(object sender, EventArgs e)
+        {
+            currentDaysAgo++;
+            if (currentDaysAgo > 50) { currentDaysAgo = 50; }
+
+            //Update the events list.
+            UpdateEventList();
+        }
+
+        /// <summary>
+        /// Scrolls the events viewer forward a day.
+        /// </summary>
+        private void scrollEventsForward_Click(object sender, EventArgs e)
+        {
+            currentDaysAgo--;
+            if (currentDaysAgo < 0) { currentDaysAgo = 0; }
+
+            //Update the events list.
+            UpdateEventList();
+        }
+
+        /// <summary>
+        /// Goes to the latest events page (not today's, yesterday's).
+        /// </summary>
+        private void goToLatestEvents_Click(object sender, EventArgs e)
+        {
+            currentDaysAgo = 1;
+            UpdateEventList();
+        }
+
+        /// <summary>
+        /// Updates the event list from the events chain, from the "currentDaysAgo" property.
+        /// </summary>
+        private void UpdateEventList()
+        {
+            events = EventChain.GetChain(currentDaysAgo);
+            eventsList.Clear();
+            eventDayLabel.Text = "Viewing events from " + currentDaysAgo + " days ago.";
+
+            //Did any events return?
+            if (events == null) { 
+                if (currentDaysAgo == 0) { return; }
+                currentDaysAgo--; UpdateEventList();
+                return;
+            }
+
+            foreach (var e in events)
+            {
+                eventsList.Items.Add(e.Stringify());
+            }
         }
 
         /// <summary>

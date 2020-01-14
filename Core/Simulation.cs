@@ -66,7 +66,10 @@ namespace AQASkeletronPlus
         /// </summary>
         public void SetMap(MapPanel map_)
         {
+            //Change the map, update with current setup.
             map = map_;
+            map.Clear();
+            map.AddBuildings(GetBuildingCoordinates());
         }
 
         /// <summary>

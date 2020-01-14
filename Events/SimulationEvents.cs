@@ -73,7 +73,7 @@ namespace AQASkeletronPlus.Events
 
         public string Stringify()
         {
-            return NumHouseholds + " have left the settlement.";
+            return NumHouseholds + " households have left the settlement.";
         }
     }
 }

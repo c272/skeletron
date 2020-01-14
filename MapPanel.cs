@@ -25,7 +25,7 @@ namespace AQASkeletronPlus
             {
                 //Refresh the control upon change.
                 iDrawTracers = value;
-                this.Refresh();
+                this.Invalidate();
             }
         }
         public bool DrawNames
@@ -222,7 +222,7 @@ namespace AQASkeletronPlus
             }
 
             //Redraw, it's a mass addition.
-            this.Refresh();
+            this.Invalidate();
         }
 
         //Verifies coordinates, and throws an error if failes.

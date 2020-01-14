@@ -36,11 +36,18 @@
             this.zoomTrackBar = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.showCompanyNamesCB = new System.Windows.Forms.CheckBox();
+            this.eventsGroupBox = new System.Windows.Forms.GroupBox();
+            this.eventsList = new System.Windows.Forms.ListView();
+            this.scrollEventsBack = new System.Windows.Forms.Button();
+            this.scrollEventsForward = new System.Windows.Forms.Button();
+            this.eventDayLabel = new System.Windows.Forms.Label();
             this.map = new AQASkeletronPlus.MapPanel();
+            this.goToLatestEvents = new System.Windows.Forms.Button();
             this.mapGroupBox.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amtDaysAdvance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).BeginInit();
+            this.eventsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +59,7 @@
             this.mapGroupBox.Controls.Add(this.mainPanel);
             this.mapGroupBox.Location = new System.Drawing.Point(12, 45);
             this.mapGroupBox.Name = "mapGroupBox";
-            this.mapGroupBox.Size = new System.Drawing.Size(1119, 492);
+            this.mapGroupBox.Size = new System.Drawing.Size(914, 492);
             this.mapGroupBox.TabIndex = 0;
             this.mapGroupBox.TabStop = false;
             this.mapGroupBox.Text = "Map";
@@ -64,7 +71,7 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(3, 16);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1113, 473);
+            this.mainPanel.Size = new System.Drawing.Size(908, 473);
             this.mainPanel.TabIndex = 0;
             // 
             // advanceDaysBtn
@@ -73,7 +80,7 @@
             this.advanceDaysBtn.Name = "advanceDaysBtn";
             this.advanceDaysBtn.Size = new System.Drawing.Size(144, 23);
             this.advanceDaysBtn.TabIndex = 1;
-            this.advanceDaysBtn.Text = "Advance [DAYS] days.";
+            this.advanceDaysBtn.Text = "Advance 1 days.";
             this.advanceDaysBtn.UseVisualStyleBackColor = true;
             this.advanceDaysBtn.Click += new System.EventHandler(this.advanceDaysBtn_Click);
             // 
@@ -98,6 +105,7 @@
             0,
             0,
             0});
+            this.amtDaysAdvance.ValueChanged += new System.EventHandler(this.advanceDayAmtValueChanged);
             // 
             // showVisitsCB
             // 
@@ -142,19 +150,92 @@
             this.showCompanyNamesCB.UseVisualStyleBackColor = true;
             this.showCompanyNamesCB.CheckedChanged += new System.EventHandler(this.showNamesChanged);
             // 
+            // eventsGroupBox
+            // 
+            this.eventsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.eventsGroupBox.Controls.Add(this.eventsList);
+            this.eventsGroupBox.Location = new System.Drawing.Point(932, 8);
+            this.eventsGroupBox.Name = "eventsGroupBox";
+            this.eventsGroupBox.Size = new System.Drawing.Size(206, 529);
+            this.eventsGroupBox.TabIndex = 6;
+            this.eventsGroupBox.TabStop = false;
+            this.eventsGroupBox.Text = "Event Log";
+            // 
+            // eventsList
+            // 
+            this.eventsList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eventsList.HideSelection = false;
+            this.eventsList.Location = new System.Drawing.Point(3, 16);
+            this.eventsList.Name = "eventsList";
+            this.eventsList.Size = new System.Drawing.Size(200, 510);
+            this.eventsList.TabIndex = 0;
+            this.eventsList.UseCompatibleStateImageBehavior = false;
+            this.eventsList.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // scrollEventsBack
+            // 
+            this.scrollEventsBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.scrollEventsBack.Location = new System.Drawing.Point(770, 24);
+            this.scrollEventsBack.Name = "scrollEventsBack";
+            this.scrollEventsBack.Size = new System.Drawing.Size(31, 23);
+            this.scrollEventsBack.TabIndex = 7;
+            this.scrollEventsBack.Text = "<";
+            this.scrollEventsBack.UseVisualStyleBackColor = true;
+            this.scrollEventsBack.Click += new System.EventHandler(this.scrollEventsBack_Click);
+            // 
+            // scrollEventsForward
+            // 
+            this.scrollEventsForward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.scrollEventsForward.Location = new System.Drawing.Point(807, 24);
+            this.scrollEventsForward.Name = "scrollEventsForward";
+            this.scrollEventsForward.Size = new System.Drawing.Size(32, 23);
+            this.scrollEventsForward.TabIndex = 8;
+            this.scrollEventsForward.Text = ">";
+            this.scrollEventsForward.UseVisualStyleBackColor = true;
+            this.scrollEventsForward.Click += new System.EventHandler(this.scrollEventsForward_Click);
+            // 
+            // eventDayLabel
+            // 
+            this.eventDayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.eventDayLabel.AutoSize = true;
+            this.eventDayLabel.Location = new System.Drawing.Point(766, 7);
+            this.eventDayLabel.Name = "eventDayLabel";
+            this.eventDayLabel.Size = new System.Drawing.Size(160, 13);
+            this.eventDayLabel.TabIndex = 9;
+            this.eventDayLabel.Text = "Viewing events from 0 days ago.";
+            // 
             // map
             // 
+            this.map.DrawNames = false;
+            this.map.DrawTracers = false;
             this.map.Location = new System.Drawing.Point(0, 0);
             this.map.Name = "map";
             this.map.Size = new System.Drawing.Size(2000, 2000);
             this.map.TabIndex = 0;
             this.map.TabStop = false;
             // 
+            // goToLatestEvents
+            // 
+            this.goToLatestEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.goToLatestEvents.Location = new System.Drawing.Point(845, 24);
+            this.goToLatestEvents.Name = "goToLatestEvents";
+            this.goToLatestEvents.Size = new System.Drawing.Size(76, 23);
+            this.goToLatestEvents.TabIndex = 10;
+            this.goToLatestEvents.Text = "Latest";
+            this.goToLatestEvents.UseVisualStyleBackColor = true;
+            this.goToLatestEvents.Click += new System.EventHandler(this.goToLatestEvents_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 549);
+            this.Controls.Add(this.goToLatestEvents);
+            this.Controls.Add(this.eventDayLabel);
+            this.Controls.Add(this.scrollEventsForward);
+            this.Controls.Add(this.scrollEventsBack);
+            this.Controls.Add(this.eventsGroupBox);
             this.Controls.Add(this.showCompanyNamesCB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.zoomTrackBar);
@@ -168,6 +249,7 @@
             this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.amtDaysAdvance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).EndInit();
+            this.eventsGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.map)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -185,6 +267,12 @@
         private System.Windows.Forms.TrackBar zoomTrackBar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox showCompanyNamesCB;
+        private System.Windows.Forms.GroupBox eventsGroupBox;
+        private System.Windows.Forms.ListView eventsList;
+        private System.Windows.Forms.Button scrollEventsBack;
+        private System.Windows.Forms.Button scrollEventsForward;
+        private System.Windows.Forms.Label eventDayLabel;
+        private System.Windows.Forms.Button goToLatestEvents;
     }
 }
 

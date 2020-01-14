@@ -45,14 +45,15 @@ namespace AQASkeletronPlus.Events
         public static List<IEvent> GetChain(int numChainsAgo)
         {
             //Is the chain valid?
-            if (numChainsAgo > 50) { throw new Exception("EventChain does not save more than 50 chains prior to the current one. Cannot retrieve."); }
+            if (numChainsAgo > 50) { return null; }
             if (numChainsAgo < 0) { throw new Exception("Cannot get future chains (less than 0 chains ago)."); }
-
+            
             //This one.
             if (numChainsAgo == 0) { return Events; }
 
             //Not this one, so morph to index.
             int index = SavedChains.Count - numChainsAgo;
+            if (index > SavedChains.Count - 1 || index < 0) { return null; }
             return SavedChains[index];
         }
     }

@@ -29,7 +29,7 @@ namespace AQASkeletronPlus
         public Simulation(int width=-1, int height=-1, int startingHouseholds=-1, List<CompanyDefault> companyTemps = null)
         {
             //Create a new settlement.
-            settlement = new Settlement(width, height);
+            settlement = new Settlement(width, height, startingHouseholds);
 
             //Set default locals.
             currentFuelCost = Settings.Get.FuelCostPerTile;
@@ -108,9 +108,6 @@ namespace AQASkeletronPlus
                 }
             }
 
-            //If the map panel is enabled, set the tracers to show visits for the day.
-            if (map != null) { map.SetTracers(visits); }
-
             //Process the end of the day for each company.
             foreach (var c in companies)
             {
@@ -156,11 +153,12 @@ namespace AQASkeletronPlus
             //End this day's event chain, and start a new one.
             EventChain.Refresh();
 
-            //Draw the new map with updated positions, if the map is enabled.
+            //Draw the new map with updated positions and tracers, if the map is enabled.
             if (map != null)
             {
                 map.Clear();
                 map.AddBuildings(GetBuildingCoordinates());
+                map.SetTracers(visits);
             }
         }
 
@@ -283,7 +281,8 @@ namespace AQASkeletronPlus
                     buildings.Add(new Building()
                     {
                         Position = outlet.Position,
-                        Type = BuildingType.Outlet
+                        Type = BuildingType.Outlet,
+                        Name = company.Name //Make sure the company name is present!
                     });
                 }
             }

@@ -15,6 +15,7 @@ namespace AQASkeletronPlus
     {
         //User set flags.
         public bool DrawTracers = false;
+        public bool DrawNames = false;
 
         //Map width and height.
         private int mapWidth = -1;
@@ -22,19 +23,45 @@ namespace AQASkeletronPlus
 
         //List of households/outlets to draw.
         private List<Vector2> households = new List<Vector2>();
-        private List<Vector2> outlets = new List<Vector2>();
+        private Dictionary<Vector2, string> outlets = new Dictionary<Vector2, string>();
         private List<Tuple<Vector2, Vector2>> tracers = new List<Tuple<Vector2, Vector2>>();
 
         //Brushes to use for the base, and outlets/houses.
         private Color baseColour = Color.White;
-        private Brush outletBrush = Brushes.Green;
-        private Brush householdBrush = Brushes.MediumPurple;
-        private Brush connectingLineBrush = Brushes.Red;
+        private Brush outletBrush = Brushes.Red;
+        private Brush householdBrush = Brushes.Blue;
+        private Brush connectingLineBrush = Brushes.LightGreen;
+
+        //Building name brush/font sizes.
+        private const int NAME_FONT_BASE_SIZE = 8;
+        private int nameFontSize;
+        private Brush nameBrush = Brushes.Black;
+        private int pixelsTillNameFontIncrease = 800;
 
         //Constructor which hooks the paint event.
         public MapPanel() : base()
         {
+            //Hook the paint event.
             base.Paint += PaintMap;
+
+            //Set up locals.
+            nameFontSize = NAME_FONT_BASE_SIZE;
+        }
+
+        //Resize the pixel size of this map panel.
+        public void ResizePanel(int pixelX, int pixelY)
+        {
+            //Set the raw size.
+            base.Width = pixelX;
+            base.Height = pixelY;
+
+            //For every ~100 pixels zoomed in both directions, (200 total), increase the font size by 1.
+            int extraPixels = (pixelX - mapWidth) + (pixelY - mapHeight);
+            extraPixels = extraPixels / pixelsTillNameFontIncrease;
+            nameFontSize = NAME_FONT_BASE_SIZE + extraPixels;
+
+            //Repaint the map.
+            this.Refresh();
         }
 
         //Paints the map to the image, and scales correctly.
@@ -50,7 +77,7 @@ namespace AQASkeletronPlus
             //Paint individual outlets onto the canvas.
             foreach (var outlet in outlets)
             {
-                Vector2 outletPixelPos = new Vector2(outlet.x * xCellSize, outlet.y * yCellSize); //Pixel position of outlet on canvas.
+                Vector2 outletPixelPos = new Vector2(outlet.Key.x * xCellSize, outlet.Key.y * yCellSize); //Pixel position of outlet on canvas.
                 e.Graphics.FillRectangle(outletBrush, new Rectangle(outletPixelPos.x, outletPixelPos.y, xCellSize, yCellSize));
             }
 
@@ -58,7 +85,7 @@ namespace AQASkeletronPlus
             foreach (var house in households)
             {
                 Vector2 housePixelPos = new Vector2(house.x * xCellSize, house.y * yCellSize); //Pixel position of the house on canvas.
-                e.Graphics.FillRectangle(householdBrush, new Rectangle(house.x, house.y, xCellSize, yCellSize));
+                e.Graphics.FillRectangle(householdBrush, new Rectangle(housePixelPos.x, housePixelPos.y, xCellSize, yCellSize));
             }
             
             //Should tracers be drawn?
@@ -70,6 +97,17 @@ namespace AQASkeletronPlus
                     Vector2 startingCenter = GetPixelCenterOfCell(tracer.Item1);
                     Vector2 endCenter = GetPixelCenterOfCell(tracer.Item2);
                     e.Graphics.DrawLine(new Pen(connectingLineBrush), startingCenter.x, startingCenter.y, endCenter.x, endCenter.y);
+                }
+            }
+
+            //Should names be drawn on outlets?
+            if (DrawNames)
+            {
+                foreach (var outlet in outlets)
+                {
+                    //Draw the text in the center of the outlet.
+                    Vector2 outletCenter = GetPixelCenterOfCell(outlet.Key);
+                    e.Graphics.DrawString(outlet.Value, new Font(FontFamily.GenericSerif, nameFontSize), nameBrush, outletCenter.x, outletCenter.y);
                 }
             }
         }
@@ -90,7 +128,7 @@ namespace AQASkeletronPlus
         /// </summary>
         public void Clear()
         {
-            outlets = new List<Vector2>();
+            outlets = new Dictionary<Vector2, string>();
             households = new List<Vector2>();
             tracers = new List<Tuple<Vector2, Vector2>>();
         }
@@ -114,17 +152,17 @@ namespace AQASkeletronPlus
         /// <summary>
         /// Sets an outlet to draw on the grid.
         /// </summary>
-        public void AddOutlet(int x, int y)
+        public void AddOutlet(int x, int y, string name)
         {
             VerifyCoordinates(x, y);
 
             //Don't add duplicate outlets.
-            foreach (Vector2 outlet in outlets)
+            foreach (var outlet in outlets)
             {
-                if (x == outlet.x && y == outlet.y) { return; }
+                if (x == outlet.Key.x && y == outlet.Key.y) { return; }
             }
 
-            outlets.Add(new Vector2(x, y));
+            outlets.Add(new Vector2(x, y), name);
         }
 
         /// <summary>
@@ -140,7 +178,7 @@ namespace AQASkeletronPlus
                 }
                 else if (building.Type == BuildingType.Outlet)
                 {
-                    AddOutlet(building.Position.x, building.Position.y);
+                    AddOutlet(building.Position.x, building.Position.y, building.Name);
                 }
                 else
                 {
@@ -215,10 +253,11 @@ namespace AQASkeletronPlus
     /// <summary>
     /// Represents a single building w/ type on the grid.
     /// </summary>
-    public struct Building
+    public class Building
     {
         public Vector2 Position;
         public BuildingType Type;
+        public string Name = "Unnamed";
     }
 
     /// <summary>

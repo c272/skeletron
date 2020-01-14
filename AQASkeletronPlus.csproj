@@ -106,6 +106,7 @@
     <Compile Include="Events\EventChain.cs" />
     <Compile Include="Events\CompanyEvents.cs" />
     <Compile Include="Events\OutletEvents.cs" />
+    <Compile Include="Events\SimulationEvents.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>

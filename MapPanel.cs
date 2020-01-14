@@ -117,5 +117,18 @@ namespace AQASkeletronPlus
         {
             return "(" + x + ", " + y + ")";
         }
+
+        /// <summary>
+        /// Calculates the distance from this Vector2 instance to another Vector2.
+        /// </summary>
+        public double DistanceTo(Vector2 other)
+        {
+            //Calculate differences.
+            int xDiff = this.x - other.x;
+            int yDiff = this.y - other.y;
+
+            //Modulus using pythagoras.
+            return Math.Sqrt(Math.Pow(xDiff, 2) + Math.Pow(yDiff, 2));
+        }
     }
 }

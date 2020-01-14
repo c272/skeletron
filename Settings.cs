@@ -52,6 +52,34 @@ namespace AQASkeletronPlus
     /// </summary>
     public interface ISettings
     {
+        //Simulation randomizer options.
+        [Option(DefaultValue = 0.25)]
+        double BaseChanceOfRandomEvents { get; }
+
+        [Option(DefaultValue = 0.25)]
+        double ChanceOfAddHouseholdsEvent { get; }
+
+        [Option(DefaultValue = 0.5)]
+        double ChanceOfChangeFuelCostEvent { get; }
+
+        [Option(DefaultValue = 0.5)]
+        double ChanceOfReputationChangeEvent { get; }
+
+        [Option(DefaultValue = 0.5)]
+        double ChanceOfDailyCostChangeEvent { get; }
+
+        //Household randomizer options.
+        [Option(DefaultValue = 1)]
+        int MinNewHouseholds { get; }
+
+        [Option(DefaultValue = 5)]
+        int MaxNewHouseholds { get; }
+
+        //Fuel randomizer options.
+        [Option(DefaultValue = 0.33)]
+        double ChanceOfFuelPriceIncrease { get; }
+
+
         //General settlement options.
         [Option(DefaultValue = 1000)]
         int DefaultSettlementWidth { get; }

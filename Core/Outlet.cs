@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AQASkeletronPlus.Events;
+using System;
 
 namespace AQASkeletronPlus
 {
@@ -11,15 +12,17 @@ namespace AQASkeletronPlus
         public Vector2 Position { get; protected set; }
         public int Capacity { get; protected set; }
         public double DailyCost { get; protected set; }
+        public Company ParentCompany { get; protected set; }
 
         //The settlement which this outlet was created on.
         protected Settlement settlement;
         protected int visitsToday = 0;
 
-        public Outlet(Settlement s, Vector2 position, int capacity, double DailyCost)
+        public Outlet(Settlement s, Company parent, Vector2 position, int capacity, double dailyCost)
         {
             Position = position;
             Capacity = capacity;
+            DailyCost = dailyCost;
             settlement = s;
             settlement.Occupy(position);
         }
@@ -27,7 +30,18 @@ namespace AQASkeletronPlus
         /// <summary>
         /// Visit the outlet (increments visits for today).
         /// </summary>
-        public void Visit() { visitsToday++; }
+        public void Visit(Vector2 origin)
+        {
+            visitsToday++;
+
+            //Log event.
+            EventChain.AddEvent(new VisitOutletEvent()
+            {
+                Company = ParentCompany.Name,
+                Household = origin,
+                OutletPos = Position
+            });
+        }
 
         /// <summary>
         /// Calculates the daily profit for this outlet (positive or negative).

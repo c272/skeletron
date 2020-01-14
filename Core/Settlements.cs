@@ -15,6 +15,13 @@ namespace AQASkeletronPlus
         public int Width { get; protected set; }
         public int Height { get; protected set; }
         public int StartingHouseholds { get; protected set; }
+        public int NumHouseholds
+        {
+            get
+            {
+                return Households.Count;
+            }
+        }
 
         //Inaccessible private fields.
         private List<Vector2> Occupied = new List<Vector2>();
@@ -49,8 +56,19 @@ namespace AQASkeletronPlus
         /// </summary>
         public void AddHousehold()
         {
+            //Check a household can actually be added.
+            if (Households.Count >= Width * Height) { return; }
+
             Vector2 housePos = GetFreeRandomPosition();
             Households.Add(new Household(housePos));
+        }
+
+        /// <summary>
+        /// Returns the household from the settlement at a given index.
+        /// </summary>
+        public Household GetHouseholdAtIndex(int i)
+        {
+            return Households[i];
         }
 
         /// <summary>

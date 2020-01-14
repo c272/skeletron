@@ -22,6 +22,8 @@ namespace AQASkeletronPlus.Events
         OutletCreate,
         FoodTruckMove,
         OutletProfit,
-        Delivery
+        Delivery,
+        VisitOutlet,
+        AddHouseholds
     }
 }

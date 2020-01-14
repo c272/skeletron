@@ -71,7 +71,7 @@ namespace AQASkeletronPlus
 
             //Open the outlet.
             Balance -= OutletCost;
-            outlets.Add(new Outlet(settlement, position, OutletCapacity, DailyCost));
+            outlets.Add(new Outlet(settlement, this, position, OutletCapacity, DailyCost));
 
             //Log in the event chain.
             EventChain.AddEvent(new OutletCreateEvent()
@@ -109,6 +109,33 @@ namespace AQASkeletronPlus
 
             //Now, close the actual outlet.
             outlets.Remove(outlet);
+        }
+
+        /// <summary>
+        /// Adds a single household visit to the outlet nearest to the given Vector2 position.
+        /// </summary>
+        public void AddVisitToNearestOutlet(Vector2 position)
+        {
+            //Any outlets to visit?
+            if (outlets.Count == 0) { return; }
+
+            //Loop over outlets and get distances.
+            Outlet nearest = null;
+            double nearestDistance = double.MaxValue;
+            foreach (var outlet in outlets)
+            {
+                //Found a better distance?
+                double thisDist = position.DistanceTo(outlet.Position);
+                if (thisDist < nearestDistance)
+                {
+                    nearest = outlet;
+                    nearestDistance = thisDist;
+                }
+            }
+
+            //Was an outlet found? If so, add it.
+            if (nearest == null) { return; }
+            nearest.Visit(position);
         }
 
         /// <summary>
@@ -158,6 +185,14 @@ namespace AQASkeletronPlus
             {
                 CloseAllOutlets();
             }
+        }
+
+        /// <summary>
+        /// Changes the fuel cost for the company by a given double amount, negative or positive.
+        /// </summary>
+        public void ChangeFuelCostBy(double amt)
+        {
+            FuelCost += amt;
         }
 
         //Calculates the on top delivery costs for the day.

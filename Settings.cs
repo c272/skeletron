@@ -112,7 +112,7 @@ namespace AQASkeletronPlus
         [Option(DefaultValue = 0.0098)]
         double FuelCostPerTile { get; }
 
-        [Option(DefaultValue = 100)]
+        [Option(DefaultValue = 100.0)]
         double BaseCostForDelivery { get;}
 
 

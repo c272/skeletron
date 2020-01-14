@@ -20,6 +20,9 @@ namespace AQASkeletronPlus
         private Settlement settlement;
         private double currentFuelCost;
 
+        //The map panel assigned to this simulation.
+        private MapPanel map = null;
+
         /// <summary>
         /// Constructs a simulation, with either default or user specified company templates.
         /// </summary>
@@ -59,6 +62,14 @@ namespace AQASkeletronPlus
         }
 
         /// <summary>
+        /// Sets the map for this simulation instance.
+        /// </summary>
+        public void SetMap(MapPanel map_)
+        {
+            map = map_;
+        }
+
+        /// <summary>
         /// Ends the current day, and moves onto the next one.
         /// </summary>
         public void ProcessDayEnd()
@@ -73,6 +84,7 @@ namespace AQASkeletronPlus
             }
 
             //Loop over each house and see if they eat out, and if so, where.
+            List<Tuple<Vector2, Vector2>> visits = new List<Tuple<Vector2, Vector2>>();
             for (int i=0; i<settlement.NumHouseholds; i++)
             {
                 Household thisHousehold = settlement.GetHouseholdAtIndex(i);
@@ -89,12 +101,15 @@ namespace AQASkeletronPlus
                     if (randomRepNum < cumulativeReputation[current])
                     {
                         //Yes, eat then break.
-                        companies[current].AddVisitToNearestOutlet(thisHousehold.Position);
+                        companies[current].AddVisitToNearestOutlet(thisHousehold.Position, ref visits);
                         break;
                     }
                     current++;
                 }
             }
+
+            //If the map panel is enabled, set the tracers to show visits for the day.
+            if (map != null) { map.SetTracers(visits); }
 
             //Process the end of the day for each company.
             foreach (var c in companies)
@@ -137,6 +152,16 @@ namespace AQASkeletronPlus
 
             //Process households leaving for the day.
             settlement.ProcessLeavers();
+
+            //End this day's event chain, and start a new one.
+            EventChain.Refresh();
+
+            //Draw the new map with updated positions, if the map is enabled.
+            if (map != null)
+            {
+                map.Clear();
+                map.AddBuildings(GetBuildingCoordinates());
+            }
         }
 
         /// <summary>
@@ -240,6 +265,41 @@ namespace AQASkeletronPlus
             {
                 NumHouses = stored
             });
+        }
+
+        /// <summary>
+        /// Returns all buildings on the settlement as a list of coordinates.
+        /// </summary>
+        /// <returns></returns>
+        public List<Building> GetBuildingCoordinates()
+        {
+            List<Building> buildings = new List<Building>();
+
+            //Add all the outlets.
+            foreach (var company in companies)
+            {
+                foreach (var outlet in company.outlets)
+                {
+                    buildings.Add(new Building()
+                    {
+                        Position = outlet.Position,
+                        Type = BuildingType.Outlet
+                    });
+                }
+            }
+
+            //Add all the houses.
+            foreach (var house in settlement.Households)
+            {
+                buildings.Add(new Building()
+                {
+                    Position = house.Position,
+                    Type = BuildingType.Household
+                });
+            }
+
+            //Return.
+            return buildings;
         }
     }
 }

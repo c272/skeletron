@@ -23,6 +23,7 @@ namespace AQASkeletronPlus
             Position = position;
             Capacity = capacity;
             DailyCost = dailyCost;
+            ParentCompany = parent;
             settlement = s;
             settlement.Occupy(position);
         }

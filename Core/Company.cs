@@ -24,7 +24,7 @@ namespace AQASkeletronPlus
         public double OutletCost { get; private set; }
 
         //Inaccessible locals for the company.
-        private List<Outlet> outlets = new List<Outlet>();
+        public List<Outlet> outlets { get; protected set; } = new List<Outlet>();
         private double avgCostPerMeal, avgPricePerMeal;
 
         //The settlement this was created on.
@@ -114,7 +114,7 @@ namespace AQASkeletronPlus
         /// <summary>
         /// Adds a single household visit to the outlet nearest to the given Vector2 position.
         /// </summary>
-        public void AddVisitToNearestOutlet(Vector2 position)
+        public void AddVisitToNearestOutlet(Vector2 position, ref List<Tuple<Vector2, Vector2>> visits)
         {
             //Any outlets to visit?
             if (outlets.Count == 0) { return; }
@@ -133,9 +133,10 @@ namespace AQASkeletronPlus
                 }
             }
 
-            //Was an outlet found? If so, add it.
+            //Was an outlet found? If so, add it, and log the visit to the list.
             if (nearest == null) { return; }
             nearest.Visit(position);
+            visits.Add(new Tuple<Vector2, Vector2>(position, nearest.Position));
         }
 
         /// <summary>

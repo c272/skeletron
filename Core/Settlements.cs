@@ -26,15 +26,15 @@ namespace AQASkeletronPlus
 
         //Inaccessible private fields.
         private List<Vector2> Occupied = new List<Vector2>();
-        private List<Household> Households = new List<Household>();
+        public List<Household> Households { get; protected set; } = new List<Household>();
 
         public Settlement(int width = -1, int height = -1, int startNoHouseholds = -1)
         {
             if (width == -1 && height == -1) { width = Settings.Get.DefaultSettlementWidth; height = Settings.Get.DefaultSettlementHeight; }
             if (startNoHouseholds == -1) { startNoHouseholds = Settings.Get.DefaultSettlementStartingHouses; }
 
-            Width = Width;
-            Height = Height;
+            Width = width;
+            Height = height;
             StartingHouseholds = startNoHouseholds;
 
             if (startNoHouseholds > Width * Height) { throw new Exception("Too many starting houses (larger than grid)."); }

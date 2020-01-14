@@ -17,11 +17,43 @@ namespace AQASkeletronPlus.Events
         public static List<IEvent> Events { get; private set; } = new List<IEvent>();
 
         /// <summary>
+        /// List of event chains that have been archived. Limited to 50 long.
+        /// </summary>
+        private static List<List<IEvent>> SavedChains = new List<List<IEvent>>();
+
+        /// <summary>
         /// Adds an event to the chain, this event is then non-removeable and permanently recorded.
         /// </summary>
         public static void AddEvent(IEvent event_)
         {
             Events.Add(event_);
+        }
+
+        /// <summary>
+        /// Resets the current event chain to blank, and saves the previous into the saved list.
+        /// </summary>
+        public static void Refresh()
+        {
+            SavedChains.Add(Events);
+            if (SavedChains.Count > 50) { SavedChains.RemoveAt(0); }
+            Events = new List<IEvent>();
+        }
+
+        /// <summary>
+        /// Gets an event chain, specified by how long ago it was. "0" is the current chain.
+        /// </summary>
+        public static List<IEvent> GetChain(int numChainsAgo)
+        {
+            //Is the chain valid?
+            if (numChainsAgo > 50) { throw new Exception("EventChain does not save more than 50 chains prior to the current one. Cannot retrieve."); }
+            if (numChainsAgo < 0) { throw new Exception("Cannot get future chains (less than 0 chains ago)."); }
+
+            //This one.
+            if (numChainsAgo == 0) { return Events; }
+
+            //Not this one, so morph to index.
+            int index = SavedChains.Count - numChainsAgo;
+            return SavedChains[index];
         }
     }
 }

@@ -15,15 +15,23 @@ namespace AQASkeletronPlus
         public Main()
         {
             InitializeComponent();
-            MapPanel test = new MapPanel()
+
+            //Create the simulation.
+            Simulation sim = new Simulation(500, 500);
+
+            //Initialize the map.
+            MapPanel map = new MapPanel()
             {
-                Width = 500,
-                Height = 500
+                Width = 1000,
+                Height = 1000
             };
-            test.SetSize(15, 15);
-            test.AddHousehold(0, 0);
-            test.AddOutlet(0, 1);
-            Controls.Add(test);
+            map.SetSize(500, 500);
+            Controls.Add(map);
+
+            //Add the map to the simulation.
+            sim.SetMap(map);
+
+            sim.ProcessDayEnd();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace AQASkeletronPlus.Events
     public interface IEvent
     {
         EventType Type { get; set; }
+        string Stringify();
     }
 
     /// <summary>
@@ -24,6 +25,10 @@ namespace AQASkeletronPlus.Events
         OutletProfit,
         Delivery,
         VisitOutlet,
-        AddHouseholds
+        AddHouseholds,
+        FuelCostChange,
+        ReputationChange,
+        CostChange,
+        HouseholdLeaving
     }
 }

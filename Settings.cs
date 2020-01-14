@@ -66,7 +66,7 @@ namespace AQASkeletronPlus
         double ChanceOfReputationChangeEvent { get; }
 
         [Option(DefaultValue = 0.5)]
-        double ChanceOfDailyCostChangeEvent { get; }
+        double ChanceOfCostChangeEvent { get; }
 
         //Household randomizer options.
         [Option(DefaultValue = 1)]
@@ -76,8 +76,16 @@ namespace AQASkeletronPlus
         int MaxNewHouseholds { get; }
 
         //Fuel randomizer options.
-        [Option(DefaultValue = 0.33)]
+        [Option(DefaultValue = 0.5)]
         double ChanceOfFuelPriceIncrease { get; }
+
+        //Reputation randomizer options.
+        [Option(DefaultValue = 0.5)]
+        double ChanceOfReputationIncrease { get; }
+
+        //Cost change randomizer options.
+        [Option(DefaultValue = 0.5)]
+        double ChanceOfCostIncrease { get; }
 
 
         //General settlement options.
@@ -89,6 +97,9 @@ namespace AQASkeletronPlus
 
         [Option(DefaultValue = 250)]
         int DefaultSettlementStartingHouses { get; }
+        
+        [Option(DefaultValue = 0.02)]
+        double ChanceOfHouseholdLeaving { get; }
 
 
         //General company options

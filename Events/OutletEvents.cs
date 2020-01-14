@@ -14,6 +14,12 @@ namespace AQASkeletronPlus.Events
         public EventType Type { get; set; } = EventType.FoodTruckMove;
         public Vector2 From;
         public Vector2 To;
+        public string Company;
+
+        public string Stringify()
+        {
+            return "Food truck for company '" + Company + "' moved from position " + From.ToString() + " to " + To.ToString() + ".";
+        }
     }
 
     /// <summary>
@@ -23,6 +29,12 @@ namespace AQASkeletronPlus.Events
     {
         public EventType Type { get; set; } = EventType.OutletProfit;
         public double ProfitLoss;
+        public string Company;
+
+        public string Stringify()
+        {
+            return "Outlet for company '" + Company + "' calculated a profit/loss of £" + ProfitLoss + " for the day.";
+        }
     }
 
     /// <summary>
@@ -34,5 +46,10 @@ namespace AQASkeletronPlus.Events
         public Vector2 Household;
         public string Company;
         public Vector2 OutletPos;
+
+        public string Stringify()
+        {
+            return "Household " + Household.ToString() + " visited outlet for company '" + Company + "' at position " + OutletPos.ToString() + ".";
+        }
     }
 }

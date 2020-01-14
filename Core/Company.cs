@@ -18,8 +18,8 @@ namespace AQASkeletronPlus
         public double BaseDeliveryCost { get; private set; }
         public string Name { get; private set; }
         public CompanyType Type { get; private set; }
-        public int Reputation { get; private set; } = Settings.Get.StartingReputation;
-        public int DailyCost { get; private set; } = Settings.Get.StartingDailyCost;
+        public double Reputation { get; private set; } = Settings.Get.StartingReputation;
+        public double DailyCost { get; private set; } = Settings.Get.StartingDailyCost;
         public int OutletCapacity { get; private set; }
         public double OutletCost { get; private set; }
 
@@ -174,7 +174,8 @@ namespace AQASkeletronPlus
                 //Log an outlet's profits/losses.
                 EventChain.AddEvent(new OutletProfitEvent()
                 {
-                    ProfitLoss = thisOutletProfit
+                    ProfitLoss = thisOutletProfit,
+                    Company = Name
                 });
 
                 outlet.ProcessDayEnd();
@@ -188,11 +189,40 @@ namespace AQASkeletronPlus
         }
 
         /// <summary>
+        /// Changes the average meal cost for all outlets by a given amount.
+        /// </summary>
+        /// <param name="amt"></param>
+        public void ChangeAvgMealCostBy(double amt)
+        {
+            avgCostPerMeal += amt;
+            if (avgCostPerMeal < 0) { avgCostPerMeal = 0; }
+        }
+
+        /// <summary>
+        /// Changes the daily cost for the company by a given double amount.
+        /// </summary>
+        public void ChangeDailyCostBy(double amt)
+        {
+            DailyCost += amt;
+            if (DailyCost < 0) { DailyCost = 0; }
+        }
+
+        /// <summary>
+        /// Changes the reputation for the company by a given double amount, negative or positive.
+        /// </summary>
+        public void ChangeReputationBy(double amt)
+        {
+            Reputation += amt;
+            if (Reputation < 0) { Reputation = 0; }
+        }
+
+        /// <summary>
         /// Changes the fuel cost for the company by a given double amount, negative or positive.
         /// </summary>
         public void ChangeFuelCostBy(double amt)
         {
             FuelCost += amt;
+            if (FuelCost < 0) { FuelCost = 0; }
         }
 
         //Calculates the on top delivery costs for the day.

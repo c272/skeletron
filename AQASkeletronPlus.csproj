@@ -102,6 +102,7 @@
     <Compile Include="Core\CompanyDefault.cs" />
     <Compile Include="Core\FoodTruck.cs" />
     <Compile Include="Core\Household.cs" />
+    <Compile Include="Extensions\RandomWrapper.cs" />
     <Compile Include="Events\Event.cs" />
     <Compile Include="Events\EventChain.cs" />
     <Compile Include="Events\CompanyEvents.cs" />

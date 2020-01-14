@@ -13,7 +13,7 @@ namespace AQASkeletronPlus
     public class Simulation
     {
         //The random number generator used throughout the simulation. Securely seeded.
-        public static Random Random = new Random(Guid.NewGuid().GetHashCode());
+        public static RandomWrapper Random = new RandomWrapper(Guid.NewGuid().GetHashCode());
 
         //Private properties of the simulation.
         private List<Company> companies = new List<Company>();
@@ -64,8 +64,8 @@ namespace AQASkeletronPlus
         public void ProcessDayEnd()
         {
             //Gather the cumulative reputation for all companies.
-            int totalReputation = 0;
-            List<int> cumulativeReputation = new List<int>();
+            double totalReputation = 0;
+            List<double> cumulativeReputation = new List<double>();
             foreach (var c in companies)
             {
                 totalReputation += c.Reputation;
@@ -81,7 +81,7 @@ namespace AQASkeletronPlus
                 if (!thisHousehold.EatsOut()) { continue; }
 
                 //Yes, they do, but where? Calculate based on nearest outlet and reputation.
-                int randomRepNum = Random.Next(0, totalReputation);
+                double randomRepNum = Random.NextDouble() * totalReputation;
                 int current = 0;
                 while (current < cumulativeReputation.Count)
                 {
@@ -129,21 +129,74 @@ namespace AQASkeletronPlus
 
                 //Random daily cost change event.
                 eventRand = Random.NextDouble();
-                if (eventRand < Settings.Get.ChanceOfDailyCostChangeEvent)
+                if (eventRand < Settings.Get.ChanceOfCostChangeEvent)
                 {
-                    ProcessDailyCostChangeEvent();
+                    ProcessCostChangeEvent();
                 }
             }
+
+            //Process households leaving for the day.
+            settlement.ProcessLeavers();
         }
 
-        private void ProcessDailyCostChangeEvent()
+        /// <summary>
+        /// Changes a random cost for a single company by a random amount.
+        /// </summary>
+        private void ProcessCostChangeEvent()
         {
-            throw new NotImplementedException();
+            //How much to change by, should it go up or down, and which company should it be applied to?
+            bool increases = (Random.NextDouble() < Settings.Get.ChanceOfCostIncrease);
+            double amt = Random.NextDouble() * 10.0;
+            if (!increases) { amt = -amt; }
+            int companyIndex = Random.Next(0, companies.Count - 1);
+
+            //Figured it out, determine which cost to increase/decrease.
+            int costType = Random.Next(0, 1);
+            string costTypeStr;
+            if (costType == 0)
+            {
+                //Change the daily cost for the company.
+                costTypeStr = "daily cost";
+                amt *= 2;
+                companies[companyIndex].ChangeDailyCostBy(amt);
+            }
+            else
+            {
+                //Change the average meal costs for a company.
+                costTypeStr = "average meal cost";
+                companies[companyIndex].ChangeAvgMealCostBy(amt);
+            }
+
+            //Log as an event.
+            EventChain.AddEvent(new CostChangeEvent()
+            {
+                AmountBy = amt,
+                Company = companies[companyIndex].Name,
+                CostType = costTypeStr
+            });
         }
 
+        /// <summary>
+        /// Changes a single company's reputation randomly.
+        /// </summary>
         private void ProcessChangeReputationEvent()
         {
-            throw new NotImplementedException();
+            //Calculate the amount, and whether it's increasing or decreasing.
+            bool increases = (Random.NextDouble() < Settings.Get.ChanceOfReputationIncrease);
+            double amt = Random.Next(1, 10) / 10.0;
+            if (!increases) { amt = -amt; }
+
+            //Which company is this for?
+            int companyIndex = Random.Next(0, companies.Count - 1);
+
+            //Apply and log.
+            companies[companyIndex].ChangeReputationBy(amt);
+
+            EventChain.AddEvent(new ReputationChangeEvent()
+            {
+                Company = companies[companyIndex].Name,
+                AmountBy = amt
+            });
         }
 
         /// <summary>
@@ -161,6 +214,12 @@ namespace AQASkeletronPlus
             //Complete the change, log.
             if (!increases) { amt = -amt; }
             companies[companyIndex].ChangeFuelCostBy(amt);
+
+            EventChain.AddEvent(new FuelCostChangeEvent()
+            {
+                AmountBy = amt,
+                Company = companies[companyIndex].Name,
+            });
         }
 
         /// <summary>

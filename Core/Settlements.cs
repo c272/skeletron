@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AQASkeletronPlus.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -74,13 +75,13 @@ namespace AQASkeletronPlus
         /// <summary>
         /// Process all of the leavers from the settlement.
         /// </summary>
-        public int ProcessLeavers()
+        public void ProcessLeavers()
         {
             int removed = 0;
             for (int i=0; i<Households.Count; i++)
             {
-                //2% chance for a household to leave.
-                if (Simulation.Random.Next(0, 99) <= 1)
+                //2% chance for a household to leave by default.
+                if (Simulation.Random.NextDouble() < Settings.Get.ChanceOfHouseholdLeaving)
                 {
                     Households.RemoveAt(i);
                     i--;
@@ -88,7 +89,11 @@ namespace AQASkeletronPlus
                 }
             }
 
-            return removed;
+            //Log to event chain.
+            EventChain.AddEvent(new HouseholdLeavingEvent()
+            {
+                NumHouseholds = removed
+            });
         }
 
         /// <summary>

@@ -12,7 +12,7 @@ namespace AQASkeletronPlus
     /// </summary>
     public class FoodTruck : Outlet
     {
-        public FoodTruck(Settlement s, Vector2 startPos, int capacity, double dailyCost) : base(s, startPos, capacity, dailyCost)
+        public FoodTruck(Settlement s, Company c, Vector2 startPos, int capacity, double dailyCost) : base(s, c, startPos, capacity, dailyCost)
         {
 
         }
@@ -51,7 +51,8 @@ namespace AQASkeletronPlus
             EventChain.AddEvent(new FoodTruckMoveEvent()
             {
                 From = old,
-                To = Position
+                To = Position,
+                Company = base.ParentCompany.Name
             });
         }
     }

@@ -14,6 +14,11 @@ namespace AQASkeletronPlus.Events
         public EventType Type { get; set; } = EventType.OutletCreate;
         public Vector2 Position;
         public int Capacity;
+
+        public string Stringify()
+        {
+            return "Outlet created at position " + Position.ToString() + ", with capacity " + Capacity + ".";
+        }
     }
 
     /// <summary>
@@ -24,5 +29,10 @@ namespace AQASkeletronPlus.Events
         public EventType Type { get; set; } = EventType.Delivery;
         public double Cost;
         public string CompanyName;
+
+        public string Stringify()
+        {
+            return "Delivery made for company '" + CompanyName + "', at a cost of £" + Cost + ".";
+        }
     }
 }

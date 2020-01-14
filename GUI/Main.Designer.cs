@@ -41,8 +41,9 @@
             this.scrollEventsBack = new System.Windows.Forms.Button();
             this.scrollEventsForward = new System.Windows.Forms.Button();
             this.eventDayLabel = new System.Windows.Forms.Label();
-            this.map = new AQASkeletronPlus.MapPanel();
             this.goToLatestEvents = new System.Windows.Forms.Button();
+            this.map = new AQASkeletronPlus.MapPanel();
+            this.simulationSettingsBtn = new System.Windows.Forms.Button();
             this.mapGroupBox.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amtDaysAdvance)).BeginInit();
@@ -205,16 +206,6 @@
             this.eventDayLabel.TabIndex = 9;
             this.eventDayLabel.Text = "Viewing events from 0 days ago.";
             // 
-            // map
-            // 
-            this.map.DrawNames = false;
-            this.map.DrawTracers = false;
-            this.map.Location = new System.Drawing.Point(0, 0);
-            this.map.Name = "map";
-            this.map.Size = new System.Drawing.Size(2000, 2000);
-            this.map.TabIndex = 0;
-            this.map.TabStop = false;
-            // 
             // goToLatestEvents
             // 
             this.goToLatestEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -226,11 +217,32 @@
             this.goToLatestEvents.UseVisualStyleBackColor = true;
             this.goToLatestEvents.Click += new System.EventHandler(this.goToLatestEvents_Click);
             // 
+            // map
+            // 
+            this.map.DrawNames = false;
+            this.map.DrawTracers = false;
+            this.map.Location = new System.Drawing.Point(0, 0);
+            this.map.Name = "map";
+            this.map.Size = new System.Drawing.Size(2000, 2000);
+            this.map.TabIndex = 0;
+            this.map.TabStop = false;
+            // 
+            // simulationSettingsBtn
+            // 
+            this.simulationSettingsBtn.Location = new System.Drawing.Point(628, 8);
+            this.simulationSettingsBtn.Name = "simulationSettingsBtn";
+            this.simulationSettingsBtn.Size = new System.Drawing.Size(132, 36);
+            this.simulationSettingsBtn.TabIndex = 11;
+            this.simulationSettingsBtn.Text = "Simulation Settings";
+            this.simulationSettingsBtn.UseVisualStyleBackColor = true;
+            this.simulationSettingsBtn.Click += new System.EventHandler(this.simulationSettingsBtn_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 549);
+            this.Controls.Add(this.simulationSettingsBtn);
             this.Controls.Add(this.goToLatestEvents);
             this.Controls.Add(this.eventDayLabel);
             this.Controls.Add(this.scrollEventsForward);
@@ -273,6 +285,7 @@
         private System.Windows.Forms.Button scrollEventsForward;
         private System.Windows.Forms.Label eventDayLabel;
         private System.Windows.Forms.Button goToLatestEvents;
+        private System.Windows.Forms.Button simulationSettingsBtn;
     }
 }
 

@@ -132,6 +132,15 @@ namespace AQASkeletronPlus
         }
 
         /// <summary>
+        /// Opens the simulation settings menu.
+        /// </summary>
+        private void simulationSettingsBtn_Click(object sender, EventArgs e)
+        {
+            SimSettingsMenu settings = new SimSettingsMenu();
+            settings.Show();
+        }
+
+        /// <summary>
         /// Triggered when the user changes the state of "Show Names".
         /// </summary>
         private void showNamesChanged(object sender, EventArgs e)

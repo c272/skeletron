@@ -38,7 +38,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
+            this.createCompanyBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -47,10 +47,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Gothic Std B", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 30);
+            this.label1.Size = new System.Drawing.Size(145, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Companies";
             // 
@@ -76,6 +76,7 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
+            this.companies.HideSelection = false;
             this.companies.Location = new System.Drawing.Point(12, 62);
             this.companies.Name = "companies";
             this.companies.Size = new System.Drawing.Size(774, 374);
@@ -118,15 +119,16 @@
             this.columnHeader7.Text = "Outlets";
             this.columnHeader7.Width = 368;
             // 
-            // button1
+            // createCompanyBtn
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(11, 443);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Create";
-            this.button1.UseVisualStyleBackColor = true;
+            this.createCompanyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.createCompanyBtn.Location = new System.Drawing.Point(11, 443);
+            this.createCompanyBtn.Name = "createCompanyBtn";
+            this.createCompanyBtn.Size = new System.Drawing.Size(75, 23);
+            this.createCompanyBtn.TabIndex = 3;
+            this.createCompanyBtn.Text = "Create";
+            this.createCompanyBtn.UseVisualStyleBackColor = true;
+            this.createCompanyBtn.Click += new System.EventHandler(this.createCompanyBtn_Click);
             // 
             // button2
             // 
@@ -166,7 +168,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.createCompanyBtn);
             this.Controls.Add(this.companies);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -189,7 +191,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button createCompanyBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

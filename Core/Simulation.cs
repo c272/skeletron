@@ -46,7 +46,16 @@ namespace AQASkeletronPlus
             //Load every company into the simulation.
             foreach (var company in companyTemps)
             {
-                Companies.Add(new Company(Settlement,
+                AddCompanyFromDefault(company);
+            }
+        }
+
+        /// <summary>
+        /// Adds a company to the simulation from a CompanyDefault.
+        /// </summary>
+        public void AddCompanyFromDefault(CompanyDefault company)
+        {
+            Companies.Add(new Company(Settlement,
                                          company.Name,
                                          company.Type,
                                          company.StartingBalance,
@@ -55,11 +64,10 @@ namespace AQASkeletronPlus
                                          Settings.Get.BaseCostForDelivery
                 ));
 
-                //Add outlets for that company at random positions.
-                for (int i = 0; i < company.StartingOutlets; i++)
-                {
-                    Companies.Last().OpenOutlet(Settlement.GetFreeRandomPosition());
-                }
+            //Add outlets for that company at random positions.
+            for (int i = 0; i < company.StartingOutlets; i++)
+            {
+                Companies.Last().OpenOutlet(Settlement.GetFreeRandomPosition());
             }
         }
 

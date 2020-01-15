@@ -109,6 +109,12 @@
     <Compile Include="Events\OutletEvents.cs" />
     <Compile Include="Events\SimulationEvents.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="GUI\CreateCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CreateCompany.Designer.cs">
+      <DependentUpon>CreateCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DisplayCompanies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="GUI\SettingsMenu.Designer.cs">
       <DependentUpon>SettingsMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\CreateCompany.resx">
+      <DependentUpon>CreateCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DisplayCompanies.resx">
       <DependentUpon>DisplayCompanies.cs</DependentUpon>
     </EmbeddedResource>

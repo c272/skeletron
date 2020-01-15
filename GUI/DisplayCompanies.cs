@@ -32,6 +32,7 @@ namespace AQASkeletronPlus
         /// </summary>
         private void PopulateListView()
         {
+            companies.Items.Clear();
             foreach (var company in Main.Simulation.Companies)
             {
                 ListViewItem item = new ListViewItem(new string[]
@@ -47,6 +48,46 @@ namespace AQASkeletronPlus
 
                 companies.Items.Add(item);
             }
+        }
+
+        /// <summary>
+        /// Create a new company (opens a new GUI).
+        /// </summary>
+        private void createCompanyBtn_Click(object sender, EventArgs e)
+        {
+            CreateCompany createCompany = new CreateCompany();
+            createCompany.Show();
+            createCompany.VisibleChanged += entryFinished;
+        }
+
+        /// <summary>
+        /// Triggered when the create company entry has finished.
+        /// </summary>
+        private void entryFinished(object sender, EventArgs e)
+        {
+            //Get sender.
+            CreateCompany companyInfo = (CreateCompany)sender;
+
+            //Create on the simulation.
+            try
+            {
+                Main.Simulation.AddCompanyFromDefault(new CompanyDefault()
+                {
+                    Name = companyInfo.CompanyName,
+                    StartingBalance = companyInfo.StartingBalance,
+                    StartingOutlets = companyInfo.StartingOutlets,
+                    Type = companyInfo.Type
+                });
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Failed during creation: '" + err.Message + "'.");
+                PopulateListView();
+                return;
+            }
+
+            MessageBox.Show("Successfully created company '" + companyInfo.CompanyName + "'.");
+            PopulateListView();
         }
     }
 }

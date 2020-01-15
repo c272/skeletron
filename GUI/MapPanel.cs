@@ -17,10 +17,7 @@ namespace AQASkeletronPlus
         private bool iDrawTracers = false, iDrawNames = false;
         public bool DrawTracers
         {
-            get
-            {
-                return iDrawTracers;
-            }
+            get => iDrawTracers;
             set
             {
                 //Refresh the control upon change.
@@ -30,10 +27,7 @@ namespace AQASkeletronPlus
         }
         public bool DrawNames
         {
-            get
-            {
-                return iDrawNames;
-            }
+            get => iDrawNames;
             set
             {
                 //Refresh the control upon change.

@@ -1,6 +1,6 @@
 ﻿namespace AQASkeletronPlus
 {
-    partial class SimSettingsMenu
+    partial class SettingsMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -190,7 +190,7 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Starting Base Delivery Cost:";
             // 
-            // SimSettingsMenu
+            // SettingsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -208,8 +208,8 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "SimSettingsMenu";
-            this.Text = "AQA Skeleton Program Emulator - Settings";
+            this.Name = "SettingsMenu";
+            this.Text = "AQA SKPE - Settings";
             ((System.ComponentModel.ISupportInitialize)(this.startingRepBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailyCostBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fuelCostBox)).EndInit();

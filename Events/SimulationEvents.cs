@@ -46,7 +46,7 @@ namespace AQASkeletronPlus.Events
 
         public string Stringify()
         {
-            return "Reputation for company '" + Company + "' has altered by £" + AmountBy + ".";
+            return "Reputation for company '" + Company + "' has altered by " + AmountBy + ".";
         }
     }
 
@@ -66,6 +66,9 @@ namespace AQASkeletronPlus.Events
         }
     }
 
+    /// <summary>
+    /// Represents a single household leaving the settlement.
+    /// </summary>
     public class HouseholdLeavingEvent : IEvent
     {
         public EventType Type { get; set; } = EventType.HouseholdLeaving;
@@ -74,6 +77,21 @@ namespace AQASkeletronPlus.Events
         public string Stringify()
         {
             return NumHouseholds + " households have left the settlement.";
+        }
+    }
+    
+    /// <summary>
+    /// Represents a single company going bankrupt.
+    /// </summary>
+    public class BankruptcyEvent : IEvent
+    {
+        public EventType Type { get; set; } = EventType.BankruptcyEvent;
+        public string CompanyName;
+        public int DaysLasted;
+
+        public string Stringify()
+        {
+            return "The company '" + CompanyName + " has gone bankrupt, with " + DaysLasted + " days survived.";
         }
     }
 }

@@ -13,13 +13,13 @@ using System.Windows.Forms;
 
 namespace AQASkeletronPlus
 {
-    public partial class SimSettingsMenu : Form
+    public partial class SettingsMenu : Form
     {
         //INI keypairs for all the settings.
         const string STARTINGREP_KEY = "StartingReputation", DAILYCOST_KEY = "DailyCost", FUELCOST_KEY = "FuelCostPerTile", BASECOST_KEY = "BaseCostForDelivery";
         private static bool changesMade = false;
 
-        public SimSettingsMenu()
+        public SettingsMenu()
         {
             //If there have been changes made previously, don't allow opening the settings menu.
             if (changesMade)

@@ -29,6 +29,7 @@ namespace AQASkeletronPlus.Events
         FuelCostChange,
         ReputationChange,
         CostChange,
-        HouseholdLeaving
+        HouseholdLeaving,
+        BankruptcyEvent
     }
 }

@@ -16,9 +16,11 @@ namespace AQASkeletronPlus
         public static RandomWrapper Random = new RandomWrapper(Guid.NewGuid().GetHashCode());
 
         //Private properties of the simulation.
-        private List<Company> companies = new List<Company>();
-        private Settlement settlement;
+        public List<Company> Companies { get; protected set; } = new List<Company>();
+        public Settlement Settlement { get; protected set; }
         private double currentFuelCost;
+        private List<Tuple<Vector2, Vector2>> visits = new List<Tuple<Vector2, Vector2>>();
+        public int DaysElapsed { get; protected set; } = 0;
 
         //The map panel assigned to this simulation.
         private MapPanel map = null;
@@ -29,7 +31,7 @@ namespace AQASkeletronPlus
         public Simulation(int width=-1, int height=-1, int startingHouseholds=-1, List<CompanyDefault> companyTemps = null)
         {
             //Create a new settlement.
-            settlement = new Settlement(width, height, startingHouseholds);
+            Settlement = new Settlement(width, height, startingHouseholds);
 
             //Set default locals.
             currentFuelCost = Settings.Get.FuelCostPerTile;
@@ -44,11 +46,11 @@ namespace AQASkeletronPlus
             //Load every company into the simulation.
             foreach (var company in companyTemps)
             {
-                companies.Add(new Company(settlement,
+                Companies.Add(new Company(Settlement,
                                          company.Name,
                                          company.Type,
                                          company.StartingBalance,
-                                         settlement.GetFreeRandomPosition(),
+                                         Settlement.GetFreeRandomPosition(),
                                          currentFuelCost,
                                          Settings.Get.BaseCostForDelivery
                 ));
@@ -56,7 +58,7 @@ namespace AQASkeletronPlus
                 //Add outlets for that company at random positions.
                 for (int i = 0; i < company.StartingOutlets; i++)
                 {
-                    companies.Last().OpenOutlet(settlement.GetFreeRandomPosition());
+                    Companies.Last().OpenOutlet(Settlement.GetFreeRandomPosition());
                 }
             }
         }
@@ -80,17 +82,17 @@ namespace AQASkeletronPlus
             //Gather the cumulative reputation for all companies.
             double totalReputation = 0;
             List<double> cumulativeReputation = new List<double>();
-            foreach (var c in companies)
+            foreach (var c in Companies)
             {
                 totalReputation += c.Reputation;
                 cumulativeReputation.Add(totalReputation);
             }
 
             //Loop over each house and see if they eat out, and if so, where.
-            List<Tuple<Vector2, Vector2>> visits = new List<Tuple<Vector2, Vector2>>();
-            for (int i=0; i<settlement.NumHouseholds; i++)
+            visits = new List<Tuple<Vector2, Vector2>>();
+            for (int i=0; i<Settlement.NumHouseholds; i++)
             {
-                Household thisHousehold = settlement.GetHouseholdAtIndex(i);
+                Household thisHousehold = Settlement.GetHouseholdAtIndex(i);
                 
                 //Do they eat out?
                 if (!thisHousehold.EatsOut()) { continue; }
@@ -104,7 +106,7 @@ namespace AQASkeletronPlus
                     if (randomRepNum < cumulativeReputation[current])
                     {
                         //Yes, eat then break.
-                        companies[current].AddVisitToNearestOutlet(thisHousehold.Position, ref visits);
+                        Companies[current].AddVisitToNearestOutlet(thisHousehold.Position, ref visits);
                         break;
                     }
                     current++;
@@ -112,9 +114,22 @@ namespace AQASkeletronPlus
             }
 
             //Process the end of the day for each company.
-            foreach (var c in companies)
+            for (int i=0; i<Companies.Count; i++)
             {
-                c.ProcessDayEnd();
+                Companies[i].ProcessDayEnd();
+
+                //Is the company bankrupt?
+                if (Companies[i].Balance < 0)
+                {
+                    //Bankrupt the company, remove from list (log event).
+                    EventChain.AddEvent(new BankruptcyEvent()
+                    {
+                        CompanyName = Companies[i].Name,
+                        DaysLasted = DaysElapsed
+                    });
+                    Companies.RemoveAt(i);
+                    i--;
+                }
             }
 
             //Choose the random events that will occur at this day end.
@@ -151,12 +166,21 @@ namespace AQASkeletronPlus
             }
 
             //Process households leaving for the day.
-            settlement.ProcessLeavers();
+            Settlement.ProcessLeavers();
 
             //End this day's event chain, and start a new one.
             EventChain.Refresh();
 
             //Draw the new map with updated positions and tracers, if the map is enabled.
+            UpdateMap();
+            DaysElapsed++;
+        }
+
+        /// <summary>
+        /// Manual handler to update the map with fresh simulation data.
+        /// </summary>
+        public void UpdateMap()
+        {
             if (map != null)
             {
                 map.Clear();
@@ -174,7 +198,7 @@ namespace AQASkeletronPlus
             bool increases = (Random.NextDouble() < Settings.Get.ChanceOfCostIncrease);
             double amt = Random.NextDouble() * 10.0;
             if (!increases) { amt = -amt; }
-            int companyIndex = Random.Next(0, companies.Count - 1);
+            int companyIndex = Random.Next(0, Companies.Count - 1);
 
             //Figured it out, determine which cost to increase/decrease.
             int costType = Random.Next(0, 1);
@@ -184,20 +208,20 @@ namespace AQASkeletronPlus
                 //Change the daily cost for the company.
                 costTypeStr = "daily cost";
                 amt *= 2;
-                companies[companyIndex].ChangeDailyCostBy(amt);
+                Companies[companyIndex].ChangeDailyCostBy(amt);
             }
             else
             {
                 //Change the average meal costs for a company.
                 costTypeStr = "average meal cost";
-                companies[companyIndex].ChangeAvgMealCostBy(amt);
+                Companies[companyIndex].ChangeAvgMealCostBy(amt);
             }
 
             //Log as an event.
             EventChain.AddEvent(new CostChangeEvent()
             {
                 AmountBy = amt,
-                Company = companies[companyIndex].Name,
+                Company = Companies[companyIndex].Name,
                 CostType = costTypeStr
             });
         }
@@ -213,14 +237,14 @@ namespace AQASkeletronPlus
             if (!increases) { amt = -amt; }
 
             //Which company is this for?
-            int companyIndex = Random.Next(0, companies.Count - 1);
+            int companyIndex = Random.Next(0, Companies.Count - 1);
 
             //Apply and log.
-            companies[companyIndex].ChangeReputationBy(amt);
+            Companies[companyIndex].ChangeReputationBy(amt);
 
             EventChain.AddEvent(new ReputationChangeEvent()
             {
-                Company = companies[companyIndex].Name,
+                Company = Companies[companyIndex].Name,
                 AmountBy = amt
             });
         }
@@ -235,16 +259,16 @@ namespace AQASkeletronPlus
             double amt = Random.Next(1, 10) / 10.0;
 
             //Which company is it for?
-            int companyIndex = Random.Next(0, companies.Count - 1);
+            int companyIndex = Random.Next(0, Companies.Count - 1);
 
             //Complete the change, log.
             if (!increases) { amt = -amt; }
-            companies[companyIndex].ChangeFuelCostBy(amt);
+            Companies[companyIndex].ChangeFuelCostBy(amt);
 
             EventChain.AddEvent(new FuelCostChangeEvent()
             {
                 AmountBy = amt,
-                Company = companies[companyIndex].Name,
+                Company = Companies[companyIndex].Name,
             });
         }
 
@@ -257,7 +281,7 @@ namespace AQASkeletronPlus
             int stored = newHouseholds;
             while (newHouseholds > 0)
             {
-                settlement.AddHousehold();
+                Settlement.AddHousehold();
                 newHouseholds--;
             }
 
@@ -277,7 +301,7 @@ namespace AQASkeletronPlus
             List<Building> buildings = new List<Building>();
 
             //Add all the outlets.
-            foreach (var company in companies)
+            foreach (var company in Companies)
             {
                 foreach (var outlet in company.outlets)
                 {
@@ -291,7 +315,7 @@ namespace AQASkeletronPlus
             }
 
             //Add all the houses.
-            foreach (var house in settlement.Households)
+            foreach (var house in Settlement.Households)
             {
                 buildings.Add(new Building()
                 {

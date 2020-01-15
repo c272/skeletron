@@ -109,6 +109,18 @@
     <Compile Include="Events\OutletEvents.cs" />
     <Compile Include="Events\SimulationEvents.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="GUI\DisplayCompanies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DisplayCompanies.Designer.cs">
+      <DependentUpon>DisplayCompanies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DisplayHouseholds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DisplayHouseholds.Designer.cs">
+      <DependentUpon>DisplayHouseholds.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,22 +131,37 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Core\Outlet.cs" />
+    <Compile Include="GUI\SimulationMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SimulationMenu.Designer.cs">
+      <DependentUpon>SimulationMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Settlements.cs" />
     <Compile Include="Core\Simulation.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="GUI\SimSettingsMenu.cs">
+    <Compile Include="GUI\SettingsMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SimSettingsMenu.Designer.cs">
-      <DependentUpon>SimSettingsMenu.cs</DependentUpon>
+    <Compile Include="GUI\SettingsMenu.Designer.cs">
+      <DependentUpon>SettingsMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\DisplayCompanies.resx">
+      <DependentUpon>DisplayCompanies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DisplayHouseholds.resx">
+      <DependentUpon>DisplayHouseholds.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SimSettingsMenu.resx">
-      <DependentUpon>SimSettingsMenu.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\SettingsMenu.resx">
+      <DependentUpon>SettingsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SimulationMenu.resx">
+      <DependentUpon>SimulationMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

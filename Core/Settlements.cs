@@ -97,9 +97,18 @@ namespace AQASkeletronPlus
         }
 
         /// <summary>
+        /// Removes a household at a specific index in the households list.
+        /// </summary>
+        public void RemoveHouseholdAt(int i)
+        {
+            if (i < 0) { throw new Exception("Invalid index to remove, <0."); }
+            if (i > Households.Count - 1) { throw new Exception("Invalid index to remove, larger than max index of houses."); }
+            Households.RemoveAt(i);
+        }
+
+        /// <summary>
         /// Returns a random position on the settlement that is not occupied.
         /// </summary>
-        /// <returns></returns>
         public Vector2 GetFreeRandomPosition()
         {
             //Are there *any* free spots?

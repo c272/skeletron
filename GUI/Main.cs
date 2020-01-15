@@ -14,7 +14,7 @@ namespace AQASkeletronPlus
     public partial class Main : Form
     {
         //The simulation running on the form.
-        private Simulation Simulation;
+        public static Simulation Simulation { get; private set; }
 
         //Minimum size of the map panel in pixels.
         private int MIN_MAP_X;
@@ -136,7 +136,26 @@ namespace AQASkeletronPlus
         /// </summary>
         private void simulationSettingsBtn_Click(object sender, EventArgs e)
         {
-            SimSettingsMenu settings = new SimSettingsMenu();
+            SettingsMenu settings = new SettingsMenu();
+        }
+
+        /// <summary>
+        /// Opens the simulation menu, which allows you to manipulate the current simulation, or view details.
+        /// </summary>
+        private void simMenuBtn_Click(object sender, EventArgs e)
+        {
+            //todo
+            SimulationMenu s = new SimulationMenu(this);
+            s.Show();
+            s.FormClosed += updateMapWrapper;
+        }
+
+        /// <summary>
+        /// Updates the map, as an event wrapper for forms closing.
+        /// </summary>
+        private void updateMapWrapper(object sender, FormClosedEventArgs e)
+        {
+            Simulation.UpdateMap();
         }
 
         /// <summary>

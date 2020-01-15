@@ -137,7 +137,6 @@ namespace AQASkeletronPlus
         private void simulationSettingsBtn_Click(object sender, EventArgs e)
         {
             SimSettingsMenu settings = new SimSettingsMenu();
-            settings.Show();
         }
 
         /// <summary>

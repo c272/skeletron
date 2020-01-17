@@ -1,0 +1,13 @@
+language: csharp
+solution: AQASkeletronPlus.sln
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: ./Docs/_site/
+  name: C272 Deployment Bot
+  target_branch: gh-pages
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master

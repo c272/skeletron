@@ -185,6 +185,14 @@ namespace AQASkeletronPlus
         }
 
         /// <summary>
+        /// Deletes a company from the simulation.
+        /// </summary>
+        public void DeleteCompany(string companyName)
+        {
+            Companies.RemoveAll(x => x.Name == companyName);
+        }
+
+        /// <summary>
         /// Manual handler to update the map with fresh simulation data.
         /// </summary>
         public void UpdateMap()

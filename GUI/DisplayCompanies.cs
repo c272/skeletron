@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AQASkeletronPlus
+namespace AQASkeletronPlus.GUI
 {
     /// <summary>
     /// Allows the user to edit and view companies directly in the simulation.
@@ -45,6 +45,7 @@ namespace AQASkeletronPlus
                     company.BaseDeliveryCost.ToString(),
                     string.Join(", ", company.outlets.Select(x => x.Position)) //Outlet positions comma delimited.
                 });
+                item.Tag = company.Name;
 
                 companies.Items.Add(item);
             }
@@ -88,6 +89,29 @@ namespace AQASkeletronPlus
 
             MessageBox.Show("Successfully created company '" + companyInfo.CompanyName + "'.");
             PopulateListView();
+        }
+
+        /// <summary>
+        /// Deletes the selected company.
+        /// </summary>
+        private void deleteCompanyBtn_Click(object sender, EventArgs e)
+        {
+            //Is there a company selected?
+            if (companies.SelectedItems.Count == 0) { return; }
+
+            //Delete all the selected indices.
+            foreach (ListViewItem company in companies.SelectedItems)
+            {
+                Main.Simulation.DeleteCompany((string)company.Tag);
+            }
+        }
+
+        /// <summary>
+        /// "OK" button. Closes the window.
+        /// </summary>
+        private void okBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

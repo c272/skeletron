@@ -19,6 +19,12 @@
     }
   ],
   "build": {
+    "globalMetadata": {
+      "_appLogoPath": "images/logo_small.png",
+      "_appFaviconPath": "images/favicon.ico",
+      "_appTitle": "AQA SKPE - Documentation",
+      "_enableSearch":  true
+    },
     "content": [
       {
         "files": [
@@ -62,8 +68,6 @@
       }
     ],
     "dest": "_site",
-    "template": [
-      "default"
-    ]
+    "template": [ "default", "templates/darkfx" ]
   }
 }

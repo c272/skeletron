@@ -1,4 +1,4 @@
-﻿namespace AQASkeletronPlus
+﻿namespace AQASkeletronPlus.GUI
 {
     partial class SimulationMenu
     {
@@ -30,7 +30,7 @@
         {
             this.displayHouseholdsBtn = new System.Windows.Forms.Button();
             this.displayCompaniesBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.runToBalanceTargetBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,14 +56,15 @@
             this.displayCompaniesBtn.UseVisualStyleBackColor = true;
             this.displayCompaniesBtn.Click += new System.EventHandler(this.displayCompaniesBtn_Click);
             // 
-            // button3
+            // runToBalanceTargetBtn
             // 
-            this.button3.Location = new System.Drawing.Point(12, 139);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(227, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Run to Target";
-            this.button3.UseVisualStyleBackColor = true;
+            this.runToBalanceTargetBtn.Location = new System.Drawing.Point(12, 139);
+            this.runToBalanceTargetBtn.Name = "runToBalanceTargetBtn";
+            this.runToBalanceTargetBtn.Size = new System.Drawing.Size(227, 23);
+            this.runToBalanceTargetBtn.TabIndex = 2;
+            this.runToBalanceTargetBtn.Text = "Run to Target";
+            this.runToBalanceTargetBtn.UseVisualStyleBackColor = true;
+            this.runToBalanceTargetBtn.Click += new System.EventHandler(this.runToBalanceTargetBtn_Click);
             // 
             // button4
             // 
@@ -104,7 +105,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.runToBalanceTargetBtn);
             this.Controls.Add(this.displayCompaniesBtn);
             this.Controls.Add(this.displayHouseholdsBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -119,7 +120,7 @@
 
         private System.Windows.Forms.Button displayHouseholdsBtn;
         private System.Windows.Forms.Button displayCompaniesBtn;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button runToBalanceTargetBtn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

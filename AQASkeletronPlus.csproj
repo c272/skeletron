@@ -137,6 +137,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Core\Outlet.cs" />
+    <Compile Include="GUI\RunToTarget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RunToTarget.Designer.cs">
+      <DependentUpon>RunToTarget.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SimulationMenu.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,4 @@
-﻿namespace AQASkeletronPlus
+﻿namespace AQASkeletronPlus.GUI
 {
     partial class CreateCompany
     {

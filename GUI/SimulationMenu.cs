@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AQASkeletronPlus
+namespace AQASkeletronPlus.GUI
 {
     /// <summary>
     /// Simulation menu. Allows the user to manipulate the simulation directly.
@@ -38,6 +38,15 @@ namespace AQASkeletronPlus
         private void displayCompaniesBtn_Click(object sender, EventArgs e)
         {
             DisplayCompanies d = new DisplayCompanies(parent);
+        }
+
+        /// <summary>
+        /// Runs the simulation until it reaches the given balance target.
+        /// </summary>
+        private void runToBalanceTargetBtn_Click(object sender, EventArgs e)
+        {
+            RunToTarget r = new RunToTarget();
+            r.Show();
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AQASkeletronPlus
+namespace AQASkeletronPlus.GUI
 {
     public partial class SettingsMenu : Form
     {

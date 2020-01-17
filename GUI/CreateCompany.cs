@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AQASkeletronPlus
+namespace AQASkeletronPlus.GUI
 {
     /// <summary>
     /// Represents input fields for creating a company.

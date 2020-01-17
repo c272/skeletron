@@ -1,0 +1,657 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/travis/build/c272/skeletron/Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "bZ3T9JCOri8U+W8VelfKjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "wQ00CMmQzvmjoHlY5g8xpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo_small.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_small.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "By5WUYEqYqi7tW7P9BWD9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Building.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Building.html",
+          "hash": "FSoqsaT03umPnM/BKdMsRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.BuildingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.BuildingType.html",
+          "hash": "ZZqsSH7Ky9yMdxCugLZETw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Company.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Company.html",
+          "hash": "XdPskb5ePM6rcc9qRPEClg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.CompanyDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.CompanyDefault.html",
+          "hash": "839BifdrBHebpuyrgUn5mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.CompanyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.CompanyType.html",
+          "hash": "FxRC+g5keFEsSowNFEapZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.AddHouseholdsEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.AddHouseholdsEvent.html",
+          "hash": "dg12yn7iMjo9iaFBnY4/8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.BankruptcyEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.BankruptcyEvent.html",
+          "hash": "Rj/g4nlKoVDYGp9rooeoug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.CostChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.CostChangeEvent.html",
+          "hash": "NtLDGVXxAXbNzkZ3OPpavw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.DeliveryEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.DeliveryEvent.html",
+          "hash": "GEc334sK9wRNBNqtml1dDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.EventChain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.EventChain.html",
+          "hash": "oLqPQI0DA13P5MDaWkC+rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.EventType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.EventType.html",
+          "hash": "/gSho6AKwXqM4wQJGLjlDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.FoodTruckMoveEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.FoodTruckMoveEvent.html",
+          "hash": "Shl4IfYB8cxQKkrWCCXqnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.FuelCostChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.FuelCostChangeEvent.html",
+          "hash": "uJ0osDantz0DvlzbDnlUug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.HouseholdLeavingEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.HouseholdLeavingEvent.html",
+          "hash": "bGEvNUmIEDkE3b6nmbqubw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.IEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.IEvent.html",
+          "hash": "8URcI0EfxN1uMOKQYyBjxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.OutletCreateEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.OutletCreateEvent.html",
+          "hash": "d6dnDnTeKwK3Nm27id2PzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.OutletProfitEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.OutletProfitEvent.html",
+          "hash": "sV5pTaX5Fkw150VdTV44cQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.ReputationChangeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.ReputationChangeEvent.html",
+          "hash": "LrYtR7+p2zv4XNClI9fj+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.VisitOutletEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.VisitOutletEvent.html",
+          "hash": "wcWZbdvwZYxhfxWEoN7dXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Events.html",
+          "hash": "vqjyc5k3iRsK2Z85ANjF2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.FoodTruck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.FoodTruck.html",
+          "hash": "ldfVgoRtT2LatteLyqOGQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.GUI.CreateCompany.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.GUI.CreateCompany.html",
+          "hash": "2cbu3skPcY7z0lvW2RmRbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.GUI.DisplayCompanies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.GUI.DisplayCompanies.html",
+          "hash": "eqbtPGx3oPthC8ObW53ttQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.GUI.DisplayHouseholds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.GUI.DisplayHouseholds.html",
+          "hash": "IXpW3TnfHf4KGW65qBwmUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.GUI.Main.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.GUI.Main.html",
+          "hash": "ICC0GtWYFTFGf7r7Qmx7mA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.GUI.RunToTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.GUI.RunToTarget.html",
+          "hash": "LYox+6nA/adjLcKkb7cDCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.GUI.SettingsMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.GUI.SettingsMenu.html",
+          "hash": "sbA8xT/9dNq3NsZVIw5Adw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.GUI.SimulationMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.GUI.SimulationMenu.html",
+          "hash": "1R0jxrbdmN78UDRPv+WLWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.GUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.GUI.html",
+          "hash": "OWqawY8ZxpXl9q17amxfbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Household.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Household.html",
+          "hash": "ZsDOrP/i7PIHX+cT7UcQqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.ISettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.ISettings.html",
+          "hash": "R6aLnBogi4mPHGqxIYWqJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.IntExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.IntExtensions.html",
+          "hash": "ShvKa08rPGFUevrYwa1j3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.MapPanel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.MapPanel.html",
+          "hash": "/6DXLFp1zxOXYL0xUEYbOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Outlet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Outlet.html",
+          "hash": "dSmxFeBsPl0+vqtRtqwPfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.RandomWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.RandomWrapper.html",
+          "hash": "ojR1/rFV4vmaQmTLHzQ1Iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Settings.html",
+          "hash": "WOwNtd9PwiY2yXfUFmMTNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Settlement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Settlement.html",
+          "hash": "YIirwAcqz2G7+aQf8iMWOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Simulation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Simulation.html",
+          "hash": "VsT7fcISLsAcxCVAOw1tUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.Vector2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.Vector2.html",
+          "hash": "KNmhh6sAP2af47Kbj6ansg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AQASkeletronPlus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AQASkeletronPlus.html",
+          "hash": "AqdrB8OnjXRJwOGRRfKmyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "MOB2DwyGB1tergQSU3JYOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "G2AoE5T/2VarbHvzLEo4TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 40,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

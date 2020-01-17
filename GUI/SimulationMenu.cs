@@ -48,5 +48,13 @@ namespace AQASkeletronPlus.GUI
             RunToTarget r = new RunToTarget();
             r.Show();
         }
+
+        /// <summary>
+        /// Opens the "About" menu.
+        /// </summary>
+        private void aboutBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

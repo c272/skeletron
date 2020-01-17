@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.mapGroupBox = new System.Windows.Forms.GroupBox();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.map = new AQASkeletronPlus.MapPanel();
             this.advanceDaysBtn = new System.Windows.Forms.Button();
             this.amtDaysAdvance = new System.Windows.Forms.NumericUpDown();
             this.showVisitsCB = new System.Windows.Forms.CheckBox();
@@ -45,12 +45,13 @@
             this.goToLatestEvents = new System.Windows.Forms.Button();
             this.simulationSettingsBtn = new System.Windows.Forms.Button();
             this.simMenuBtn = new System.Windows.Forms.Button();
+            this.map = new AQASkeletronPlus.MapPanel();
             this.mapGroupBox.SuspendLayout();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amtDaysAdvance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).BeginInit();
             this.eventsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             this.SuspendLayout();
             // 
             // mapGroupBox
@@ -75,16 +76,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1023, 473);
             this.mainPanel.TabIndex = 0;
-            // 
-            // map
-            // 
-            this.map.DrawNames = false;
-            this.map.DrawTracers = false;
-            this.map.Location = new System.Drawing.Point(0, 0);
-            this.map.Name = "map";
-            this.map.Size = new System.Drawing.Size(2000, 2000);
-            this.map.TabIndex = 0;
-            this.map.TabStop = false;
             // 
             // advanceDaysBtn
             // 
@@ -248,6 +239,16 @@
             this.simMenuBtn.UseVisualStyleBackColor = true;
             this.simMenuBtn.Click += new System.EventHandler(this.simMenuBtn_Click);
             // 
+            // map
+            // 
+            this.map.DrawNames = false;
+            this.map.DrawTracers = false;
+            this.map.Location = new System.Drawing.Point(0, 0);
+            this.map.Name = "map";
+            this.map.Size = new System.Drawing.Size(2000, 2000);
+            this.map.TabIndex = 0;
+            this.map.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,14 +268,15 @@
             this.Controls.Add(this.amtDaysAdvance);
             this.Controls.Add(this.advanceDaysBtn);
             this.Controls.Add(this.mapGroupBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "AQA Skeleton Program Emulator - Main";
             this.mapGroupBox.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.map)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.amtDaysAdvance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoomTrackBar)).EndInit();
             this.eventsGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.map)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

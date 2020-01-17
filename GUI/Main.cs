@@ -25,12 +25,21 @@ namespace AQASkeletronPlus.GUI
         private int currentDaysAgo = 0;
         private List<IEvent> events = new List<IEvent>();
 
-        public Main()
+        public Main(Simulation existing = null)
         {
             InitializeComponent();
 
             //Create the simulation.
-            Simulation = new Simulation(mapX, mapY, startingHouses);
+            if (existing == null)
+            {
+                Simulation = new Simulation(mapX, mapY, startingHouses);
+            }
+            else
+            {
+                Simulation = existing;
+                mapX = existing.Settlement.Width;
+                mapY = existing.Settlement.Height;
+            }
 
             //Calculate the minimum X and Y based on the simulation setting (at least 2x2 pixels per square).
             MIN_MAP_X = (mapX * 2);

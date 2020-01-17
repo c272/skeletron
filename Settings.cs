@@ -52,6 +52,17 @@ namespace AQASkeletronPlus
     /// </summary>
     public interface ISettings
     {
+        //Simulation defaults.
+        [Option(DefaultValue = 500)]
+        int DefaultSimulationWidth { get; }
+
+        [Option(DefaultValue = 500)]
+        int DefaultSimulationHeight { get; }
+
+        [Option(DefaultValue = 250)]
+        int DefaultSimulationHouses { get; }
+
+
         //Simulation randomizer options.
         [Option(DefaultValue = 0.25)]
         double BaseChanceOfRandomEvents { get; }

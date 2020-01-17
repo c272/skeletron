@@ -16,5 +16,29 @@ namespace AQASkeletronPlus.GUI
         {
             InitializeComponent();
         }
+
+        private void goBtn_Click(object sender, EventArgs e)
+        {
+            //Balances valid?
+            if (minBal.Value >= maxBal.Value) { MessageBox.Show("Invalid, minimum value must be smaller than maximum."); return; }
+
+            //Simulate!
+            double minVal = Convert.ToDouble(minBal.Value);
+            double maxVal = Convert.ToDouble(maxBal.Value);
+            while (true)
+            {
+                //Simulate the day.
+                Main.Simulation.ProcessDayEnd();
+                
+                //Any companies outside bounds?
+                foreach (var company in Main.Simulation.Companies)
+                {
+                    if (company.Balance < minVal || company.Balance > maxVal) {
+                        MessageBox.Show("Company '" + company.Name + "' broke the limits with a balance of £" + company.Balance + ".");
+                        return;
+                    }
+                }
+            }
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateCompany));
             this.nameText = new System.Windows.Forms.TextBox();
             this.startingBalance = new System.Windows.Forms.NumericUpDown();
             this.startingOutlets = new System.Windows.Forms.NumericUpDown();
@@ -154,6 +155,8 @@
             this.Controls.Add(this.startingOutlets);
             this.Controls.Add(this.startingBalance);
             this.Controls.Add(this.nameText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateCompany";
             this.Text = "AQA SKPE - Create Company";
             ((System.ComponentModel.ISupportInitialize)(this.startingBalance)).EndInit();

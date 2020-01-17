@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CreateCompany
+    <title>Class StartupConfig
    | AQA SKPE - Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CreateCompany
+    <meta name="title" content="Class StartupConfig
    | AQA SKPE - Documentation ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -78,12 +78,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AQASkeletronPlus.GUI.CreateCompany">
+            <article class="content wrap" id="_content" data-uid="AQASkeletronPlus.GUI.StartupConfig">
   
   
-  <h1 id="AQASkeletronPlus_GUI_CreateCompany" data-uid="AQASkeletronPlus.GUI.CreateCompany" class="text-break">Class CreateCompany
+  <h1 id="AQASkeletronPlus_GUI_StartupConfig" data-uid="AQASkeletronPlus.GUI.StartupConfig" class="text-break">Class StartupConfig
   </h1>
-  <div class="markdown level0 summary"><p>Represents input fields for creating a company.</p>
+  <div class="markdown level0 summary"><p>Allows the user to configure their simulation before starting it.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -95,7 +95,7 @@
     <div class="level4"><span class="xref">System.Windows.Forms.ScrollableControl</span></div>
     <div class="level5"><span class="xref">System.Windows.Forms.ContainerControl</span></div>
     <div class="level6"><span class="xref">System.Windows.Forms.Form</span></div>
-    <div class="level7"><span class="xref">CreateCompany</span></div>
+    <div class="level7"><span class="xref">StartupConfig</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -1175,6 +1175,9 @@
       <span class="xref">System.Windows.Forms.Control.ClientRectangle</span>
     </div>
     <div>
+      <span class="xref">System.Windows.Forms.Control.CompanyName</span>
+    </div>
+    <div>
       <span class="xref">System.Windows.Forms.Control.ContainsFocus</span>
     </div>
     <div>
@@ -1618,160 +1621,39 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AQASkeletronPlus.GUI.html">AQASkeletronPlus.GUI</a></h6>
   <h6><strong>Assembly</strong>: AQASkeletronPlus.dll</h6>
-  <h5 id="AQASkeletronPlus_GUI_CreateCompany_syntax">Syntax</h5>
+  <h5 id="AQASkeletronPlus_GUI_StartupConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CreateCompany : Form, ISynchronizeInvoke, IBindableComponent, IDropTarget, IWin32Window, IComponent, IDisposable, IContainerControl</code></pre>
+    <pre><code class="lang-csharp hljs">public class StartupConfig : Form, ISynchronizeInvoke, IBindableComponent, IDropTarget, IWin32Window, IComponent, IDisposable, IContainerControl</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_CreateCompany__ctor.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.CreateCompany.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_StartupConfig__ctor.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.StartupConfig.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/CreateCompany.cs/#L24">View Source</a>
+    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/StartupConfig.cs/#L21">View Source</a>
   </span>
-  <a id="AQASkeletronPlus_GUI_CreateCompany__ctor_" data-uid="AQASkeletronPlus.GUI.CreateCompany.#ctor*"></a>
-  <h4 id="AQASkeletronPlus_GUI_CreateCompany__ctor" data-uid="AQASkeletronPlus.GUI.CreateCompany.#ctor">CreateCompany()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="AQASkeletronPlus_GUI_StartupConfig__ctor_" data-uid="AQASkeletronPlus.GUI.StartupConfig.#ctor*"></a>
+  <h4 id="AQASkeletronPlus_GUI_StartupConfig__ctor" data-uid="AQASkeletronPlus.GUI.StartupConfig.#ctor">StartupConfig()</h4>
+  <div class="markdown level1 summary"><p>Set the default values upon start.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CreateCompany()</code></pre>
+    <pre><code class="lang-csharp hljs">public StartupConfig()</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_CreateCompany_CompanyName.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.CreateCompany.CompanyName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/CreateCompany.cs/#L19">View Source</a>
-  </span>
-  <a id="AQASkeletronPlus_GUI_CreateCompany_CompanyName_" data-uid="AQASkeletronPlus.GUI.CreateCompany.CompanyName*"></a>
-  <h4 id="AQASkeletronPlus_GUI_CreateCompany_CompanyName" data-uid="AQASkeletronPlus.GUI.CreateCompany.CompanyName">CompanyName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CompanyName { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_CreateCompany_StartingBalance.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.CreateCompany.StartingBalance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/CreateCompany.cs/#L20">View Source</a>
-  </span>
-  <a id="AQASkeletronPlus_GUI_CreateCompany_StartingBalance_" data-uid="AQASkeletronPlus.GUI.CreateCompany.StartingBalance*"></a>
-  <h4 id="AQASkeletronPlus_GUI_CreateCompany_StartingBalance" data-uid="AQASkeletronPlus.GUI.CreateCompany.StartingBalance">StartingBalance</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double StartingBalance { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_CreateCompany_StartingOutlets.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.CreateCompany.StartingOutlets%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/CreateCompany.cs/#L22">View Source</a>
-  </span>
-  <a id="AQASkeletronPlus_GUI_CreateCompany_StartingOutlets_" data-uid="AQASkeletronPlus.GUI.CreateCompany.StartingOutlets*"></a>
-  <h4 id="AQASkeletronPlus_GUI_CreateCompany_StartingOutlets" data-uid="AQASkeletronPlus.GUI.CreateCompany.StartingOutlets">StartingOutlets</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int StartingOutlets { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_CreateCompany_Type.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.CreateCompany.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/CreateCompany.cs/#L21">View Source</a>
-  </span>
-  <a id="AQASkeletronPlus_GUI_CreateCompany_Type_" data-uid="AQASkeletronPlus.GUI.CreateCompany.Type*"></a>
-  <h4 id="AQASkeletronPlus_GUI_CreateCompany_Type" data-uid="AQASkeletronPlus.GUI.CreateCompany.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompanyType Type { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AQASkeletronPlus.CompanyType.html">CompanyType</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_CreateCompany_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.CreateCompany.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_StartupConfig_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.StartupConfig.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/CreateCompany.Designer.cs/#L14">View Source</a>
+    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/StartupConfig.Designer.cs/#L14">View Source</a>
   </span>
-  <a id="AQASkeletronPlus_GUI_CreateCompany_Dispose_" data-uid="AQASkeletronPlus.GUI.CreateCompany.Dispose*"></a>
-  <h4 id="AQASkeletronPlus_GUI_CreateCompany_Dispose_System_Boolean_" data-uid="AQASkeletronPlus.GUI.CreateCompany.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <a id="AQASkeletronPlus_GUI_StartupConfig_Dispose_" data-uid="AQASkeletronPlus.GUI.StartupConfig.Dispose*"></a>
+  <h4 id="AQASkeletronPlus_GUI_StartupConfig_Dispose_System_Boolean_" data-uid="AQASkeletronPlus.GUI.StartupConfig.Dispose(System.Boolean)">Dispose(Boolean)</h4>
   <div class="markdown level1 summary"><p>Clean up any resources being used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1829,10 +1711,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_CreateCompany.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.CreateCompany%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/c272/skeletron/new/9b425a5fb7db8439dab3754a8589bd8655794939/apiSpec/new?filename=AQASkeletronPlus_GUI_StartupConfig.md&amp;value=---%0Auid%3A%20AQASkeletronPlus.GUI.StartupConfig%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/CreateCompany.Designer.cs/#L3" class="contribution-link">View Source</a>
+                    <a href="https://github.com/c272/skeletron/blob/9b425a5fb7db8439dab3754a8589bd8655794939/GUI/StartupConfig.Designer.cs/#L3" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

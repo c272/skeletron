@@ -1068,6 +1068,38 @@ references:
   commentId: N:AQASkeletronPlus.GUI
   fullName: AQASkeletronPlus.GUI
   nameWithType: AQASkeletronPlus.GUI
+- uid: AQASkeletronPlus.GUI.AboutMenu
+  name: AboutMenu
+  href: api/AQASkeletronPlus.GUI.AboutMenu.html
+  commentId: T:AQASkeletronPlus.GUI.AboutMenu
+  fullName: AQASkeletronPlus.GUI.AboutMenu
+  nameWithType: AboutMenu
+- uid: AQASkeletronPlus.GUI.AboutMenu.#ctor
+  name: AboutMenu()
+  href: api/AQASkeletronPlus.GUI.AboutMenu.html#AQASkeletronPlus_GUI_AboutMenu__ctor
+  commentId: M:AQASkeletronPlus.GUI.AboutMenu.#ctor
+  fullName: AQASkeletronPlus.GUI.AboutMenu.AboutMenu()
+  nameWithType: AboutMenu.AboutMenu()
+- uid: AQASkeletronPlus.GUI.AboutMenu.#ctor*
+  name: AboutMenu
+  href: api/AQASkeletronPlus.GUI.AboutMenu.html#AQASkeletronPlus_GUI_AboutMenu__ctor_
+  commentId: Overload:AQASkeletronPlus.GUI.AboutMenu.#ctor
+  isSpec: "True"
+  fullName: AQASkeletronPlus.GUI.AboutMenu.AboutMenu
+  nameWithType: AboutMenu.AboutMenu
+- uid: AQASkeletronPlus.GUI.AboutMenu.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/AQASkeletronPlus.GUI.AboutMenu.html#AQASkeletronPlus_GUI_AboutMenu_Dispose_System_Boolean_
+  commentId: M:AQASkeletronPlus.GUI.AboutMenu.Dispose(System.Boolean)
+  fullName: AQASkeletronPlus.GUI.AboutMenu.Dispose(System.Boolean)
+  nameWithType: AboutMenu.Dispose(Boolean)
+- uid: AQASkeletronPlus.GUI.AboutMenu.Dispose*
+  name: Dispose
+  href: api/AQASkeletronPlus.GUI.AboutMenu.html#AQASkeletronPlus_GUI_AboutMenu_Dispose_
+  commentId: Overload:AQASkeletronPlus.GUI.AboutMenu.Dispose
+  isSpec: "True"
+  fullName: AQASkeletronPlus.GUI.AboutMenu.Dispose
+  nameWithType: AboutMenu.Dispose
 - uid: AQASkeletronPlus.GUI.CreateCompany
   name: CreateCompany
   href: api/AQASkeletronPlus.GUI.CreateCompany.html
@@ -1222,12 +1254,12 @@ references:
   commentId: T:AQASkeletronPlus.GUI.Main
   fullName: AQASkeletronPlus.GUI.Main
   nameWithType: Main
-- uid: AQASkeletronPlus.GUI.Main.#ctor
-  name: Main()
-  href: api/AQASkeletronPlus.GUI.Main.html#AQASkeletronPlus_GUI_Main__ctor
-  commentId: M:AQASkeletronPlus.GUI.Main.#ctor
-  fullName: AQASkeletronPlus.GUI.Main.Main()
-  nameWithType: Main.Main()
+- uid: AQASkeletronPlus.GUI.Main.#ctor(AQASkeletronPlus.Simulation)
+  name: Main(Simulation)
+  href: api/AQASkeletronPlus.GUI.Main.html#AQASkeletronPlus_GUI_Main__ctor_AQASkeletronPlus_Simulation_
+  commentId: M:AQASkeletronPlus.GUI.Main.#ctor(AQASkeletronPlus.Simulation)
+  fullName: AQASkeletronPlus.GUI.Main.Main(AQASkeletronPlus.Simulation)
+  nameWithType: Main.Main(Simulation)
 - uid: AQASkeletronPlus.GUI.Main.#ctor*
   name: Main
   href: api/AQASkeletronPlus.GUI.Main.html#AQASkeletronPlus_GUI_Main__ctor_
@@ -1357,6 +1389,38 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.GUI.SimulationMenu.Dispose
   nameWithType: SimulationMenu.Dispose
+- uid: AQASkeletronPlus.GUI.StartupConfig
+  name: StartupConfig
+  href: api/AQASkeletronPlus.GUI.StartupConfig.html
+  commentId: T:AQASkeletronPlus.GUI.StartupConfig
+  fullName: AQASkeletronPlus.GUI.StartupConfig
+  nameWithType: StartupConfig
+- uid: AQASkeletronPlus.GUI.StartupConfig.#ctor
+  name: StartupConfig()
+  href: api/AQASkeletronPlus.GUI.StartupConfig.html#AQASkeletronPlus_GUI_StartupConfig__ctor
+  commentId: M:AQASkeletronPlus.GUI.StartupConfig.#ctor
+  fullName: AQASkeletronPlus.GUI.StartupConfig.StartupConfig()
+  nameWithType: StartupConfig.StartupConfig()
+- uid: AQASkeletronPlus.GUI.StartupConfig.#ctor*
+  name: StartupConfig
+  href: api/AQASkeletronPlus.GUI.StartupConfig.html#AQASkeletronPlus_GUI_StartupConfig__ctor_
+  commentId: Overload:AQASkeletronPlus.GUI.StartupConfig.#ctor
+  isSpec: "True"
+  fullName: AQASkeletronPlus.GUI.StartupConfig.StartupConfig
+  nameWithType: StartupConfig.StartupConfig
+- uid: AQASkeletronPlus.GUI.StartupConfig.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/AQASkeletronPlus.GUI.StartupConfig.html#AQASkeletronPlus_GUI_StartupConfig_Dispose_System_Boolean_
+  commentId: M:AQASkeletronPlus.GUI.StartupConfig.Dispose(System.Boolean)
+  fullName: AQASkeletronPlus.GUI.StartupConfig.Dispose(System.Boolean)
+  nameWithType: StartupConfig.Dispose(Boolean)
+- uid: AQASkeletronPlus.GUI.StartupConfig.Dispose*
+  name: Dispose
+  href: api/AQASkeletronPlus.GUI.StartupConfig.html#AQASkeletronPlus_GUI_StartupConfig_Dispose_
+  commentId: Overload:AQASkeletronPlus.GUI.StartupConfig.Dispose
+  isSpec: "True"
+  fullName: AQASkeletronPlus.GUI.StartupConfig.Dispose
+  nameWithType: StartupConfig.Dispose
 - uid: AQASkeletronPlus.Household
   name: Household
   href: api/AQASkeletronPlus.Household.html
@@ -1609,6 +1673,45 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.ISettings.DefaultSettlementWidth
   nameWithType: ISettings.DefaultSettlementWidth
+- uid: AQASkeletronPlus.ISettings.DefaultSimulationHeight
+  name: DefaultSimulationHeight
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_DefaultSimulationHeight
+  commentId: P:AQASkeletronPlus.ISettings.DefaultSimulationHeight
+  fullName: AQASkeletronPlus.ISettings.DefaultSimulationHeight
+  nameWithType: ISettings.DefaultSimulationHeight
+- uid: AQASkeletronPlus.ISettings.DefaultSimulationHeight*
+  name: DefaultSimulationHeight
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_DefaultSimulationHeight_
+  commentId: Overload:AQASkeletronPlus.ISettings.DefaultSimulationHeight
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.DefaultSimulationHeight
+  nameWithType: ISettings.DefaultSimulationHeight
+- uid: AQASkeletronPlus.ISettings.DefaultSimulationHouses
+  name: DefaultSimulationHouses
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_DefaultSimulationHouses
+  commentId: P:AQASkeletronPlus.ISettings.DefaultSimulationHouses
+  fullName: AQASkeletronPlus.ISettings.DefaultSimulationHouses
+  nameWithType: ISettings.DefaultSimulationHouses
+- uid: AQASkeletronPlus.ISettings.DefaultSimulationHouses*
+  name: DefaultSimulationHouses
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_DefaultSimulationHouses_
+  commentId: Overload:AQASkeletronPlus.ISettings.DefaultSimulationHouses
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.DefaultSimulationHouses
+  nameWithType: ISettings.DefaultSimulationHouses
+- uid: AQASkeletronPlus.ISettings.DefaultSimulationWidth
+  name: DefaultSimulationWidth
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_DefaultSimulationWidth
+  commentId: P:AQASkeletronPlus.ISettings.DefaultSimulationWidth
+  fullName: AQASkeletronPlus.ISettings.DefaultSimulationWidth
+  nameWithType: ISettings.DefaultSimulationWidth
+- uid: AQASkeletronPlus.ISettings.DefaultSimulationWidth*
+  name: DefaultSimulationWidth
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_DefaultSimulationWidth_
+  commentId: Overload:AQASkeletronPlus.ISettings.DefaultSimulationWidth
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.DefaultSimulationWidth
+  nameWithType: ISettings.DefaultSimulationWidth
 - uid: AQASkeletronPlus.ISettings.FamilyClosingCostPerSeat
   name: FamilyClosingCostPerSeat
   href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_FamilyClosingCostPerSeat

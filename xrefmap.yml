@@ -2735,3 +2735,22 @@ references:
   commentId: F:AQASkeletronPlus.Vector2.y
   fullName: AQASkeletronPlus.Vector2.y
   nameWithType: Vector2.y
+- uid: AQASkeletronPlus.VersionExtensions
+  name: VersionExtensions
+  href: api/AQASkeletronPlus.VersionExtensions.html
+  commentId: T:AQASkeletronPlus.VersionExtensions
+  fullName: AQASkeletronPlus.VersionExtensions
+  nameWithType: VersionExtensions
+- uid: AQASkeletronPlus.VersionExtensions.GetVersionName(System.Reflection.AssemblyName)
+  name: GetVersionName(AssemblyName)
+  href: api/AQASkeletronPlus.VersionExtensions.html#AQASkeletronPlus_VersionExtensions_GetVersionName_System_Reflection_AssemblyName_
+  commentId: M:AQASkeletronPlus.VersionExtensions.GetVersionName(System.Reflection.AssemblyName)
+  fullName: AQASkeletronPlus.VersionExtensions.GetVersionName(System.Reflection.AssemblyName)
+  nameWithType: VersionExtensions.GetVersionName(AssemblyName)
+- uid: AQASkeletronPlus.VersionExtensions.GetVersionName*
+  name: GetVersionName
+  href: api/AQASkeletronPlus.VersionExtensions.html#AQASkeletronPlus_VersionExtensions_GetVersionName_
+  commentId: Overload:AQASkeletronPlus.VersionExtensions.GetVersionName
+  isSpec: "True"
+  fullName: AQASkeletronPlus.VersionExtensions.GetVersionName
+  nameWithType: VersionExtensions.GetVersionName

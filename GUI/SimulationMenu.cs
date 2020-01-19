@@ -54,7 +54,8 @@ namespace AQASkeletronPlus.GUI
         /// </summary>
         private void aboutBtn_Click(object sender, EventArgs e)
         {
-
+            AboutMenu a = new AboutMenu();
+            a.Show();
         }
     }
 }

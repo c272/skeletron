@@ -109,6 +109,7 @@
     <Compile Include="Events\OutletEvents.cs" />
     <Compile Include="Events\SimulationEvents.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="Extensions\VersionExtensions.cs" />
     <Compile Include="GUI\AboutMenu.cs">
       <SubType>Form</SubType>
     </Compile>

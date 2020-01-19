@@ -1,1 +1,1 @@
-#[Introduction](intro.md)
+#[Custom Settings](settings.md)

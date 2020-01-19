@@ -50,7 +50,7 @@
     <None Include=".gitignore" />
     <None Include="api\.gitignore" />
     <None Include="api\index.md" />
-    <None Include="articles\intro.md" />
+    <None Include="articles\settings.md" />
     <None Include="articles\toc.md" />
     <None Include="docfx.json" />
     <None Include="index.md" />

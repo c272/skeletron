@@ -2658,6 +2658,12 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.Simulation.Companies
   nameWithType: Simulation.Companies
+- uid: AQASkeletronPlus.Simulation.CompaniesClosedYesterday
+  name: CompaniesClosedYesterday
+  href: api/AQASkeletronPlus.Simulation.html#AQASkeletronPlus_Simulation_CompaniesClosedYesterday
+  commentId: F:AQASkeletronPlus.Simulation.CompaniesClosedYesterday
+  fullName: AQASkeletronPlus.Simulation.CompaniesClosedYesterday
+  nameWithType: Simulation.CompaniesClosedYesterday
 - uid: AQASkeletronPlus.Simulation.DaysElapsed
   name: DaysElapsed
   href: api/AQASkeletronPlus.Simulation.html#AQASkeletronPlus_Simulation_DaysElapsed

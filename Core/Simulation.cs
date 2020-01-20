@@ -21,6 +21,7 @@ namespace AQASkeletronPlus
         private double currentFuelCost;
         private List<Tuple<Vector2, Vector2>> visits = new List<Tuple<Vector2, Vector2>>();
         public int DaysElapsed { get; protected set; } = 0;
+        public List<Company> CompaniesClosedYesterday = new List<Company>();
 
         //The map panel assigned to this simulation.
         private MapPanel map = null;
@@ -90,6 +91,7 @@ namespace AQASkeletronPlus
             //Gather the cumulative reputation for all companies.
             double totalReputation = 0;
             List<double> cumulativeReputation = new List<double>();
+            CompaniesClosedYesterday = new List<Company>();
             foreach (var c in Companies)
             {
                 totalReputation += c.Reputation;
@@ -135,6 +137,7 @@ namespace AQASkeletronPlus
                         CompanyName = Companies[i].Name,
                         DaysLasted = DaysElapsed
                     });
+                    CompaniesClosedYesterday.Add(Companies[i]);
                     Companies.RemoveAt(i);
                     i--;
                 }

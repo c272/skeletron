@@ -104,6 +104,9 @@ namespace AQASkeletronPlus.GUI
             {
                 Main.Simulation.DeleteCompany((string)company.Tag);
             }
+
+            //Refresh.
+            PopulateListView();
         }
 
         /// <summary>

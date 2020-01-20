@@ -62,6 +62,17 @@ namespace AQASkeletronPlus.GUI
             for (int i=0; i<amtDaysAdvance.Value; i++)
             {
                 Simulation.ProcessDayEnd();
+                if (Simulation.CompaniesClosedYesterday.Count > 0)
+                {
+                    //Build the message.
+                    string msg = Simulation.CompaniesClosedYesterday.Count + " companies closed yesterday:\n";
+                    foreach (var company in Simulation.CompaniesClosedYesterday)
+                    {
+                        msg += company.Name + "\n";
+                    }
+                    msg.Trim('\n', '\r');
+                    MessageBox.Show(msg);
+                }
             }
 
             //Set the event viewer to yesterday, update the viewer.

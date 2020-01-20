@@ -168,6 +168,7 @@ namespace AQASkeletronPlus
 
             //Calculate delivery costs.
             deliveryCosts += BaseDeliveryCost + CalculateDeliveryCost();
+            Balance -= deliveryCosts;
             EventChain.AddEvent(new DeliveryEvent()
             {
                 CompanyName = Name,
@@ -190,6 +191,9 @@ namespace AQASkeletronPlus
 
                 outlet.ProcessDayEnd();
             }
+
+            //Update balance.
+            Balance += profitLossFromOutlets;
 
             //Close the company?
             if (Balance <= 0)

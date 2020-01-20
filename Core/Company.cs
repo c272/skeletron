@@ -82,6 +82,15 @@ namespace AQASkeletronPlus
         }
 
         /// <summary>
+        /// Expands this outlet from it's current capacity.
+        /// </summary>
+        public void ExpandOutlet(Outlet outlet, int amtSeats)
+        {
+            OutletCapacity += amtSeats;
+            DailyCost += amtSeats * 0.5;
+        }
+
+        /// <summary>
         /// Closes every open outlet for this company.
         /// </summary>
         public void CloseAllOutlets()

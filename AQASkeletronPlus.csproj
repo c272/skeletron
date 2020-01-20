@@ -144,6 +144,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Core\Outlet.cs" />
+    <Compile Include="GUI\ModifyCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ModifyCompany.Designer.cs">
+      <DependentUpon>ModifyCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\RunToTarget.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ModifyCompany.resx">
+      <DependentUpon>ModifyCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RunToTarget.resx">
       <DependentUpon>RunToTarget.cs</DependentUpon>

@@ -60,6 +60,11 @@ Below is a list of different settings you can change, their type, and what they 
 (*Default: 5, Type: Integer*) The maximum number of houses that will be added in a random add households event.
 
 ---
+### MaxNewSeats
+
+(*Default: 20, Type: Integer*) The maximum number of new seats that will be added on an "Expand Outlet" event.
+
+---
 ### ChanceOfFuelPriceIncrease
 
 (*Default: 0.5, Type: Float*) Chance that the fuel price will go up during a random fuel cost change event.

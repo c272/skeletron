@@ -40,7 +40,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.createCompanyBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.modifyCompanyBtn = new System.Windows.Forms.Button();
             this.deleteCompanyBtn = new System.Windows.Forms.Button();
             this.okBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -131,15 +131,16 @@
             this.createCompanyBtn.UseVisualStyleBackColor = true;
             this.createCompanyBtn.Click += new System.EventHandler(this.createCompanyBtn_Click);
             // 
-            // button2
+            // modifyCompanyBtn
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Location = new System.Drawing.Point(91, 443);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Modify";
-            this.button2.UseVisualStyleBackColor = true;
+            this.modifyCompanyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.modifyCompanyBtn.Location = new System.Drawing.Point(91, 443);
+            this.modifyCompanyBtn.Name = "modifyCompanyBtn";
+            this.modifyCompanyBtn.Size = new System.Drawing.Size(75, 23);
+            this.modifyCompanyBtn.TabIndex = 4;
+            this.modifyCompanyBtn.Text = "Modify";
+            this.modifyCompanyBtn.UseVisualStyleBackColor = true;
+            this.modifyCompanyBtn.Click += new System.EventHandler(this.modifyCompanyBtn_Click);
             // 
             // deleteCompanyBtn
             // 
@@ -170,7 +171,7 @@
             this.ClientSize = new System.Drawing.Size(800, 474);
             this.Controls.Add(this.okBtn);
             this.Controls.Add(this.deleteCompanyBtn);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.modifyCompanyBtn);
             this.Controls.Add(this.createCompanyBtn);
             this.Controls.Add(this.companies);
             this.Controls.Add(this.label2);
@@ -197,7 +198,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Button createCompanyBtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button modifyCompanyBtn;
         private System.Windows.Forms.Button deleteCompanyBtn;
         private System.Windows.Forms.Button okBtn;
     }

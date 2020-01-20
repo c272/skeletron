@@ -113,5 +113,18 @@ namespace AQASkeletronPlus.GUI
         {
             this.Close();
         }
+
+        /// <summary>
+        /// Triggers the opening of a modification window, if a company is selected.
+        /// </summary>
+        private void modifyCompanyBtn_Click(object sender, EventArgs e)
+        {
+            //Is there a company selected?
+            if (companies.SelectedItems.Count == 0) { return; }
+
+            //There is, modify.
+            ModifyCompany m = new ModifyCompany((string)(companies.SelectedItems[0].Tag));
+            m.Show();
+        }
     }
 }

@@ -86,6 +86,9 @@ namespace AQASkeletronPlus
         [Option(DefaultValue = 5)]
         int MaxNewHouseholds { get; }
 
+        [Option(DefaultValue = 20)]
+        int MaxNewSeats { get; }
+
         //Fuel randomizer options.
         [Option(DefaultValue = 0.5)]
         double ChanceOfFuelPriceIncrease { get; }

@@ -201,6 +201,19 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.Company.DailyCost
   nameWithType: Company.DailyCost
+- uid: AQASkeletronPlus.Company.ExpandOutlet(AQASkeletronPlus.Outlet,System.Int32)
+  name: ExpandOutlet(Outlet, Int32)
+  href: api/AQASkeletronPlus.Company.html#AQASkeletronPlus_Company_ExpandOutlet_AQASkeletronPlus_Outlet_System_Int32_
+  commentId: M:AQASkeletronPlus.Company.ExpandOutlet(AQASkeletronPlus.Outlet,System.Int32)
+  fullName: AQASkeletronPlus.Company.ExpandOutlet(AQASkeletronPlus.Outlet, System.Int32)
+  nameWithType: Company.ExpandOutlet(Outlet, Int32)
+- uid: AQASkeletronPlus.Company.ExpandOutlet*
+  name: ExpandOutlet
+  href: api/AQASkeletronPlus.Company.html#AQASkeletronPlus_Company_ExpandOutlet_
+  commentId: Overload:AQASkeletronPlus.Company.ExpandOutlet
+  isSpec: "True"
+  fullName: AQASkeletronPlus.Company.ExpandOutlet
+  nameWithType: Company.ExpandOutlet
 - uid: AQASkeletronPlus.Company.FuelCost
   name: FuelCost
   href: api/AQASkeletronPlus.Company.html#AQASkeletronPlus_Company_FuelCost
@@ -1293,6 +1306,57 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.GUI.Main.Simulation
   nameWithType: Main.Simulation
+- uid: AQASkeletronPlus.GUI.ModifyCompany
+  name: ModifyCompany
+  href: api/AQASkeletronPlus.GUI.ModifyCompany.html
+  commentId: T:AQASkeletronPlus.GUI.ModifyCompany
+  fullName: AQASkeletronPlus.GUI.ModifyCompany
+  nameWithType: ModifyCompany
+- uid: AQASkeletronPlus.GUI.ModifyCompany.#ctor(System.String)
+  name: ModifyCompany(String)
+  href: api/AQASkeletronPlus.GUI.ModifyCompany.html#AQASkeletronPlus_GUI_ModifyCompany__ctor_System_String_
+  commentId: M:AQASkeletronPlus.GUI.ModifyCompany.#ctor(System.String)
+  fullName: AQASkeletronPlus.GUI.ModifyCompany.ModifyCompany(System.String)
+  nameWithType: ModifyCompany.ModifyCompany(String)
+- uid: AQASkeletronPlus.GUI.ModifyCompany.#ctor*
+  name: ModifyCompany
+  href: api/AQASkeletronPlus.GUI.ModifyCompany.html#AQASkeletronPlus_GUI_ModifyCompany__ctor_
+  commentId: Overload:AQASkeletronPlus.GUI.ModifyCompany.#ctor
+  isSpec: "True"
+  fullName: AQASkeletronPlus.GUI.ModifyCompany.ModifyCompany
+  nameWithType: ModifyCompany.ModifyCompany
+- uid: AQASkeletronPlus.GUI.ModifyCompany.company
+  name: company
+  href: api/AQASkeletronPlus.GUI.ModifyCompany.html#AQASkeletronPlus_GUI_ModifyCompany_company
+  commentId: P:AQASkeletronPlus.GUI.ModifyCompany.company
+  fullName: AQASkeletronPlus.GUI.ModifyCompany.company
+  nameWithType: ModifyCompany.company
+- uid: AQASkeletronPlus.GUI.ModifyCompany.company*
+  name: company
+  href: api/AQASkeletronPlus.GUI.ModifyCompany.html#AQASkeletronPlus_GUI_ModifyCompany_company_
+  commentId: Overload:AQASkeletronPlus.GUI.ModifyCompany.company
+  isSpec: "True"
+  fullName: AQASkeletronPlus.GUI.ModifyCompany.company
+  nameWithType: ModifyCompany.company
+- uid: AQASkeletronPlus.GUI.ModifyCompany.companyName
+  name: companyName
+  href: api/AQASkeletronPlus.GUI.ModifyCompany.html#AQASkeletronPlus_GUI_ModifyCompany_companyName
+  commentId: F:AQASkeletronPlus.GUI.ModifyCompany.companyName
+  fullName: AQASkeletronPlus.GUI.ModifyCompany.companyName
+  nameWithType: ModifyCompany.companyName
+- uid: AQASkeletronPlus.GUI.ModifyCompany.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/AQASkeletronPlus.GUI.ModifyCompany.html#AQASkeletronPlus_GUI_ModifyCompany_Dispose_System_Boolean_
+  commentId: M:AQASkeletronPlus.GUI.ModifyCompany.Dispose(System.Boolean)
+  fullName: AQASkeletronPlus.GUI.ModifyCompany.Dispose(System.Boolean)
+  nameWithType: ModifyCompany.Dispose(Boolean)
+- uid: AQASkeletronPlus.GUI.ModifyCompany.Dispose*
+  name: Dispose
+  href: api/AQASkeletronPlus.GUI.ModifyCompany.html#AQASkeletronPlus_GUI_ModifyCompany_Dispose_
+  commentId: Overload:AQASkeletronPlus.GUI.ModifyCompany.Dispose
+  isSpec: "True"
+  fullName: AQASkeletronPlus.GUI.ModifyCompany.Dispose
+  nameWithType: ModifyCompany.Dispose
 - uid: AQASkeletronPlus.GUI.RunToTarget
   name: RunToTarget
   href: api/AQASkeletronPlus.GUI.RunToTarget.html
@@ -1894,6 +1958,19 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.ISettings.MaxNewHouseholds
   nameWithType: ISettings.MaxNewHouseholds
+- uid: AQASkeletronPlus.ISettings.MaxNewSeats
+  name: MaxNewSeats
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_MaxNewSeats
+  commentId: P:AQASkeletronPlus.ISettings.MaxNewSeats
+  fullName: AQASkeletronPlus.ISettings.MaxNewSeats
+  nameWithType: ISettings.MaxNewSeats
+- uid: AQASkeletronPlus.ISettings.MaxNewSeats*
+  name: MaxNewSeats
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_MaxNewSeats_
+  commentId: Overload:AQASkeletronPlus.ISettings.MaxNewSeats
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.MaxNewSeats
+  nameWithType: ISettings.MaxNewSeats
 - uid: AQASkeletronPlus.ISettings.MinNewHouseholds
   name: MinNewHouseholds
   href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_MinNewHouseholds

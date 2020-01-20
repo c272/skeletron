@@ -135,6 +135,7 @@
             this.Controls.Add(this.minBal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "RunToTarget";
             this.Text = "AQA SKPE - Run to Target";
             ((System.ComponentModel.ISupportInitialize)(this.minBal)).EndInit();

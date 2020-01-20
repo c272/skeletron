@@ -269,6 +269,7 @@
             this.Controls.Add(this.advanceDaysBtn);
             this.Controls.Add(this.mapGroupBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1274, 300);
             this.Name = "Main";
             this.Text = "AQA Skeleton Program Emulator - Main";
             this.mapGroupBox.ResumeLayout(false);

@@ -45,8 +45,8 @@
             this.goToLatestEvents = new System.Windows.Forms.Button();
             this.simulationSettingsBtn = new System.Windows.Forms.Button();
             this.simMenuBtn = new System.Windows.Forms.Button();
-            this.map = new AQASkeletronPlus.MapPanel();
             this.showStatsCb = new System.Windows.Forms.CheckBox();
+            this.map = new AQASkeletronPlus.MapPanel();
             this.mapGroupBox.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amtDaysAdvance)).BeginInit();
@@ -63,7 +63,7 @@
             this.mapGroupBox.Controls.Add(this.mainPanel);
             this.mapGroupBox.Location = new System.Drawing.Point(12, 45);
             this.mapGroupBox.Name = "mapGroupBox";
-            this.mapGroupBox.Size = new System.Drawing.Size(1029, 492);
+            this.mapGroupBox.Size = new System.Drawing.Size(1179, 492);
             this.mapGroupBox.TabIndex = 0;
             this.mapGroupBox.TabStop = false;
             this.mapGroupBox.Text = "Map";
@@ -75,7 +75,7 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(3, 16);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1023, 473);
+            this.mainPanel.Size = new System.Drawing.Size(1173, 473);
             this.mainPanel.TabIndex = 0;
             // 
             // advanceDaysBtn
@@ -126,10 +126,9 @@
             // 
             this.zoomTrackBar.LargeChange = 1;
             this.zoomTrackBar.Location = new System.Drawing.Point(379, 4);
-            this.zoomTrackBar.Maximum = 5;
             this.zoomTrackBar.Minimum = 1;
             this.zoomTrackBar.Name = "zoomTrackBar";
-            this.zoomTrackBar.Size = new System.Drawing.Size(243, 45);
+            this.zoomTrackBar.Size = new System.Drawing.Size(393, 45);
             this.zoomTrackBar.TabIndex = 4;
             this.zoomTrackBar.Value = 1;
             this.zoomTrackBar.ValueChanged += new System.EventHandler(this.zoomChanged);
@@ -137,7 +136,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(484, 34);
+            this.label1.Location = new System.Drawing.Point(557, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 1;
@@ -159,7 +158,7 @@
             this.eventsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.eventsGroupBox.Controls.Add(this.eventsList);
-            this.eventsGroupBox.Location = new System.Drawing.Point(1047, 8);
+            this.eventsGroupBox.Location = new System.Drawing.Point(1197, 8);
             this.eventsGroupBox.Name = "eventsGroupBox";
             this.eventsGroupBox.Size = new System.Drawing.Size(206, 529);
             this.eventsGroupBox.TabIndex = 6;
@@ -180,7 +179,7 @@
             // scrollEventsBack
             // 
             this.scrollEventsBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.scrollEventsBack.Location = new System.Drawing.Point(885, 24);
+            this.scrollEventsBack.Location = new System.Drawing.Point(1035, 24);
             this.scrollEventsBack.Name = "scrollEventsBack";
             this.scrollEventsBack.Size = new System.Drawing.Size(31, 23);
             this.scrollEventsBack.TabIndex = 7;
@@ -191,7 +190,7 @@
             // scrollEventsForward
             // 
             this.scrollEventsForward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.scrollEventsForward.Location = new System.Drawing.Point(922, 24);
+            this.scrollEventsForward.Location = new System.Drawing.Point(1072, 24);
             this.scrollEventsForward.Name = "scrollEventsForward";
             this.scrollEventsForward.Size = new System.Drawing.Size(32, 23);
             this.scrollEventsForward.TabIndex = 8;
@@ -203,7 +202,7 @@
             // 
             this.eventDayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.eventDayLabel.AutoSize = true;
-            this.eventDayLabel.Location = new System.Drawing.Point(881, 7);
+            this.eventDayLabel.Location = new System.Drawing.Point(1031, 7);
             this.eventDayLabel.Name = "eventDayLabel";
             this.eventDayLabel.Size = new System.Drawing.Size(160, 13);
             this.eventDayLabel.TabIndex = 9;
@@ -212,7 +211,7 @@
             // goToLatestEvents
             // 
             this.goToLatestEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.goToLatestEvents.Location = new System.Drawing.Point(960, 24);
+            this.goToLatestEvents.Location = new System.Drawing.Point(1110, 24);
             this.goToLatestEvents.Name = "goToLatestEvents";
             this.goToLatestEvents.Size = new System.Drawing.Size(76, 23);
             this.goToLatestEvents.TabIndex = 10;
@@ -222,7 +221,7 @@
             // 
             // simulationSettingsBtn
             // 
-            this.simulationSettingsBtn.Location = new System.Drawing.Point(628, 6);
+            this.simulationSettingsBtn.Location = new System.Drawing.Point(778, 8);
             this.simulationSettingsBtn.Name = "simulationSettingsBtn";
             this.simulationSettingsBtn.Size = new System.Drawing.Size(123, 39);
             this.simulationSettingsBtn.TabIndex = 11;
@@ -232,23 +231,13 @@
             // 
             // simMenuBtn
             // 
-            this.simMenuBtn.Location = new System.Drawing.Point(757, 6);
+            this.simMenuBtn.Location = new System.Drawing.Point(907, 8);
             this.simMenuBtn.Name = "simMenuBtn";
             this.simMenuBtn.Size = new System.Drawing.Size(118, 39);
             this.simMenuBtn.TabIndex = 12;
             this.simMenuBtn.Text = "Simulation Menu";
             this.simMenuBtn.UseVisualStyleBackColor = true;
             this.simMenuBtn.Click += new System.EventHandler(this.simMenuBtn_Click);
-            // 
-            // map
-            // 
-            this.map.DrawNames = false;
-            this.map.DrawTracers = false;
-            this.map.Location = new System.Drawing.Point(0, 0);
-            this.map.Name = "map";
-            this.map.Size = new System.Drawing.Size(2000, 2000);
-            this.map.TabIndex = 0;
-            this.map.TabStop = false;
             // 
             // showStatsCb
             // 
@@ -261,11 +250,22 @@
             this.showStatsCb.UseVisualStyleBackColor = true;
             this.showStatsCb.CheckedChanged += new System.EventHandler(this.showStatsChange);
             // 
+            // map
+            // 
+            this.map.DrawNames = false;
+            this.map.DrawStats = false;
+            this.map.DrawTracers = false;
+            this.map.Location = new System.Drawing.Point(0, 0);
+            this.map.Name = "map";
+            this.map.Size = new System.Drawing.Size(2000, 2000);
+            this.map.TabIndex = 0;
+            this.map.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 549);
+            this.ClientSize = new System.Drawing.Size(1408, 549);
             this.Controls.Add(this.showStatsCb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.simMenuBtn);

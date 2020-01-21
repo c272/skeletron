@@ -215,3 +215,32 @@ Below is a list of different settings you can change, their type, and what they 
 (*Default: 150, Type: Integer*) The cost of a single seat incurred when closing a named chef company outlet.
 
 ---
+
+## Balanced Simulation Settings List
+These settings are only for when you have the "Balanced" simulation mode enabled from the start screen.
+
+### BalancedSim_PickChanceFastFood
+
+(*Default: 0.45, Type: Float*) The chance a fast food company will be picked when eating out.
+
+---
+
+### BalancedSim_PickChanceFamily
+
+(*Default: 0.35, Type: Float*) The chance a family company will be picked when eating out.
+
+---
+
+### BalancedSim_PickChanceFastFood
+
+(*Default: 0.45, Type: Float*) The chance a fast food company will be picked when eating out.
+
+---
+
+### BalancedSim_PickChanceNamedChef
+
+(*Default: 0.2, Type: Float*) The chance a named chef company will be picked when eating out.
+
+---
+
+//todo

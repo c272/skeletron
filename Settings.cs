@@ -52,6 +52,34 @@ namespace AQASkeletronPlus
     /// </summary>
     public interface ISettings
     {
+        ///////////////////////////////////
+        // BALANCED SIMULATION SETTINGS. //
+        ///////////////////////////////////
+        //This only applies to the "Balanced" simulation mode.
+
+        [Option(DefaultValue = 0.45)]
+        double BalancedSim_PickChanceFastFood { get; }
+
+        [Option(DefaultValue = 300.0)]
+        double BalancedSim_TravelRadiusFastFood { get; }
+
+        [Option(DefaultValue = 0.35)]
+        double BalancedSim_PickChanceFamily { get; }
+
+        [Option(DefaultValue = 350.0)]
+        double BalancedSim_TravelRadiusFamily { get; }
+
+        [Option(DefaultValue = 0.2)]
+        double BalancedSim_PickChanceNamedChef { get; }
+
+        [Option(DefaultValue = 450.0)]
+        double BalancedSim_TravelRadiusNamedChef { get; }
+
+        [Option(DefaultValue = 0.3)]
+        double BalancedSim_FuelCostCap { get; }
+
+        //END BALANCED SIMULATION SETTINGS.
+
         //Simulation defaults.
         [Option(DefaultValue = 500)]
         int DefaultSimulationWidth { get; }
@@ -140,7 +168,7 @@ namespace AQASkeletronPlus
         [Option(DefaultValue = 12)]
         int FamilyCostPerMeal { get; }
 
-        [Option(DefaultValue = 14)]
+        [Option(DefaultValue = 25)]
         int FamilyPricePerMeal { get; }
 
         [Option(DefaultValue = 10)]
@@ -160,7 +188,7 @@ namespace AQASkeletronPlus
         [Option(DefaultValue = 5)]
         int FastFoodCostPerMeal { get; }
 
-        [Option(DefaultValue = 10)]
+        [Option(DefaultValue = 15)]
         int FastFoodPricePerMeal { get; }
 
         [Option(DefaultValue = 20)]

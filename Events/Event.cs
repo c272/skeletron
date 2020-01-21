@@ -30,6 +30,7 @@ namespace AQASkeletronPlus.Events
         ReputationChange,
         CostChange,
         HouseholdLeaving,
-        BankruptcyEvent
+        BankruptcyEvent,
+        FailedToEatOut
     }
 }

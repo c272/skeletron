@@ -35,10 +35,53 @@ namespace AQASkeletronPlus.GUI
             Simulation sim = null;
             try
             {
-                sim = new Simulation(
-                    Convert.ToInt32(simWidth.Value),
-                    Convert.ToInt32(simHeight.Value),
-                    Convert.ToInt32(simHouses.Value));
+                //Which simulation type is it?
+                if (balancedModeCb.Checked)
+                {
+                    //Edit the defaults to balance.
+                    Settings.DefaultCompanies = new List<CompanyDefault>()
+                    {
+                        //AQA Burgers
+                        new CompanyDefault()
+                        {
+                            Name = "AQA Burgers+",
+                            StartingBalance = 100000,
+                            Type = CompanyType.FastFood,
+                            StartingOutlets = 4
+                        },
+
+                        //Ben Thor Cuisine
+                        new CompanyDefault()
+                        {
+                            Name = "Ben Thor Cuisine",
+                            StartingBalance = 100400,
+                            Type = CompanyType.NamedChef,
+                            StartingOutlets = 2
+                        },
+
+                        //Paltry Poultry
+                        new CompanyDefault()
+                        {
+                            Name = "Family Poultry",
+                            StartingBalance = 25000,
+                            Type = CompanyType.Family,
+                            StartingOutlets = 4
+                        }
+                    };
+
+                    //Start sim.
+                    sim = new BalancedSimulation(
+                        Convert.ToInt32(simWidth.Value),
+                        Convert.ToInt32(simHeight.Value),
+                        Convert.ToInt32(simHouses.Value));
+                }
+                else
+                {
+                    sim = new Simulation(
+                        Convert.ToInt32(simWidth.Value),
+                        Convert.ToInt32(simHeight.Value),
+                        Convert.ToInt32(simHouses.Value));
+                }
             }
             catch (Exception err)
             {

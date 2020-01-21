@@ -61,7 +61,16 @@ namespace AQASkeletronPlus.GUI
             //Process the days.
             for (int i=0; i<amtDaysAdvance.Value; i++)
             {
-                Simulation.ProcessDayEnd();
+                try
+                {
+                    Simulation.ProcessDayEnd();
+                }
+                catch
+                {
+                    MessageBox.Show("Error progressing simulation. Do any companies still exist?");
+                    return;
+                }
+
                 if (Simulation.CompaniesClosedYesterday.Count > 0)
                 {
                     //Build the message.

@@ -98,10 +98,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\SimulationBalanced.cs" />
     <Compile Include="Core\Company.cs" />
     <Compile Include="Core\CompanyDefault.cs" />
     <Compile Include="Core\FoodTruck.cs" />
     <Compile Include="Core\Household.cs" />
+    <Compile Include="Extensions\DoubleExtensions.cs" />
     <Compile Include="Extensions\RandomWrapper.cs" />
     <Compile Include="Events\Event.cs" />
     <Compile Include="Events\EventChain.cs" />
@@ -218,6 +220,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Events\BalancedSimulationEvents.cs" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

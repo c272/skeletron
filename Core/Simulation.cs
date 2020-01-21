@@ -19,7 +19,7 @@ namespace AQASkeletronPlus
         public List<Company> Companies { get; protected set; } = new List<Company>();
         public Settlement Settlement { get; protected set; }
         private double currentFuelCost;
-        private List<Tuple<Vector2, Vector2>> visits = new List<Tuple<Vector2, Vector2>>();
+        protected List<Tuple<Vector2, Vector2>> visits = new List<Tuple<Vector2, Vector2>>();
         public int DaysElapsed { get; protected set; } = 0;
         public List<Company> CompaniesClosedYesterday = new List<Company>();
 
@@ -100,28 +100,7 @@ namespace AQASkeletronPlus
 
             //Loop over each house and see if they eat out, and if so, where.
             visits = new List<Tuple<Vector2, Vector2>>();
-            for (int i=0; i<Settlement.NumHouseholds; i++)
-            {
-                Household thisHousehold = Settlement.GetHouseholdAtIndex(i);
-                
-                //Do they eat out?
-                if (!thisHousehold.EatsOut()) { continue; }
-
-                //Yes, they do, but where? Calculate based on nearest outlet and reputation.
-                double randomRepNum = Random.NextDouble() * totalReputation;
-                int current = 0;
-                while (current < cumulativeReputation.Count)
-                {
-                    //Is this company's reputation sufficient for this household to eat there?
-                    if (randomRepNum < cumulativeReputation[current])
-                    {
-                        //Yes, eat then break.
-                        Companies[current].AddVisitToNearestOutlet(thisHousehold.Position, ref visits);
-                        break;
-                    }
-                    current++;
-                }
-            }
+            CalculateVisitsFromHouseholds(cumulativeReputation, totalReputation);
 
             //Process the end of the day for each company.
             for (int i=0; i<Companies.Count; i++)
@@ -185,6 +164,35 @@ namespace AQASkeletronPlus
             //Draw the new map with updated positions and tracers, if the map is enabled.
             UpdateMap();
             DaysElapsed++;
+        }
+
+        /// <summary>
+        /// Calculates visits for each household based on reputation.
+        /// </summary>
+        protected virtual void CalculateVisitsFromHouseholds(List<double> cumulativeReputation, double totalReputation)
+        {
+            for (int i = 0; i < Settlement.NumHouseholds; i++)
+            {
+                Household thisHousehold = Settlement.GetHouseholdAtIndex(i);
+
+                //Do they eat out?
+                if (!thisHousehold.EatsOut()) { continue; }
+
+                //Yes, they do, but where? Calculate based on nearest outlet and reputation.
+                double randomRepNum = Random.NextDouble() * totalReputation;
+                int current = 0;
+                while (current < cumulativeReputation.Count)
+                {
+                    //Is this company's reputation sufficient for this household to eat there?
+                    if (randomRepNum < cumulativeReputation[current])
+                    {
+                        //Yes, eat then break.
+                        Companies[current].AddVisitToNearestOutlet(thisHousehold.Position, ref visits);
+                        break;
+                    }
+                    current++;
+                }
+            }
         }
 
         /// <summary>
@@ -271,7 +279,7 @@ namespace AQASkeletronPlus
         /// <summary>
         /// Changes the price of fuel randomly.
         /// </summary>
-        private void ProcessChangeFuelCostEvent()
+        protected virtual void ProcessChangeFuelCostEvent()
         {
             //Check if fuel price increases or decreases, get by how much.
             bool increases = (Random.NextDouble() < Settings.Get.ChanceOfFuelPriceIncrease);

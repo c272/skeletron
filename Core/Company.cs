@@ -233,10 +233,11 @@ namespace AQASkeletronPlus
         /// <summary>
         /// Changes the fuel cost for the company by a given double amount, negative or positive.
         /// </summary>
-        public void ChangeFuelCostBy(double amt)
+        public void ChangeFuelCostBy(double amt, double hardCap = double.MaxValue)
         {
             FuelCost += amt;
             if (FuelCost < 0) { FuelCost = 0; }
+            if (FuelCost > hardCap) { FuelCost = hardCap; }
         }
 
         //Calculates the on top delivery costs for the day.
@@ -299,6 +300,6 @@ namespace AQASkeletronPlus
     {
         FastFood,
         NamedChef,
-        Family
+        Family,
     }
 }

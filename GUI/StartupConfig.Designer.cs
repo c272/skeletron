@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.simHouses = new System.Windows.Forms.NumericUpDown();
             this.goBtn = new System.Windows.Forms.Button();
+            this.balancedModeCb = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simHeight)).BeginInit();
@@ -129,7 +130,7 @@
             // 
             // goBtn
             // 
-            this.goBtn.Location = new System.Drawing.Point(16, 325);
+            this.goBtn.Location = new System.Drawing.Point(16, 346);
             this.goBtn.Name = "goBtn";
             this.goBtn.Size = new System.Drawing.Size(200, 23);
             this.goBtn.TabIndex = 10;
@@ -137,11 +138,24 @@
             this.goBtn.UseVisualStyleBackColor = true;
             this.goBtn.Click += new System.EventHandler(this.goBtn_Click);
             // 
+            // balancedModeCb
+            // 
+            this.balancedModeCb.AutoSize = true;
+            this.balancedModeCb.Checked = true;
+            this.balancedModeCb.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.balancedModeCb.Location = new System.Drawing.Point(42, 327);
+            this.balancedModeCb.Name = "balancedModeCb";
+            this.balancedModeCb.Size = new System.Drawing.Size(147, 17);
+            this.balancedModeCb.TabIndex = 11;
+            this.balancedModeCb.Text = "Enable \"Balanced Mode\"";
+            this.balancedModeCb.UseVisualStyleBackColor = true;
+            // 
             // StartupConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(234, 361);
+            this.ClientSize = new System.Drawing.Size(234, 384);
+            this.Controls.Add(this.balancedModeCb);
             this.Controls.Add(this.goBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.simHouses);
@@ -176,5 +190,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown simHouses;
         private System.Windows.Forms.Button goBtn;
+        private System.Windows.Forms.CheckBox balancedModeCb;
     }
 }

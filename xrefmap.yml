@@ -19,6 +19,12 @@ references:
   commentId: F:AQASkeletronPlus.Building.Name
   fullName: AQASkeletronPlus.Building.Name
   nameWithType: Building.Name
+- uid: AQASkeletronPlus.Building.Outlet
+  name: Outlet
+  href: api/AQASkeletronPlus.Building.html#AQASkeletronPlus_Building_Outlet
+  commentId: F:AQASkeletronPlus.Building.Outlet
+  fullName: AQASkeletronPlus.Building.Outlet
+  nameWithType: Building.Outlet
 - uid: AQASkeletronPlus.Building.Position
   name: Position
   href: api/AQASkeletronPlus.Building.html#AQASkeletronPlus_Building_Position
@@ -2136,12 +2142,12 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.MapPanel.AddHousehold
   nameWithType: MapPanel.AddHousehold
-- uid: AQASkeletronPlus.MapPanel.AddOutlet(System.Int32,System.Int32,System.String)
-  name: AddOutlet(Int32, Int32, String)
-  href: api/AQASkeletronPlus.MapPanel.html#AQASkeletronPlus_MapPanel_AddOutlet_System_Int32_System_Int32_System_String_
-  commentId: M:AQASkeletronPlus.MapPanel.AddOutlet(System.Int32,System.Int32,System.String)
-  fullName: AQASkeletronPlus.MapPanel.AddOutlet(System.Int32, System.Int32, System.String)
-  nameWithType: MapPanel.AddOutlet(Int32, Int32, String)
+- uid: AQASkeletronPlus.MapPanel.AddOutlet(System.Int32,System.Int32,AQASkeletronPlus.Outlet)
+  name: AddOutlet(Int32, Int32, Outlet)
+  href: api/AQASkeletronPlus.MapPanel.html#AQASkeletronPlus_MapPanel_AddOutlet_System_Int32_System_Int32_AQASkeletronPlus_Outlet_
+  commentId: M:AQASkeletronPlus.MapPanel.AddOutlet(System.Int32,System.Int32,AQASkeletronPlus.Outlet)
+  fullName: AQASkeletronPlus.MapPanel.AddOutlet(System.Int32, System.Int32, AQASkeletronPlus.Outlet)
+  nameWithType: MapPanel.AddOutlet(Int32, Int32, Outlet)
 - uid: AQASkeletronPlus.MapPanel.AddOutlet*
   name: AddOutlet
   href: api/AQASkeletronPlus.MapPanel.html#AQASkeletronPlus_MapPanel_AddOutlet_
@@ -2175,6 +2181,19 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.MapPanel.DrawNames
   nameWithType: MapPanel.DrawNames
+- uid: AQASkeletronPlus.MapPanel.DrawStats
+  name: DrawStats
+  href: api/AQASkeletronPlus.MapPanel.html#AQASkeletronPlus_MapPanel_DrawStats
+  commentId: P:AQASkeletronPlus.MapPanel.DrawStats
+  fullName: AQASkeletronPlus.MapPanel.DrawStats
+  nameWithType: MapPanel.DrawStats
+- uid: AQASkeletronPlus.MapPanel.DrawStats*
+  name: DrawStats
+  href: api/AQASkeletronPlus.MapPanel.html#AQASkeletronPlus_MapPanel_DrawStats_
+  commentId: Overload:AQASkeletronPlus.MapPanel.DrawStats
+  isSpec: "True"
+  fullName: AQASkeletronPlus.MapPanel.DrawStats
+  nameWithType: MapPanel.DrawStats
 - uid: AQASkeletronPlus.MapPanel.DrawTracers
   name: DrawTracers
   href: api/AQASkeletronPlus.MapPanel.html#AQASkeletronPlus_MapPanel_DrawTracers
@@ -2359,6 +2378,19 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.Outlet.Visit
   nameWithType: Outlet.Visit
+- uid: AQASkeletronPlus.Outlet.VisitedYesterday
+  name: VisitedYesterday
+  href: api/AQASkeletronPlus.Outlet.html#AQASkeletronPlus_Outlet_VisitedYesterday
+  commentId: P:AQASkeletronPlus.Outlet.VisitedYesterday
+  fullName: AQASkeletronPlus.Outlet.VisitedYesterday
+  nameWithType: Outlet.VisitedYesterday
+- uid: AQASkeletronPlus.Outlet.VisitedYesterday*
+  name: VisitedYesterday
+  href: api/AQASkeletronPlus.Outlet.html#AQASkeletronPlus_Outlet_VisitedYesterday_
+  commentId: Overload:AQASkeletronPlus.Outlet.VisitedYesterday
+  isSpec: "True"
+  fullName: AQASkeletronPlus.Outlet.VisitedYesterday
+  nameWithType: Outlet.VisitedYesterday
 - uid: AQASkeletronPlus.Outlet.visitsToday
   name: visitsToday
   href: api/AQASkeletronPlus.Outlet.html#AQASkeletronPlus_Outlet_visitsToday

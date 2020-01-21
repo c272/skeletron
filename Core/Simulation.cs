@@ -328,7 +328,8 @@ namespace AQASkeletronPlus
                     {
                         Position = outlet.Position,
                         Type = BuildingType.Outlet,
-                        Name = company.Name //Make sure the company name is present!
+                        Name = company.Name, //Make sure the company name is present!
+                        Outlet = outlet
                     });
                 }
             }

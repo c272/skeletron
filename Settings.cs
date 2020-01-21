@@ -163,7 +163,7 @@ namespace AQASkeletronPlus
         [Option(DefaultValue = 10)]
         int FastFoodPricePerMeal { get; }
 
-        [Option(DefaultValue = 30)]
+        [Option(DefaultValue = 20)]
         int FastFoodRandomMaxRep { get; }
 
         [Option(DefaultValue = 75)]
@@ -183,7 +183,7 @@ namespace AQASkeletronPlus
         [Option(DefaultValue = 40)]
         int NamedChefPricePerMeal { get; }
 
-        [Option(DefaultValue = 50)]
+        [Option(DefaultValue = 30)]
         int NamedChefRandomMaxRep { get; }
 
         [Option(DefaultValue = 150)]

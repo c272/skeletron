@@ -179,6 +179,14 @@ namespace AQASkeletronPlus.GUI
         }
 
         /// <summary>
+        /// Triggered when the user changes the state of "Show Stats".
+        /// </summary>
+        private void showStatsChange(object sender, EventArgs e)
+        {
+            map.DrawStats = showStatsCb.Checked;
+        }
+
+        /// <summary>
         /// Triggered when the user changes the state of "Show Names".
         /// </summary>
         private void showNamesChanged(object sender, EventArgs e)

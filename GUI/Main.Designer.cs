@@ -46,6 +46,7 @@
             this.simulationSettingsBtn = new System.Windows.Forms.Button();
             this.simMenuBtn = new System.Windows.Forms.Button();
             this.map = new AQASkeletronPlus.MapPanel();
+            this.showStatsCb = new System.Windows.Forms.CheckBox();
             this.mapGroupBox.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amtDaysAdvance)).BeginInit();
@@ -91,7 +92,7 @@
             // 
             this.amtDaysAdvance.Location = new System.Drawing.Point(160, 14);
             this.amtDaysAdvance.Maximum = new decimal(new int[] {
-            99,
+            365,
             0,
             0,
             0});
@@ -124,11 +125,11 @@
             // zoomTrackBar
             // 
             this.zoomTrackBar.LargeChange = 1;
-            this.zoomTrackBar.Location = new System.Drawing.Point(298, 4);
+            this.zoomTrackBar.Location = new System.Drawing.Point(379, 4);
             this.zoomTrackBar.Maximum = 5;
             this.zoomTrackBar.Minimum = 1;
             this.zoomTrackBar.Name = "zoomTrackBar";
-            this.zoomTrackBar.Size = new System.Drawing.Size(324, 45);
+            this.zoomTrackBar.Size = new System.Drawing.Size(243, 45);
             this.zoomTrackBar.TabIndex = 4;
             this.zoomTrackBar.Value = 1;
             this.zoomTrackBar.ValueChanged += new System.EventHandler(this.zoomChanged);
@@ -136,7 +137,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(442, 34);
+            this.label1.Location = new System.Drawing.Point(484, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 1;
@@ -249,11 +250,24 @@
             this.map.TabIndex = 0;
             this.map.TabStop = false;
             // 
+            // showStatsCb
+            // 
+            this.showStatsCb.AutoSize = true;
+            this.showStatsCb.Location = new System.Drawing.Point(300, 9);
+            this.showStatsCb.Name = "showStatsCb";
+            this.showStatsCb.Size = new System.Drawing.Size(80, 17);
+            this.showStatsCb.TabIndex = 13;
+            this.showStatsCb.Text = "Show Stats";
+            this.showStatsCb.UseVisualStyleBackColor = true;
+            this.showStatsCb.CheckedChanged += new System.EventHandler(this.showStatsChange);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 549);
+            this.Controls.Add(this.showStatsCb);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.simMenuBtn);
             this.Controls.Add(this.simulationSettingsBtn);
             this.Controls.Add(this.goToLatestEvents);
@@ -262,12 +276,11 @@
             this.Controls.Add(this.scrollEventsBack);
             this.Controls.Add(this.eventsGroupBox);
             this.Controls.Add(this.showCompanyNamesCB);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.zoomTrackBar);
             this.Controls.Add(this.showVisitsCB);
             this.Controls.Add(this.amtDaysAdvance);
             this.Controls.Add(this.advanceDaysBtn);
             this.Controls.Add(this.mapGroupBox);
+            this.Controls.Add(this.zoomTrackBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1274, 300);
             this.Name = "Main";
@@ -302,6 +315,7 @@
         private System.Windows.Forms.Button goToLatestEvents;
         private System.Windows.Forms.Button simulationSettingsBtn;
         private System.Windows.Forms.Button simMenuBtn;
+        private System.Windows.Forms.CheckBox showStatsCb;
     }
 }
 

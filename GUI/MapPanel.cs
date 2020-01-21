@@ -14,7 +14,7 @@ namespace AQASkeletronPlus
     public class MapPanel : PictureBox
     {
         //User set flags.
-        private bool iDrawTracers = false, iDrawNames = false;
+        private bool iDrawTracers = false, iDrawNames = false, iDrawStats = false;
         public bool DrawTracers
         {
             get => iDrawTracers;
@@ -35,6 +35,16 @@ namespace AQASkeletronPlus
                 this.Refresh();
             }
         }
+        public bool DrawStats
+        {
+            get => iDrawStats;
+            set
+            {
+                //Refresh the control upon change.
+                iDrawStats = value;
+                this.Refresh();
+            }
+        }
 
         //Map width and height.
         private int mapWidth = -1;
@@ -42,7 +52,7 @@ namespace AQASkeletronPlus
 
         //List of households/outlets to draw.
         private List<Vector2> households = new List<Vector2>();
-        private Dictionary<Vector2, string> outlets = new Dictionary<Vector2, string>();
+        private Dictionary<Vector2, Outlet> outlets = new Dictionary<Vector2, Outlet>();
         private List<Tuple<Vector2, Vector2>> tracers = new List<Tuple<Vector2, Vector2>>();
 
         //Brushes to use for the base, and outlets/houses.
@@ -124,16 +134,21 @@ namespace AQASkeletronPlus
             }
 
             //Should names be drawn on outlets?
-            if (DrawNames)
+            if (DrawNames || DrawStats)
             {
                 //Recalculate the font size for the map.
                 CalculateFontSize();
 
                 foreach (var outlet in outlets)
                 {
+                    //Get the text to draw.
+                    string textToDraw = "";
+                    if (DrawNames) { textToDraw += outlet.Value.ParentCompany.Name; }
+                    if (DrawStats) { textToDraw += " (" + outlet.Value.VisitedYesterday + ")"; }
+
                     //Draw the text in the center of the outlet.
                     Vector2 outletCenter = GetPixelCenterOfCell(outlet.Key);
-                    e.Graphics.DrawString(outlet.Value, new Font(FontFamily.GenericSerif, nameFontSize), nameBrush, outletCenter.x, outletCenter.y);
+                    e.Graphics.DrawString(textToDraw, new Font(FontFamily.GenericSerif, nameFontSize), nameBrush, outletCenter.x, outletCenter.y);
                 }
             }
         }
@@ -154,7 +169,7 @@ namespace AQASkeletronPlus
         /// </summary>
         public void Clear()
         {
-            outlets = new Dictionary<Vector2, string>();
+            outlets = new Dictionary<Vector2, Outlet>();
             households = new List<Vector2>();
             tracers = new List<Tuple<Vector2, Vector2>>();
 
@@ -181,7 +196,7 @@ namespace AQASkeletronPlus
         /// <summary>
         /// Sets an outlet to draw on the grid.
         /// </summary>
-        public void AddOutlet(int x, int y, string name)
+        public void AddOutlet(int x, int y, Outlet outlet_)
         {
             VerifyCoordinates(x, y);
 
@@ -191,7 +206,7 @@ namespace AQASkeletronPlus
                 if (x == outlet.Key.x && y == outlet.Key.y) { return; }
             }
 
-            outlets.Add(new Vector2(x, y), name);
+            outlets.Add(new Vector2(x, y), outlet_);
         }
 
         /// <summary>
@@ -207,7 +222,7 @@ namespace AQASkeletronPlus
                 }
                 else if (building.Type == BuildingType.Outlet)
                 {
-                    AddOutlet(building.Position.x, building.Position.y, building.Name);
+                    AddOutlet(building.Position.x, building.Position.y, building.Outlet);
                 }
                 else
                 {
@@ -290,6 +305,7 @@ namespace AQASkeletronPlus
         public Vector2 Position;
         public BuildingType Type;
         public string Name = "Unnamed";
+        public Outlet Outlet;
     }
 
     /// <summary>

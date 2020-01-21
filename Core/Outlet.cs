@@ -18,6 +18,11 @@ namespace AQASkeletronPlus
         protected Settlement settlement;
         protected int visitsToday = 0;
 
+        /// <summary>
+        /// The number of households who visited this outlet yesterday.
+        /// </summary>
+        public int VisitedYesterday { get; protected set; } = 0;
+
         public Outlet(Settlement s, Company parent, Vector2 position, int capacity, double dailyCost)
         {
             Position = position;
@@ -58,6 +63,7 @@ namespace AQASkeletronPlus
         public void ProcessDayEnd()
         {
             //Reset the visits for the day.
+            VisitedYesterday = visitsToday;
             visitsToday = 0;
         }
     }

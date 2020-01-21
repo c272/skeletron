@@ -7,6 +7,70 @@ references:
   commentId: N:AQASkeletronPlus
   fullName: AQASkeletronPlus
   nameWithType: AQASkeletronPlus
+- uid: AQASkeletronPlus.BalancedSimulation
+  name: BalancedSimulation
+  href: api/AQASkeletronPlus.BalancedSimulation.html
+  commentId: T:AQASkeletronPlus.BalancedSimulation
+  fullName: AQASkeletronPlus.BalancedSimulation
+  nameWithType: BalancedSimulation
+- uid: AQASkeletronPlus.BalancedSimulation.#ctor(System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{AQASkeletronPlus.CompanyDefault})
+  name: BalancedSimulation(Int32, Int32, Int32, List<CompanyDefault>)
+  href: api/AQASkeletronPlus.BalancedSimulation.html#AQASkeletronPlus_BalancedSimulation__ctor_System_Int32_System_Int32_System_Int32_System_Collections_Generic_List_AQASkeletronPlus_CompanyDefault__
+  commentId: M:AQASkeletronPlus.BalancedSimulation.#ctor(System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{AQASkeletronPlus.CompanyDefault})
+  name.vb: BalancedSimulation(Int32, Int32, Int32, List(Of CompanyDefault))
+  fullName: AQASkeletronPlus.BalancedSimulation.BalancedSimulation(System.Int32, System.Int32, System.Int32, System.Collections.Generic.List<AQASkeletronPlus.CompanyDefault>)
+  fullName.vb: AQASkeletronPlus.BalancedSimulation.BalancedSimulation(System.Int32, System.Int32, System.Int32, System.Collections.Generic.List(Of AQASkeletronPlus.CompanyDefault))
+  nameWithType: BalancedSimulation.BalancedSimulation(Int32, Int32, Int32, List<CompanyDefault>)
+  nameWithType.vb: BalancedSimulation.BalancedSimulation(Int32, Int32, Int32, List(Of CompanyDefault))
+- uid: AQASkeletronPlus.BalancedSimulation.#ctor*
+  name: BalancedSimulation
+  href: api/AQASkeletronPlus.BalancedSimulation.html#AQASkeletronPlus_BalancedSimulation__ctor_
+  commentId: Overload:AQASkeletronPlus.BalancedSimulation.#ctor
+  isSpec: "True"
+  fullName: AQASkeletronPlus.BalancedSimulation.BalancedSimulation
+  nameWithType: BalancedSimulation.BalancedSimulation
+- uid: AQASkeletronPlus.BalancedSimulation.CalculateVisitsFromHouseholds(System.Collections.Generic.List{System.Double},System.Double)
+  name: CalculateVisitsFromHouseholds(List<Double>, Double)
+  href: api/AQASkeletronPlus.BalancedSimulation.html#AQASkeletronPlus_BalancedSimulation_CalculateVisitsFromHouseholds_System_Collections_Generic_List_System_Double__System_Double_
+  commentId: M:AQASkeletronPlus.BalancedSimulation.CalculateVisitsFromHouseholds(System.Collections.Generic.List{System.Double},System.Double)
+  name.vb: CalculateVisitsFromHouseholds(List(Of Double), Double)
+  fullName: AQASkeletronPlus.BalancedSimulation.CalculateVisitsFromHouseholds(System.Collections.Generic.List<System.Double>, System.Double)
+  fullName.vb: AQASkeletronPlus.BalancedSimulation.CalculateVisitsFromHouseholds(System.Collections.Generic.List(Of System.Double), System.Double)
+  nameWithType: BalancedSimulation.CalculateVisitsFromHouseholds(List<Double>, Double)
+  nameWithType.vb: BalancedSimulation.CalculateVisitsFromHouseholds(List(Of Double), Double)
+- uid: AQASkeletronPlus.BalancedSimulation.CalculateVisitsFromHouseholds*
+  name: CalculateVisitsFromHouseholds
+  href: api/AQASkeletronPlus.BalancedSimulation.html#AQASkeletronPlus_BalancedSimulation_CalculateVisitsFromHouseholds_
+  commentId: Overload:AQASkeletronPlus.BalancedSimulation.CalculateVisitsFromHouseholds
+  isSpec: "True"
+  fullName: AQASkeletronPlus.BalancedSimulation.CalculateVisitsFromHouseholds
+  nameWithType: BalancedSimulation.CalculateVisitsFromHouseholds
+- uid: AQASkeletronPlus.BalancedSimulation.GetOutletsAround(AQASkeletronPlus.Vector2,System.Double)
+  name: GetOutletsAround(Vector2, Double)
+  href: api/AQASkeletronPlus.BalancedSimulation.html#AQASkeletronPlus_BalancedSimulation_GetOutletsAround_AQASkeletronPlus_Vector2_System_Double_
+  commentId: M:AQASkeletronPlus.BalancedSimulation.GetOutletsAround(AQASkeletronPlus.Vector2,System.Double)
+  fullName: AQASkeletronPlus.BalancedSimulation.GetOutletsAround(AQASkeletronPlus.Vector2, System.Double)
+  nameWithType: BalancedSimulation.GetOutletsAround(Vector2, Double)
+- uid: AQASkeletronPlus.BalancedSimulation.GetOutletsAround*
+  name: GetOutletsAround
+  href: api/AQASkeletronPlus.BalancedSimulation.html#AQASkeletronPlus_BalancedSimulation_GetOutletsAround_
+  commentId: Overload:AQASkeletronPlus.BalancedSimulation.GetOutletsAround
+  isSpec: "True"
+  fullName: AQASkeletronPlus.BalancedSimulation.GetOutletsAround
+  nameWithType: BalancedSimulation.GetOutletsAround
+- uid: AQASkeletronPlus.BalancedSimulation.ProcessChangeFuelCostEvent
+  name: ProcessChangeFuelCostEvent()
+  href: api/AQASkeletronPlus.BalancedSimulation.html#AQASkeletronPlus_BalancedSimulation_ProcessChangeFuelCostEvent
+  commentId: M:AQASkeletronPlus.BalancedSimulation.ProcessChangeFuelCostEvent
+  fullName: AQASkeletronPlus.BalancedSimulation.ProcessChangeFuelCostEvent()
+  nameWithType: BalancedSimulation.ProcessChangeFuelCostEvent()
+- uid: AQASkeletronPlus.BalancedSimulation.ProcessChangeFuelCostEvent*
+  name: ProcessChangeFuelCostEvent
+  href: api/AQASkeletronPlus.BalancedSimulation.html#AQASkeletronPlus_BalancedSimulation_ProcessChangeFuelCostEvent_
+  commentId: Overload:AQASkeletronPlus.BalancedSimulation.ProcessChangeFuelCostEvent
+  isSpec: "True"
+  fullName: AQASkeletronPlus.BalancedSimulation.ProcessChangeFuelCostEvent
+  nameWithType: BalancedSimulation.ProcessChangeFuelCostEvent
 - uid: AQASkeletronPlus.Building
   name: Building
   href: api/AQASkeletronPlus.Building.html
@@ -142,12 +206,12 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.Company.ChangeDailyCostBy
   nameWithType: Company.ChangeDailyCostBy
-- uid: AQASkeletronPlus.Company.ChangeFuelCostBy(System.Double)
-  name: ChangeFuelCostBy(Double)
-  href: api/AQASkeletronPlus.Company.html#AQASkeletronPlus_Company_ChangeFuelCostBy_System_Double_
-  commentId: M:AQASkeletronPlus.Company.ChangeFuelCostBy(System.Double)
-  fullName: AQASkeletronPlus.Company.ChangeFuelCostBy(System.Double)
-  nameWithType: Company.ChangeFuelCostBy(Double)
+- uid: AQASkeletronPlus.Company.ChangeFuelCostBy(System.Double,System.Double)
+  name: ChangeFuelCostBy(Double, Double)
+  href: api/AQASkeletronPlus.Company.html#AQASkeletronPlus_Company_ChangeFuelCostBy_System_Double_System_Double_
+  commentId: M:AQASkeletronPlus.Company.ChangeFuelCostBy(System.Double,System.Double)
+  fullName: AQASkeletronPlus.Company.ChangeFuelCostBy(System.Double, System.Double)
+  nameWithType: Company.ChangeFuelCostBy(Double, Double)
 - uid: AQASkeletronPlus.Company.ChangeFuelCostBy*
   name: ChangeFuelCostBy
   href: api/AQASkeletronPlus.Company.html#AQASkeletronPlus_Company_ChangeFuelCostBy_
@@ -391,6 +455,28 @@ references:
   commentId: F:AQASkeletronPlus.CompanyType.NamedChef
   fullName: AQASkeletronPlus.CompanyType.NamedChef
   nameWithType: CompanyType.NamedChef
+- uid: AQASkeletronPlus.DoubleExtensions
+  name: DoubleExtensions
+  href: api/AQASkeletronPlus.DoubleExtensions.html
+  commentId: T:AQASkeletronPlus.DoubleExtensions
+  fullName: AQASkeletronPlus.DoubleExtensions
+  nameWithType: DoubleExtensions
+- uid: AQASkeletronPlus.DoubleExtensions.CumulativeSum(System.Collections.Generic.IEnumerable{System.Double})
+  name: CumulativeSum(IEnumerable<Double>)
+  href: api/AQASkeletronPlus.DoubleExtensions.html#AQASkeletronPlus_DoubleExtensions_CumulativeSum_System_Collections_Generic_IEnumerable_System_Double__
+  commentId: M:AQASkeletronPlus.DoubleExtensions.CumulativeSum(System.Collections.Generic.IEnumerable{System.Double})
+  name.vb: CumulativeSum(IEnumerable(Of Double))
+  fullName: AQASkeletronPlus.DoubleExtensions.CumulativeSum(System.Collections.Generic.IEnumerable<System.Double>)
+  fullName.vb: AQASkeletronPlus.DoubleExtensions.CumulativeSum(System.Collections.Generic.IEnumerable(Of System.Double))
+  nameWithType: DoubleExtensions.CumulativeSum(IEnumerable<Double>)
+  nameWithType.vb: DoubleExtensions.CumulativeSum(IEnumerable(Of Double))
+- uid: AQASkeletronPlus.DoubleExtensions.CumulativeSum*
+  name: CumulativeSum
+  href: api/AQASkeletronPlus.DoubleExtensions.html#AQASkeletronPlus_DoubleExtensions_CumulativeSum_
+  commentId: Overload:AQASkeletronPlus.DoubleExtensions.CumulativeSum
+  isSpec: "True"
+  fullName: AQASkeletronPlus.DoubleExtensions.CumulativeSum
+  nameWithType: DoubleExtensions.CumulativeSum
 - uid: AQASkeletronPlus.Events
   name: AQASkeletronPlus.Events
   href: api/AQASkeletronPlus.Events.html
@@ -661,6 +747,12 @@ references:
   commentId: F:AQASkeletronPlus.Events.EventType.Delivery
   fullName: AQASkeletronPlus.Events.EventType.Delivery
   nameWithType: EventType.Delivery
+- uid: AQASkeletronPlus.Events.EventType.FailedToEatOut
+  name: FailedToEatOut
+  href: api/AQASkeletronPlus.Events.EventType.html#AQASkeletronPlus_Events_EventType_FailedToEatOut
+  commentId: F:AQASkeletronPlus.Events.EventType.FailedToEatOut
+  fullName: AQASkeletronPlus.Events.EventType.FailedToEatOut
+  nameWithType: EventType.FailedToEatOut
 - uid: AQASkeletronPlus.Events.EventType.FoodTruckMove
   name: FoodTruckMove
   href: api/AQASkeletronPlus.Events.EventType.html#AQASkeletronPlus_Events_EventType_FoodTruckMove
@@ -703,6 +795,56 @@ references:
   commentId: F:AQASkeletronPlus.Events.EventType.VisitOutlet
   fullName: AQASkeletronPlus.Events.EventType.VisitOutlet
   nameWithType: EventType.VisitOutlet
+- uid: AQASkeletronPlus.Events.FailedToEatOutEvent
+  name: FailedToEatOutEvent
+  href: api/AQASkeletronPlus.Events.FailedToEatOutEvent.html
+  commentId: T:AQASkeletronPlus.Events.FailedToEatOutEvent
+  fullName: AQASkeletronPlus.Events.FailedToEatOutEvent
+  nameWithType: FailedToEatOutEvent
+- uid: AQASkeletronPlus.Events.FailedToEatOutEvent.Origin
+  name: Origin
+  href: api/AQASkeletronPlus.Events.FailedToEatOutEvent.html#AQASkeletronPlus_Events_FailedToEatOutEvent_Origin
+  commentId: F:AQASkeletronPlus.Events.FailedToEatOutEvent.Origin
+  fullName: AQASkeletronPlus.Events.FailedToEatOutEvent.Origin
+  nameWithType: FailedToEatOutEvent.Origin
+- uid: AQASkeletronPlus.Events.FailedToEatOutEvent.OutletType
+  name: OutletType
+  href: api/AQASkeletronPlus.Events.FailedToEatOutEvent.html#AQASkeletronPlus_Events_FailedToEatOutEvent_OutletType
+  commentId: F:AQASkeletronPlus.Events.FailedToEatOutEvent.OutletType
+  fullName: AQASkeletronPlus.Events.FailedToEatOutEvent.OutletType
+  nameWithType: FailedToEatOutEvent.OutletType
+- uid: AQASkeletronPlus.Events.FailedToEatOutEvent.Radius
+  name: Radius
+  href: api/AQASkeletronPlus.Events.FailedToEatOutEvent.html#AQASkeletronPlus_Events_FailedToEatOutEvent_Radius
+  commentId: F:AQASkeletronPlus.Events.FailedToEatOutEvent.Radius
+  fullName: AQASkeletronPlus.Events.FailedToEatOutEvent.Radius
+  nameWithType: FailedToEatOutEvent.Radius
+- uid: AQASkeletronPlus.Events.FailedToEatOutEvent.Stringify
+  name: Stringify()
+  href: api/AQASkeletronPlus.Events.FailedToEatOutEvent.html#AQASkeletronPlus_Events_FailedToEatOutEvent_Stringify
+  commentId: M:AQASkeletronPlus.Events.FailedToEatOutEvent.Stringify
+  fullName: AQASkeletronPlus.Events.FailedToEatOutEvent.Stringify()
+  nameWithType: FailedToEatOutEvent.Stringify()
+- uid: AQASkeletronPlus.Events.FailedToEatOutEvent.Stringify*
+  name: Stringify
+  href: api/AQASkeletronPlus.Events.FailedToEatOutEvent.html#AQASkeletronPlus_Events_FailedToEatOutEvent_Stringify_
+  commentId: Overload:AQASkeletronPlus.Events.FailedToEatOutEvent.Stringify
+  isSpec: "True"
+  fullName: AQASkeletronPlus.Events.FailedToEatOutEvent.Stringify
+  nameWithType: FailedToEatOutEvent.Stringify
+- uid: AQASkeletronPlus.Events.FailedToEatOutEvent.Type
+  name: Type
+  href: api/AQASkeletronPlus.Events.FailedToEatOutEvent.html#AQASkeletronPlus_Events_FailedToEatOutEvent_Type
+  commentId: P:AQASkeletronPlus.Events.FailedToEatOutEvent.Type
+  fullName: AQASkeletronPlus.Events.FailedToEatOutEvent.Type
+  nameWithType: FailedToEatOutEvent.Type
+- uid: AQASkeletronPlus.Events.FailedToEatOutEvent.Type*
+  name: Type
+  href: api/AQASkeletronPlus.Events.FailedToEatOutEvent.html#AQASkeletronPlus_Events_FailedToEatOutEvent_Type_
+  commentId: Overload:AQASkeletronPlus.Events.FailedToEatOutEvent.Type
+  isSpec: "True"
+  fullName: AQASkeletronPlus.Events.FailedToEatOutEvent.Type
+  nameWithType: FailedToEatOutEvent.Type
 - uid: AQASkeletronPlus.Events.FoodTruckMoveEvent
   name: FoodTruckMoveEvent
   href: api/AQASkeletronPlus.Events.FoodTruckMoveEvent.html
@@ -1574,6 +1716,97 @@ references:
   commentId: T:AQASkeletronPlus.ISettings
   fullName: AQASkeletronPlus.ISettings
   nameWithType: ISettings
+- uid: AQASkeletronPlus.ISettings.BalancedSim_FuelCostCap
+  name: BalancedSim_FuelCostCap
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_FuelCostCap
+  commentId: P:AQASkeletronPlus.ISettings.BalancedSim_FuelCostCap
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_FuelCostCap
+  nameWithType: ISettings.BalancedSim_FuelCostCap
+- uid: AQASkeletronPlus.ISettings.BalancedSim_FuelCostCap*
+  name: BalancedSim_FuelCostCap
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_FuelCostCap_
+  commentId: Overload:AQASkeletronPlus.ISettings.BalancedSim_FuelCostCap
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_FuelCostCap
+  nameWithType: ISettings.BalancedSim_FuelCostCap
+- uid: AQASkeletronPlus.ISettings.BalancedSim_PickChanceFamily
+  name: BalancedSim_PickChanceFamily
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_PickChanceFamily
+  commentId: P:AQASkeletronPlus.ISettings.BalancedSim_PickChanceFamily
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_PickChanceFamily
+  nameWithType: ISettings.BalancedSim_PickChanceFamily
+- uid: AQASkeletronPlus.ISettings.BalancedSim_PickChanceFamily*
+  name: BalancedSim_PickChanceFamily
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_PickChanceFamily_
+  commentId: Overload:AQASkeletronPlus.ISettings.BalancedSim_PickChanceFamily
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_PickChanceFamily
+  nameWithType: ISettings.BalancedSim_PickChanceFamily
+- uid: AQASkeletronPlus.ISettings.BalancedSim_PickChanceFastFood
+  name: BalancedSim_PickChanceFastFood
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_PickChanceFastFood
+  commentId: P:AQASkeletronPlus.ISettings.BalancedSim_PickChanceFastFood
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_PickChanceFastFood
+  nameWithType: ISettings.BalancedSim_PickChanceFastFood
+- uid: AQASkeletronPlus.ISettings.BalancedSim_PickChanceFastFood*
+  name: BalancedSim_PickChanceFastFood
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_PickChanceFastFood_
+  commentId: Overload:AQASkeletronPlus.ISettings.BalancedSim_PickChanceFastFood
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_PickChanceFastFood
+  nameWithType: ISettings.BalancedSim_PickChanceFastFood
+- uid: AQASkeletronPlus.ISettings.BalancedSim_PickChanceNamedChef
+  name: BalancedSim_PickChanceNamedChef
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_PickChanceNamedChef
+  commentId: P:AQASkeletronPlus.ISettings.BalancedSim_PickChanceNamedChef
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_PickChanceNamedChef
+  nameWithType: ISettings.BalancedSim_PickChanceNamedChef
+- uid: AQASkeletronPlus.ISettings.BalancedSim_PickChanceNamedChef*
+  name: BalancedSim_PickChanceNamedChef
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_PickChanceNamedChef_
+  commentId: Overload:AQASkeletronPlus.ISettings.BalancedSim_PickChanceNamedChef
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_PickChanceNamedChef
+  nameWithType: ISettings.BalancedSim_PickChanceNamedChef
+- uid: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFamily
+  name: BalancedSim_TravelRadiusFamily
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_TravelRadiusFamily
+  commentId: P:AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFamily
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFamily
+  nameWithType: ISettings.BalancedSim_TravelRadiusFamily
+- uid: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFamily*
+  name: BalancedSim_TravelRadiusFamily
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_TravelRadiusFamily_
+  commentId: Overload:AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFamily
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFamily
+  nameWithType: ISettings.BalancedSim_TravelRadiusFamily
+- uid: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFastFood
+  name: BalancedSim_TravelRadiusFastFood
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_TravelRadiusFastFood
+  commentId: P:AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFastFood
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFastFood
+  nameWithType: ISettings.BalancedSim_TravelRadiusFastFood
+- uid: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFastFood*
+  name: BalancedSim_TravelRadiusFastFood
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_TravelRadiusFastFood_
+  commentId: Overload:AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFastFood
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusFastFood
+  nameWithType: ISettings.BalancedSim_TravelRadiusFastFood
+- uid: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusNamedChef
+  name: BalancedSim_TravelRadiusNamedChef
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_TravelRadiusNamedChef
+  commentId: P:AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusNamedChef
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusNamedChef
+  nameWithType: ISettings.BalancedSim_TravelRadiusNamedChef
+- uid: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusNamedChef*
+  name: BalancedSim_TravelRadiusNamedChef
+  href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BalancedSim_TravelRadiusNamedChef_
+  commentId: Overload:AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusNamedChef
+  isSpec: "True"
+  fullName: AQASkeletronPlus.ISettings.BalancedSim_TravelRadiusNamedChef
+  nameWithType: ISettings.BalancedSim_TravelRadiusNamedChef
 - uid: AQASkeletronPlus.ISettings.BaseChanceOfRandomEvents
   name: BaseChanceOfRandomEvents
   href: api/AQASkeletronPlus.ISettings.html#AQASkeletronPlus_ISettings_BaseChanceOfRandomEvents
@@ -2677,6 +2910,22 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.Simulation.AddCompanyFromDefault
   nameWithType: Simulation.AddCompanyFromDefault
+- uid: AQASkeletronPlus.Simulation.CalculateVisitsFromHouseholds(System.Collections.Generic.List{System.Double},System.Double)
+  name: CalculateVisitsFromHouseholds(List<Double>, Double)
+  href: api/AQASkeletronPlus.Simulation.html#AQASkeletronPlus_Simulation_CalculateVisitsFromHouseholds_System_Collections_Generic_List_System_Double__System_Double_
+  commentId: M:AQASkeletronPlus.Simulation.CalculateVisitsFromHouseholds(System.Collections.Generic.List{System.Double},System.Double)
+  name.vb: CalculateVisitsFromHouseholds(List(Of Double), Double)
+  fullName: AQASkeletronPlus.Simulation.CalculateVisitsFromHouseholds(System.Collections.Generic.List<System.Double>, System.Double)
+  fullName.vb: AQASkeletronPlus.Simulation.CalculateVisitsFromHouseholds(System.Collections.Generic.List(Of System.Double), System.Double)
+  nameWithType: Simulation.CalculateVisitsFromHouseholds(List<Double>, Double)
+  nameWithType.vb: Simulation.CalculateVisitsFromHouseholds(List(Of Double), Double)
+- uid: AQASkeletronPlus.Simulation.CalculateVisitsFromHouseholds*
+  name: CalculateVisitsFromHouseholds
+  href: api/AQASkeletronPlus.Simulation.html#AQASkeletronPlus_Simulation_CalculateVisitsFromHouseholds_
+  commentId: Overload:AQASkeletronPlus.Simulation.CalculateVisitsFromHouseholds
+  isSpec: "True"
+  fullName: AQASkeletronPlus.Simulation.CalculateVisitsFromHouseholds
+  nameWithType: Simulation.CalculateVisitsFromHouseholds
 - uid: AQASkeletronPlus.Simulation.Companies
   name: Companies
   href: api/AQASkeletronPlus.Simulation.html#AQASkeletronPlus_Simulation_Companies
@@ -2735,6 +2984,19 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.Simulation.GetBuildingCoordinates
   nameWithType: Simulation.GetBuildingCoordinates
+- uid: AQASkeletronPlus.Simulation.ProcessChangeFuelCostEvent
+  name: ProcessChangeFuelCostEvent()
+  href: api/AQASkeletronPlus.Simulation.html#AQASkeletronPlus_Simulation_ProcessChangeFuelCostEvent
+  commentId: M:AQASkeletronPlus.Simulation.ProcessChangeFuelCostEvent
+  fullName: AQASkeletronPlus.Simulation.ProcessChangeFuelCostEvent()
+  nameWithType: Simulation.ProcessChangeFuelCostEvent()
+- uid: AQASkeletronPlus.Simulation.ProcessChangeFuelCostEvent*
+  name: ProcessChangeFuelCostEvent
+  href: api/AQASkeletronPlus.Simulation.html#AQASkeletronPlus_Simulation_ProcessChangeFuelCostEvent_
+  commentId: Overload:AQASkeletronPlus.Simulation.ProcessChangeFuelCostEvent
+  isSpec: "True"
+  fullName: AQASkeletronPlus.Simulation.ProcessChangeFuelCostEvent
+  nameWithType: Simulation.ProcessChangeFuelCostEvent
 - uid: AQASkeletronPlus.Simulation.ProcessDayEnd
   name: ProcessDayEnd()
   href: api/AQASkeletronPlus.Simulation.html#AQASkeletronPlus_Simulation_ProcessDayEnd
@@ -2793,6 +3055,12 @@ references:
   isSpec: "True"
   fullName: AQASkeletronPlus.Simulation.UpdateMap
   nameWithType: Simulation.UpdateMap
+- uid: AQASkeletronPlus.Simulation.visits
+  name: visits
+  href: api/AQASkeletronPlus.Simulation.html#AQASkeletronPlus_Simulation_visits
+  commentId: F:AQASkeletronPlus.Simulation.visits
+  fullName: AQASkeletronPlus.Simulation.visits
+  nameWithType: Simulation.visits
 - uid: AQASkeletronPlus.Vector2
   name: Vector2
   href: api/AQASkeletronPlus.Vector2.html

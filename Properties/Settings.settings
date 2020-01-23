@@ -1,7 +1,15 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AQASkeletronPlus.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HCN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Anti-Hasan League</Value>
+    </Setting>
+    <Setting Name="BTCN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ben Thor Cuisine</Value>
+    </Setting>
+    <Setting Name="ABCN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AQA Burgers</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

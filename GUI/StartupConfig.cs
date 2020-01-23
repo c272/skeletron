@@ -44,28 +44,28 @@ namespace AQASkeletronPlus.GUI
                         //AQA Burgers
                         new CompanyDefault()
                         {
-                            Name = "AQA Burgers+",
-                            StartingBalance = 100000,
+                            Name = Properties.Settings.Default.ABCN,
+                            StartingBalance = 120000,
                             Type = CompanyType.FastFood,
-                            StartingOutlets = 4
+                            StartingOutlets = 3
                         },
 
                         //Ben Thor Cuisine
                         new CompanyDefault()
                         {
-                            Name = "Ben Thor Cuisine",
-                            StartingBalance = 100400,
+                            Name = Properties.Settings.Default.BTCN,
+                            StartingBalance = 80400,
                             Type = CompanyType.NamedChef,
-                            StartingOutlets = 2
+                            StartingOutlets = 1
                         },
 
                         //Paltry Poultry
                         new CompanyDefault()
                         {
-                            Name = "Family Poultry",
+                            Name = Properties.Settings.Default.HCN,
                             StartingBalance = 25000,
                             Type = CompanyType.Family,
-                            StartingOutlets = 4
+                            StartingOutlets = 2
                         }
                     };
 

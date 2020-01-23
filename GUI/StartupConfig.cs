@@ -38,7 +38,7 @@ namespace AQASkeletronPlus.GUI
                 //Which simulation type is it?
                 if (balancedModeCb.Checked)
                 {
-                    //Edit the defaults to balance.
+                    //Edit the defaults to balance (in props).
                     Settings.DefaultCompanies = new List<CompanyDefault>()
                     {
                         //AQA Burgers

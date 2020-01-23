@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "EOSziFNSjE6W/3mIb/kcHg=="
+          "hash": "c1cwGGC+Fv/NMAhmcznxbQ=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/settings.html",
-          "hash": "frv+DR1its57MHlSytr8eg=="
+          "hash": "pSPjRRx4F3v/zr0e4d3HMg=="
         }
       },
       "is_incremental": false,
@@ -134,7 +134,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "DxM99edH4lm5snibjszWJw=="
+          "hash": "8foCGepSFvgpkPgEwMzPbw=="
         }
       },
       "is_incremental": false,
@@ -146,7 +146,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.BalancedSimulation.html",
-          "hash": "hR33HwLoMnYuWfMmpBi+Kg=="
+          "hash": "AOaygCXs0pt96h4CwiJ5Cg=="
         }
       },
       "is_incremental": false,
@@ -158,7 +158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Building.html",
-          "hash": "oCv2MLVIcHr5htO/OMhAxQ=="
+          "hash": "9N4k1R47SGjXfyWnCVWbNw=="
         }
       },
       "is_incremental": false,
@@ -170,7 +170,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.BuildingType.html",
-          "hash": "XixIVeTtOzk3zw9pxtQZpw=="
+          "hash": "j+QMwZGU4q499CtnPbDzfA=="
         }
       },
       "is_incremental": false,
@@ -182,7 +182,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Company.html",
-          "hash": "qNO3b2TLO2ag1UOlft1pOw=="
+          "hash": "/2ayEQEnwlsBrFKlUsw7uQ=="
         }
       },
       "is_incremental": false,
@@ -194,7 +194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.CompanyDefault.html",
-          "hash": "kzhjfI54QmJZndT+C/3hCg=="
+          "hash": "7JvNsXcwPUifsm4cBDxQaA=="
         }
       },
       "is_incremental": false,
@@ -206,7 +206,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.CompanyType.html",
-          "hash": "AlpCSYPlkf798O6i4X4vNA=="
+          "hash": "x+/47yvrHtSTS21EkBEjaQ=="
         }
       },
       "is_incremental": false,
@@ -218,7 +218,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.DoubleExtensions.html",
-          "hash": "0xJw7jO7R9xnAULEpzpaaQ=="
+          "hash": "CeOnl8p/PPrw63t3FJ3Bow=="
         }
       },
       "is_incremental": false,
@@ -230,7 +230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.AddHouseholdsEvent.html",
-          "hash": "pDl/250bkd1PgiMUtrQYCQ=="
+          "hash": "k1oaveFNkIQ3JnHbdH/C/w=="
         }
       },
       "is_incremental": false,
@@ -242,7 +242,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.BankruptcyEvent.html",
-          "hash": "U70xii5TFs/fBeZqCcXp7A=="
+          "hash": "GNbqr7Z6yDuclZaPsAeJxw=="
         }
       },
       "is_incremental": false,
@@ -254,7 +254,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.CostChangeEvent.html",
-          "hash": "Qyv9y9FGOFRrLI8yWcR+mA=="
+          "hash": "CVHfJ5kMX0jez3yUSuoL8g=="
         }
       },
       "is_incremental": false,
@@ -266,7 +266,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.DeliveryEvent.html",
-          "hash": "qpUC89DMOL2SHOcorTkL2Q=="
+          "hash": "8FaslcG0121wYv4AgCHnCQ=="
         }
       },
       "is_incremental": false,
@@ -278,7 +278,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.EventChain.html",
-          "hash": "bajBqukL+BsPGco2/ymiYw=="
+          "hash": "4oNGQ9+xAecHSry9WCnqAg=="
         }
       },
       "is_incremental": false,
@@ -290,7 +290,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.EventType.html",
-          "hash": "UTMweDgjsD5Dk0BJxAlgyQ=="
+          "hash": "1apxwnkmLo6Z62K8QtJ0IQ=="
         }
       },
       "is_incremental": false,
@@ -302,7 +302,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.FailedToEatOutEvent.html",
-          "hash": "cJZ0YKCqP0UxGdIzun2xyQ=="
+          "hash": "dPoEGYbbTV7bhs+p2wEV7g=="
         }
       },
       "is_incremental": false,
@@ -314,7 +314,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.FoodTruckMoveEvent.html",
-          "hash": "g7Dc8q05IYEKu9osaGxi7A=="
+          "hash": "XTPPiRI8jAs2w7uIbusMeg=="
         }
       },
       "is_incremental": false,
@@ -326,7 +326,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.FuelCostChangeEvent.html",
-          "hash": "Ot+O5lMo0g8jpnGW8+ya4w=="
+          "hash": "EAf/vs0T6IGxurnbyrDUxg=="
         }
       },
       "is_incremental": false,
@@ -338,7 +338,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.HouseholdLeavingEvent.html",
-          "hash": "RWh8MLxhoif6qW655DzzHw=="
+          "hash": "EDgUVP2W8RN9jwQEO7zLKQ=="
         }
       },
       "is_incremental": false,
@@ -350,7 +350,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.IEvent.html",
-          "hash": "U/9PNaxh/WJ06dAE2YCkdw=="
+          "hash": "dGywde7CA8DUCFRoGv7vOA=="
         }
       },
       "is_incremental": false,
@@ -362,7 +362,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.OutletCreateEvent.html",
-          "hash": "F1hwkKdF4HQ9+DkJeJQxhA=="
+          "hash": "WEqTqHRv916WGXv5WAw1Jg=="
         }
       },
       "is_incremental": false,
@@ -374,7 +374,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.OutletProfitEvent.html",
-          "hash": "goXx+QwnZPxf5j5JO2oXtQ=="
+          "hash": "exHIpN5tXK5FMSkVXP3/zA=="
         }
       },
       "is_incremental": false,
@@ -386,7 +386,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.ReputationChangeEvent.html",
-          "hash": "sOHuyXsvNnvv2owKViiYPA=="
+          "hash": "9P7KZTm1k0iKRVgTWD1DPg=="
         }
       },
       "is_incremental": false,
@@ -398,7 +398,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Events.VisitOutletEvent.html",
-          "hash": "q041VIT3QtDUzrAZSvnXmQ=="
+          "hash": "jr29ZiOp0Oi7y0Ik7txgLQ=="
         }
       },
       "is_incremental": false,
@@ -422,7 +422,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.FoodTruck.html",
-          "hash": "x+5mqs915/6YyxsH/Oiiow=="
+          "hash": "HXQ3lZE1csvtpdxh9gJOJQ=="
         }
       },
       "is_incremental": false,
@@ -434,7 +434,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.AboutMenu.html",
-          "hash": "tZ2MMHGdkTZQXriPPFy6IA=="
+          "hash": "zpyx5bU1kAIFASRYn75IaA=="
         }
       },
       "is_incremental": false,
@@ -446,7 +446,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.CreateCompany.html",
-          "hash": "L+TUo+gMLW7xPzZmNnwcVQ=="
+          "hash": "f4hCTqn1GbRCNyN9btuglw=="
         }
       },
       "is_incremental": false,
@@ -458,7 +458,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.DisplayCompanies.html",
-          "hash": "rM1vYahcqPKYZbL+GOJO+g=="
+          "hash": "qXLGNny9zPobsfxo8Ec/fg=="
         }
       },
       "is_incremental": false,
@@ -470,7 +470,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.DisplayHouseholds.html",
-          "hash": "KiE+6ZR22cPVuBn5g1vPDA=="
+          "hash": "mOjrCvqfASKQhSI7mBb9sg=="
         }
       },
       "is_incremental": false,
@@ -482,7 +482,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.Main.html",
-          "hash": "kpOpw+orBmgrDIi2P6PWfw=="
+          "hash": "fZFGEKzqG5PaN5vIHxJbNw=="
         }
       },
       "is_incremental": false,
@@ -494,7 +494,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.ModifyCompany.html",
-          "hash": "VcI4Hk5VggpSt9Y06eNFNw=="
+          "hash": "EVqLFkkn8WYhmy4i+W6pUQ=="
         }
       },
       "is_incremental": false,
@@ -506,7 +506,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.RunToTarget.html",
-          "hash": "Z2dKc/PIelblBVu5spvczQ=="
+          "hash": "2liCL1VYrYHAGo1prKNM6g=="
         }
       },
       "is_incremental": false,
@@ -518,7 +518,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.SettingsMenu.html",
-          "hash": "07rPhM98LLQgkKfrM68gIA=="
+          "hash": "Y08j9H+ejbqC5k5d6UrjPQ=="
         }
       },
       "is_incremental": false,
@@ -530,7 +530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.SimulationMenu.html",
-          "hash": "4pqEDlXVVanjpCfPhgB66w=="
+          "hash": "bd7GavwPGSusk/11v4B0uA=="
         }
       },
       "is_incremental": false,
@@ -542,7 +542,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.GUI.StartupConfig.html",
-          "hash": "4ScQBg65qIgCZRhRQmCvyg=="
+          "hash": "YBLKf56jndhyv/ViLuOswA=="
         }
       },
       "is_incremental": false,
@@ -566,7 +566,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Household.html",
-          "hash": "p1nYNrFbxK8ATLBrjX4afg=="
+          "hash": "nfeJHYnI3DMDDGSJ+bsFSg=="
         }
       },
       "is_incremental": false,
@@ -578,7 +578,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.ISettings.html",
-          "hash": "7f5oPbrILGATByLoeo6Cpg=="
+          "hash": "Slkdkn4l05yEwQmLlK4WUA=="
         }
       },
       "is_incremental": false,
@@ -590,7 +590,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.IntExtensions.html",
-          "hash": "9DtOFJ7KvNZ2I3MJndMmRg=="
+          "hash": "3NN1XipkQ+zeZ9onLap2Xw=="
         }
       },
       "is_incremental": false,
@@ -602,7 +602,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.MapPanel.html",
-          "hash": "ML7A8qjsfxFakidlX4cj4w=="
+          "hash": "FJuu6JFa3bDru5gKEDCs2w=="
         }
       },
       "is_incremental": false,
@@ -614,7 +614,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Outlet.html",
-          "hash": "YXTwbfQWfPlte+OoKJyyvg=="
+          "hash": "6bbWbDfvP8+489rZRujgUA=="
         }
       },
       "is_incremental": false,
@@ -626,7 +626,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.RandomWrapper.html",
-          "hash": "ZJgdiPG6vE4MWrcaXYV/ew=="
+          "hash": "sR6LV1ZwBPPQ+RJqJuhkgQ=="
         }
       },
       "is_incremental": false,
@@ -638,7 +638,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Settings.html",
-          "hash": "sSzb4bOJzhCCMUFwBk7TVA=="
+          "hash": "2puzcLKatzRDQJV8VMGffA=="
         }
       },
       "is_incremental": false,
@@ -650,7 +650,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Settlement.html",
-          "hash": "84piacAeQb3yYKMqbGXwww=="
+          "hash": "biJQ2T+yDAbOyeuE4jmKUg=="
         }
       },
       "is_incremental": false,
@@ -662,7 +662,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Simulation.html",
-          "hash": "NCMXxA7Hd7KwvTVW1byN6Q=="
+          "hash": "ZBJiG0Ri0pUnjZenHLKHXg=="
         }
       },
       "is_incremental": false,
@@ -674,7 +674,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.Vector2.html",
-          "hash": "GMfZr/S6Dz1a/0dViXIguw=="
+          "hash": "rHuFfOxw7qe+PqpCv7lH2w=="
         }
       },
       "is_incremental": false,
@@ -686,7 +686,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AQASkeletronPlus.VersionExtensions.html",
-          "hash": "Pn0nizXVTD8yAPbQjT31Iw=="
+          "hash": "NG0sMj5mW2NBdQx2zHOdJw=="
         }
       },
       "is_incremental": false,
@@ -747,16 +747,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 47,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 47,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

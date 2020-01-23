@@ -167,17 +167,7 @@ namespace AQASkeletronPlus.GUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.CheckLayout();
 
-        }
-
-        private void CheckLayout()
-        {
-            foreach (Control c in Controls)
-            {
-                if (c is TextBox)
-                    Environment.Exit(0);
-            }
         }
 
         #endregion

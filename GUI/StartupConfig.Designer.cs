@@ -160,6 +160,7 @@ namespace AQASkeletronPlus.GUI
             this.MaximizeBox = false;
             this.Name = "StartupConfig";
             this.Text = "AQA SKPE - Startup";
+
             ((System.ComponentModel.ISupportInitialize)(this.simWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simHouses)).EndInit();

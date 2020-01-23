@@ -38,7 +38,7 @@ namespace AQASkeletronPlus
             //Set locals.
             Name = name;
             Type = type;
-            Balance = balance;
+            Balance = Math.Round(balance, 2);
             FuelCost = fuelCostPerTile;
             BaseDeliveryCost = baseDeliveryCost;
             settlement = s;
@@ -70,7 +70,7 @@ namespace AQASkeletronPlus
             if (Balance < OutletCost) { throw new Exception("Cannot open an outlet, insufficient company balance."); }
 
             //Open the outlet.
-            Balance -= OutletCost;
+            Balance -= Math.Round(OutletCost, 2);
             outlets.Add(new Outlet(settlement, this, position, OutletCapacity, DailyCost));
 
             //Log in the event chain.
@@ -168,11 +168,11 @@ namespace AQASkeletronPlus
 
             //Calculate delivery costs.
             deliveryCosts += BaseDeliveryCost + CalculateDeliveryCost();
-            Balance -= deliveryCosts;
+            Balance -= Math.Round(deliveryCosts, 2);
             EventChain.AddEvent(new DeliveryEvent()
             {
                 CompanyName = Name,
-                Cost = deliveryCosts,
+                Cost = Math.Round(deliveryCosts, 2),
                 Type = EventType.Delivery
             });
 
@@ -185,7 +185,7 @@ namespace AQASkeletronPlus
                 //Log an outlet's profits/losses.
                 EventChain.AddEvent(new OutletProfitEvent()
                 {
-                    ProfitLoss = thisOutletProfit,
+                    ProfitLoss = Math.Round(thisOutletProfit, 2),
                     Company = Name
                 });
 
@@ -193,7 +193,7 @@ namespace AQASkeletronPlus
             }
 
             //Update balance.
-            Balance += profitLossFromOutlets;
+            Balance += Math.Round(profitLossFromOutlets, 2);
 
             //Close the company?
             if (Balance <= 0)

@@ -243,4 +243,32 @@ These settings are only for when you have the "Balanced" simulation mode enabled
 
 ---
 
-//todo
+### BalancedSim_TravelRadiusFastFood
+
+(*Default: 300, Type: Float*) The distance a household is willing to travel to eat out.
+
+---
+
+### BalancedSim_TravelRadiusFastFood
+
+(*Default: 300, Type: Float*) The distance a household is willing to travel to eat out at a fast food outlet.
+
+---
+
+### BalancedSim_TravelRadiusFamily
+
+(*Default: 350, Type: Float*) The distance a household is willing to travel to eat out at a family outlet.
+
+---
+
+### BalancedSim_TravelRadiusNamedChef
+
+(*Default: 450, Type: Float*) The distance a household is willing to travel to eat out at a named chef outlet.
+
+---
+
+### BalancedSim_FuelCostCap
+
+(*Default: 0.3, Type: Float*) Global cap on the cost of fuel per tile for a company.
+
+---

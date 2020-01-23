@@ -57,7 +57,7 @@ namespace AQASkeletronPlus
         ///////////////////////////////////
         //This only applies to the "Balanced" simulation mode.
 
-        [Option(DefaultValue = 0.45)]
+        [Option(DefaultValue = 0.40)]
         double BalancedSim_PickChanceFastFood { get; }
 
         [Option(DefaultValue = 300.0)]
@@ -69,7 +69,7 @@ namespace AQASkeletronPlus
         [Option(DefaultValue = 350.0)]
         double BalancedSim_TravelRadiusFamily { get; }
 
-        [Option(DefaultValue = 0.2)]
+        [Option(DefaultValue = 0.25)]
         double BalancedSim_PickChanceNamedChef { get; }
 
         [Option(DefaultValue = 450.0)]

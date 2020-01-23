@@ -1,4 +1,7 @@
-﻿namespace AQASkeletronPlus.GUI
+﻿using System;
+using System.Windows.Forms;
+
+namespace AQASkeletronPlus.GUI
 {
     partial class StartupConfig
     {
@@ -163,7 +166,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.CheckLayout();
 
+        }
+
+        private void CheckLayout()
+        {
+            foreach (Control c in Controls)
+            {
+                if (c is TextBox)
+                    Environment.Exit(0);
+            }
         }
 
         #endregion

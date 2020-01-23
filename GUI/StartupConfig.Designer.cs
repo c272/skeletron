@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartupConfig));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.simWidth = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,31 +37,12 @@
             this.simHouses = new System.Windows.Forms.NumericUpDown();
             this.goBtn = new System.Windows.Forms.Button();
             this.balancedModeCb = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.simWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simHouses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, -21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(137, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "by Larry T.";
             // 
             // simWidth
             // 
@@ -150,11 +129,21 @@
             this.balancedModeCb.Text = "Enable \"Balanced Mode\"";
             this.balancedModeCb.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(205, 154);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // StartupConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(234, 384);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.balancedModeCb);
             this.Controls.Add(this.goBtn);
             this.Controls.Add(this.label4);
@@ -163,26 +152,21 @@
             this.Controls.Add(this.simHeight);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.simWidth);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "StartupConfig";
             this.Text = "AQA SKPE - Startup";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simHouses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown simWidth;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -191,5 +175,6 @@
         private System.Windows.Forms.NumericUpDown simHouses;
         private System.Windows.Forms.Button goBtn;
         private System.Windows.Forms.CheckBox balancedModeCb;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

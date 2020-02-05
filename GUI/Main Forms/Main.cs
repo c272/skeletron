@@ -64,6 +64,7 @@ namespace AQASkeletronPlus.GUI
                 try
                 {
                     Simulation.ProcessDayEnd();
+                    eventsGroupBox.Text = "Event Log (Current Day: " + Simulation.DaysElapsed + ")";
                 }
                 catch
                 {

@@ -122,36 +122,41 @@ namespace AQASkeletronPlus
                 }
             }
 
-            //Choose the random events that will occur at this day end.
-            double eventRand = Random.NextDouble();
-            if (eventRand < Settings.Get.BaseChanceOfRandomEvents)
+            //Only do random events if companies still exist.
+            if (Companies.Count > 0)
             {
-                //Random household addition event.
-                eventRand = Random.NextDouble();
-                if (eventRand < Settings.Get.ChanceOfAddHouseholdsEvent)
-                {
-                    ProcessAddHouseholdsEvent();
-                }
 
-                //Random fuel cost change event.
-                eventRand = Random.NextDouble();
-                if (eventRand < Settings.Get.ChanceOfChangeFuelCostEvent)
+                //Choose the random events that will occur at this day end.
+                double eventRand = Random.NextDouble();
+                if (eventRand < Settings.Get.BaseChanceOfRandomEvents)
                 {
-                    ProcessChangeFuelCostEvent();
-                }
+                    //Random household addition event.
+                    eventRand = Random.NextDouble();
+                    if (eventRand < Settings.Get.ChanceOfAddHouseholdsEvent)
+                    {
+                        ProcessAddHouseholdsEvent();
+                    }
 
-                //Random reputation change event.
-                eventRand = Random.NextDouble();
-                if (eventRand < Settings.Get.ChanceOfReputationChangeEvent)
-                {
-                    ProcessChangeReputationEvent();
-                }
+                    //Random fuel cost change event.
+                    eventRand = Random.NextDouble();
+                    if (eventRand < Settings.Get.ChanceOfChangeFuelCostEvent)
+                    {
+                        ProcessChangeFuelCostEvent();
+                    }
 
-                //Random daily cost change event.
-                eventRand = Random.NextDouble();
-                if (eventRand < Settings.Get.ChanceOfCostChangeEvent)
-                {
-                    ProcessCostChangeEvent();
+                    //Random reputation change event.
+                    eventRand = Random.NextDouble();
+                    if (eventRand < Settings.Get.ChanceOfReputationChangeEvent)
+                    {
+                        ProcessChangeReputationEvent();
+                    }
+
+                    //Random daily cost change event.
+                    eventRand = Random.NextDouble();
+                    if (eventRand < Settings.Get.ChanceOfCostChangeEvent)
+                    {
+                        ProcessCostChangeEvent();
+                    }
                 }
             }
 

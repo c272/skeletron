@@ -11,6 +11,8 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -112,62 +114,62 @@
     <Compile Include="Events\SimulationEvents.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
     <Compile Include="Extensions\VersionExtensions.cs" />
-    <Compile Include="GUI\AboutMenu.cs">
+    <Compile Include="GUI\Static Forms\AboutMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\AboutMenu.Designer.cs">
+    <Compile Include="GUI\Static Forms\AboutMenu.Designer.cs">
       <DependentUpon>AboutMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\CreateCompany.cs">
+    <Compile Include="GUI\Input Forms\CreateCompany.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\CreateCompany.Designer.cs">
+    <Compile Include="GUI\Input Forms\CreateCompany.Designer.cs">
       <DependentUpon>CreateCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\DisplayCompanies.cs">
+    <Compile Include="GUI\Static Forms\DisplayCompanies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DisplayCompanies.Designer.cs">
+    <Compile Include="GUI\Static Forms\DisplayCompanies.Designer.cs">
       <DependentUpon>DisplayCompanies.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\DisplayHouseholds.cs">
+    <Compile Include="GUI\Static Forms\DisplayHouseholds.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DisplayHouseholds.Designer.cs">
+    <Compile Include="GUI\Static Forms\DisplayHouseholds.Designer.cs">
       <DependentUpon>DisplayHouseholds.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Main.cs">
+    <Compile Include="GUI\Main Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Main.Designer.cs">
+    <Compile Include="GUI\Main Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MapPanel.cs">
+    <Compile Include="GUI\Custom Controls\MapPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Core\Outlet.cs" />
-    <Compile Include="GUI\ModifyCompany.cs">
+    <Compile Include="GUI\Input Forms\ModifyCompany.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ModifyCompany.Designer.cs">
+    <Compile Include="GUI\Input Forms\ModifyCompany.Designer.cs">
       <DependentUpon>ModifyCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\RunToTarget.cs">
+    <Compile Include="GUI\Static Forms\RunToTarget.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\RunToTarget.Designer.cs">
+    <Compile Include="GUI\Static Forms\RunToTarget.Designer.cs">
       <DependentUpon>RunToTarget.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SimulationMenu.cs">
+    <Compile Include="GUI\Main Forms\SimulationMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SimulationMenu.Designer.cs">
+    <Compile Include="GUI\Main Forms\SimulationMenu.Designer.cs">
       <DependentUpon>SimulationMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\StartupConfig.cs">
+    <Compile Include="GUI\Main Forms\StartupConfig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\StartupConfig.Designer.cs">
+    <Compile Include="GUI\Main Forms\StartupConfig.Designer.cs">
       <DependentUpon>StartupConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -175,40 +177,40 @@
     <Compile Include="Core\Settlements.cs" />
     <Compile Include="Core\Simulation.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="GUI\SettingsMenu.cs">
+    <Compile Include="GUI\Input Forms\SettingsMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SettingsMenu.Designer.cs">
+    <Compile Include="GUI\Input Forms\SettingsMenu.Designer.cs">
       <DependentUpon>SettingsMenu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\AboutMenu.resx">
+    <EmbeddedResource Include="GUI\Static Forms\AboutMenu.resx">
       <DependentUpon>AboutMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\CreateCompany.resx">
+    <EmbeddedResource Include="GUI\Input Forms\CreateCompany.resx">
       <DependentUpon>CreateCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DisplayCompanies.resx">
+    <EmbeddedResource Include="GUI\Static Forms\DisplayCompanies.resx">
       <DependentUpon>DisplayCompanies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DisplayHouseholds.resx">
+    <EmbeddedResource Include="GUI\Static Forms\DisplayHouseholds.resx">
       <DependentUpon>DisplayHouseholds.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Main.resx">
+    <EmbeddedResource Include="GUI\Main Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ModifyCompany.resx">
+    <EmbeddedResource Include="GUI\Input Forms\ModifyCompany.resx">
       <DependentUpon>ModifyCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\RunToTarget.resx">
+    <EmbeddedResource Include="GUI\Static Forms\RunToTarget.resx">
       <DependentUpon>RunToTarget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SettingsMenu.resx">
+    <EmbeddedResource Include="GUI\Input Forms\SettingsMenu.resx">
       <DependentUpon>SettingsMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SimulationMenu.resx">
+    <EmbeddedResource Include="GUI\Main Forms\SimulationMenu.resx">
       <DependentUpon>SimulationMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\StartupConfig.resx">
+    <EmbeddedResource Include="GUI\Main Forms\StartupConfig.resx">
       <DependentUpon>StartupConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -53,6 +53,11 @@
             0,
             0,
             0});
+            this.minBal.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
             this.minBal.Name = "minBal";
             this.minBal.Size = new System.Drawing.Size(242, 20);
             this.minBal.TabIndex = 0;

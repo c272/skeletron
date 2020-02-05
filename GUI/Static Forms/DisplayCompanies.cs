@@ -41,6 +41,7 @@ namespace AQASkeletronPlus.GUI
                     company.Balance.ToString(),
                     company.Reputation.ToString(),
                     company.Type.ToString(),
+                    company.DailyCost.ToString(),
                     company.FuelCost.ToString(),
                     company.BaseDeliveryCost.ToString(),
                     string.Join(", ", company.outlets.Select(x => x.Position)) //Outlet positions comma delimited.
@@ -128,6 +129,13 @@ namespace AQASkeletronPlus.GUI
             //There is, modify.
             ModifyCompany m = new ModifyCompany((string)(companies.SelectedItems[0].Tag));
             m.Show();
+            m.VisibleChanged += populateWrapper;
+        }
+
+        //Populates the company table again.
+        private void populateWrapper(object sender, EventArgs e)
+        {
+            PopulateListView();
         }
     }
 }

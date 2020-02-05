@@ -43,6 +43,7 @@
             this.modifyCompanyBtn = new System.Windows.Forms.Button();
             this.deleteCompanyBtn = new System.Windows.Forms.Button();
             this.okBtn = new System.Windows.Forms.Button();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -74,11 +75,12 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
+            this.columnHeader9,
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
             this.companies.HideSelection = false;
-            this.companies.Location = new System.Drawing.Point(12, 62);
+            this.companies.Location = new System.Drawing.Point(13, 63);
             this.companies.Name = "companies";
             this.companies.Size = new System.Drawing.Size(774, 374);
             this.companies.TabIndex = 2;
@@ -108,12 +110,12 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Fuel Cost";
-            this.columnHeader5.Width = 70;
+            this.columnHeader5.Width = 91;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Base Delivery Cost";
-            this.columnHeader6.Width = 118;
+            this.columnHeader6.Width = 128;
             // 
             // columnHeader7
             // 
@@ -164,6 +166,11 @@
             this.okBtn.UseVisualStyleBackColor = true;
             this.okBtn.Click += new System.EventHandler(this.okBtn_Click);
             // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Daily Costs";
+            this.columnHeader9.Width = 88;
+            // 
             // DisplayCompanies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,7 +184,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(450, 0);
+            this.MinimumSize = new System.Drawing.Size(450, 39);
             this.Name = "DisplayCompanies";
             this.Text = "AQA SKPE - Companies";
             this.ResumeLayout(false);
@@ -201,5 +208,6 @@
         private System.Windows.Forms.Button modifyCompanyBtn;
         private System.Windows.Forms.Button deleteCompanyBtn;
         private System.Windows.Forms.Button okBtn;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }

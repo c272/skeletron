@@ -163,7 +163,7 @@
             this.eventsGroupBox.Size = new System.Drawing.Size(206, 529);
             this.eventsGroupBox.TabIndex = 6;
             this.eventsGroupBox.TabStop = false;
-            this.eventsGroupBox.Text = "Event Log";
+            this.eventsGroupBox.Text = "Event Log (Current Day: 0)";
             // 
             // eventsList
             // 
